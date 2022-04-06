@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="zh"><head><meta charset="utf-8"><meta name="generator" content="Hexo 4.2.0"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>DOM学习 - kerbalHao</title><meta description="DomNODE类型： Node.ELEMENT_NODE(1) Node.ATTRIBUTE_NODE(2) Node.TEXT_NODE(3) Node.CDATA_SECTION_NODE(4) Node.ENTITY_REFERENCE_NODE(5) Node.ENTITY_NODE(6) Node.PROCESSING_INSTRUCTION_NODE(7) Node.COMMENT_N"><meta property="og:type" content="article"><meta property="og:title" content="DOM学习"><meta property="og:url" content="https://kerbalhao.github.io/posts/5b12dbf7/"><meta property="og:site_name" content="KerbalHao"><meta property="og:description" content="DomNODE类型： Node.ELEMENT_NODE(1) Node.ATTRIBUTE_NODE(2) Node.TEXT_NODE(3) Node.CDATA_SECTION_NODE(4) Node.ENTITY_REFERENCE_NODE(5) Node.ENTITY_NODE(6) Node.PROCESSING_INSTRUCTION_NODE(7) Node.COMMENT_N"><meta property="og:locale" content="zh_CN"><meta property="og:image" content="https://cdn.jsdelivr.net/gh/kerbalhao/blog_images/avatar.jpg"><meta property="article:published_time" content="2018-12-15T06:36:09.000Z"><meta property="article:modified_time" content="2022-04-06T10:48:44.280Z"><meta property="article:author" content="KerbalHao"><meta property="article:tag" content="JS Dom"><meta property="twitter:card" content="summary"><meta property="twitter:image" content="https://cdn.jsdelivr.net/gh/kerbalhao/blog_images/avatar.jpg"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://kerbalhao.github.io/posts/5b12dbf7/"},"headline":"DOM学习","image":["https://cdn.jsdelivr.net/gh/kerbalhao/blog_images/avatar.jpg"],"datePublished":"2018-12-15T06:36:09.000Z","dateModified":"2022-04-06T10:48:44.280Z","author":{"@type":"Person","name":"KerbalHao"},"description":"DomNODE类型： Node.ELEMENT_NODE(1) Node.ATTRIBUTE_NODE(2) Node.TEXT_NODE(3) Node.CDATA_SECTION_NODE(4) Node.ENTITY_REFERENCE_NODE(5) Node.ENTITY_NODE(6) Node.PROCESSING_INSTRUCTION_NODE(7) Node.COMMENT_N"}</script><link rel="alternative" href="/atom.xml" title="kerbalHao" type="application/atom+xml"><link rel="icon" href="https://cdn.jsdelivr.net/gh/removeif/removeif.github.io@latest/img/wico.png"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:400,600|Source+Code+Pro|Monda:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|Microsoft YaHei:300,300italic,400,400italic,700,700italic|PT Mono:300,300italic,400,400italic,700,700italic&amp;amp;subset=latin,latin-ext|Inconsolata|Itim|Lobster.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/atom-one-dark.css"><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><script src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" defer></script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.6.12/dist/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/css/justifiedGallery.min.css"><!--!--><!--!--><script src="https://cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js"></script><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kerbalhao/kerbalhao.github.io/css/style.min.css"><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/gh/kerbalhao/kerbalhao.github.io/js/globalUtils.min.js"></script></head><body class="is-3-column has-navbar-fixed-top"><nav class="navbar navbar-main is-fixed-top"><div class="container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="https://cdn.jsdelivr.net/gh/kerbalhao/blog_images/log.jpg" alt="kerbalHao" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">首页</a><a class="navbar-item" href="/archives">归档</a><a class="navbar-item" href="/categories">分类</a><a class="navbar-item" href="/tags">标签</a><a class="navbar-item" href="/self-talking">碎碎念</a><a class="navbar-item" href="/message">留言</a><a class="navbar-item" href="/about">关于</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/kerbalhao"><i class="fab fa-github"></i></a><a class="navbar-item search" title="搜索" href="javascript:;"><i class="fas fa-search"></i></a><a class="navbar-item" id="night-nav" title="Night Mode" href="javascript:;"><i class="fas fa-moon" id="night-icon"></i></a></div></div></div></nav><script type="text/javascript" src="https://cdn.jsdelivr.net/gh/kerbalhao/kerbalhao.github.io/js/theme-setting.min.js"></script><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-9-widescreen"><div class="card"><article class="card-content article" role="article"><div class="article-meta size-small is-uppercase level is-mobile"><div class="level-left"><time class="level-item" dateTime="2018-12-15T06:36:09.000Z">2018-12-15</time><a class="commentCountImg" href="/posts/5b12dbf7/#comment-container"><span class="display-none-class">65e7e2689b05d725c9b67bd98d6dd105</span><img class="not-gallery-item" src="https://cdn.jsdelivr.net/gh/kerbalhao/kerbalhao.github.io/img/chat.svg"> <span class="commentCount" id="65e7e2689b05d725c9b67bd98d6dd105"> 99+</span>    </a><span class="level-item">27 分钟 读完 (大约 4047 个字)</span><span class="level-item" id="busuanzi_container_page_pv"><i class="far fa-eye"></i>&nbsp;&nbsp;<span id="busuanzi_value_page_pv">0</span>次访问</span></div></div><h1 class="title is-3 is-size-4-mobile">DOM学习</h1><div class="content"><h1 id="Dom"><a href="#Dom" class="headerlink" title="Dom"></a><code>Dom</code></h1><h2 id="NODE类型："><a href="#NODE类型：" class="headerlink" title="NODE类型："></a><code>NODE</code>类型：</h2><ol>
+<li>Node.ELEMENT_NODE(1)</li>
+<li>Node.ATTRIBUTE_NODE(2)</li>
+<li>Node.TEXT_NODE(3)</li>
+<li>Node.CDATA_SECTION_NODE(4)</li>
+<li>Node.ENTITY_REFERENCE_NODE(5)</li>
+<li>Node.ENTITY_NODE(6)</li>
+<li>Node.PROCESSING_INSTRUCTION_NODE(7)</li>
+<li>Node.COMMENT_NODE(8)</li>
+<li>Node.DOCUMENT_NODE(9)：</li>
+<li>Node.DOCUMENT_TYPE_NODE(10)</li>
+<li>Node.DOCUMENT_FRAGMENT_NODE(11)</li>
+<li>Node.NOTATION_NODE(12)</li>
+</ol>
+<p>所有 <code>node</code>都有 <code>nodeType</code>,<code>nodeName</code>,<code>nodeValue</code>属性，<code>nodeType</code>用于判断 <code>node</code>类型,<code>nodeName</code>和 <code>nodeValue</code>取决于 <code>Node</code>类型，对于元素来说，<code>nodeName</code>值元素的标签名，<code>nodeValue</code>为 <code>null</code></p>
+<a id="more"></a>
+
+
+<h3 id="节点关系"><a href="#节点关系" class="headerlink" title="节点关系"></a>节点关系</h3><h4 id="子节点-childNodes"><a href="#子节点-childNodes" class="headerlink" title="子节点(childNodes)"></a>子节点(<code>childNodes</code>)</h4><p>每个节点都有一个 <code>childNodes</code>属性，其中保存着一个 <code>nodeList</code>对象，是类数组对象，可以用索引值访问该对象，有 <code>length</code>属性，但不是数组。访问 <code>nodeList</code>可以使用方括号表示法，也可以使用 <code>item</code>()方法<br><code>someNode.childNodes[0] == someNode.childNodes.item(0)</code></p>
+<h4 id="父节点-parentNode"><a href="#父节点-parentNode" class="headerlink" title="父节点 (parentNode)"></a>父节点 (<code>parentNode</code>)</h4><p>每个节点都有一个 <code>parentNode</code>属性，指向文档树中的父节点。在 <code>childNodes</code>列表中的所有节点都有相同的父节点，他们的 <code>parentNode</code>属性都指向同一个节点。父节点的 <code>firstChild</code>和 <code>lastChild</code>属性分别指向子节点列表的第一个和最后一个节点</p>
+<h4 id="同胞节点-nextSibling、previousSibling"><a href="#同胞节点-nextSibling、previousSibling" class="headerlink" title="同胞节点(nextSibling、previousSibling)"></a>同胞节点(<code>nextSibling</code>、<code>previousSibling</code>)</h4><p>在 <code>childNodes</code>丽奥表中的每个节点相互之间都是同胞节点，是用列表中每个节点的 <code>previousSibling</code>和 <code>nextSibling</code>属性可以访问同一列表的其他节点</p>
+<h3 id="操作节点"><a href="#操作节点" class="headerlink" title="操作节点"></a>操作节点</h3><p><code>someNode.appendChild()</code>方法，用于向 <code>childNode</code>列表的末尾添加一个节点，如果传入到 <code>appendChild</code>()中的节点是文档中的一部分，那么该节点姜葱原来的位置转移到列表的末尾。添加节点后，<code>childNodes</code>新增的节点，父节点以及以前的最后一个子节点的关系指针都会发生相应的变化。</p>
+<p><code>someNode.insertBefore(newNode,referenceNode)</code>方法，用于将借调放在 <code>childNodes</code>列表中的特定位置，接受两个参数：要插入的节点和作为参照的节点。插入节点后，被插入的节点会变成参照节点的前一个同胞节点，同时被方法返回。如果参照节点为 <code>null</code>，则 <code>insertBefore</code>()与 <code>appendChild</code>()执行相同的操作。</p>
+<p><code>someNode.replaceChild(newNode, replacedNode)</code>方法，用于替换节点。接收两个参数，要插入的节点和要替换的节点，返回被替换的节点</p>
+<p><code>someNode.removeChild()</code>方法，用于移除节点，接受一个参数，即要被移除的节点，返回该节点。</p>
+<p>以上四个方法都是操作某个节点的子节点，需要取得父节点来使用。</p>
+<h3 id="其他操作方法"><a href="#其他操作方法" class="headerlink" title="其他操作方法"></a>其他操作方法</h3><p>以下两个方法是所有节点都有的方法：</p>
+<ol>
+<li><code>someNode.clone()</code>方法，用于创建调用这个方法的节点的一个完全相同的副本。接收一个布尔值，确定是否深复制。参数为 <code>true</code>的情况下，执行深复制，也就是复制整个节点及其整个子节点树；参数为 <code>false</code>的情况下，执行浅复制，即只复制节点本身。复制后返回的节点副本属于文档所有，没有为他指定父节点，需要通过 <code>appendChild</code>()等方法添加到文档中。</li>
+<li><code>someNode.normalize()</code>方法，用于处理文档树中的不规范的文本节点。</li>
+</ol>
+<h2 id="Document节点"><a href="#Document节点" class="headerlink" title="Document节点"></a>Document节点</h2><p><code>Document</code>节点的特性：</p>
+<ul>
+<li><code>nodeType</code>= 9;</li>
+<li><code>nodeName</code>= ‘#document’;</li>
+<li><code>nodeValue</code>= <code>null</code>;</li>
+<li><code>parentNode</code>的值为 <code>null</code>;</li>
+<li><code>ownerDocument</code>的值为 <code>null</code>；</li>
+<li>其子节点可能是一个 <code>DocumentType</code>(最多一个)、<code>Element</code>(最多一个)、<code>ProcessingInstruction</code>或 <code>Comment</code></li>
+</ul>
+<p><code>document</code>属性:</p>
+<ul>
+<li><code>document.documentElement</code>属性指向文档的 <code>&lt;html&gt;</code>元素</li>
+<li><code>document.body</code>属性指向文档的 <code>&lt;body&gt;</code>元素</li>
+<li><code>document.title</code>属性，修改 <code>title的</code>值会海标 <code>&lt;title&gt;</code>元素</li>
+<li><code>document.URL</code>属性包含页面完整的 <code>url,</code>只能访问</li>
+<li><code>document.referrer</code>属性保存着连接到当前页面的那个页面的 <code>url，</code>只能访问，可能为空</li>
+<li><code>document.domain</code>属性，只包含页面的域名，可以修改</li>
+</ul>
+<p>查找元素：</p>
+<ul>
+<li><code>document.getElementById</code>()方法，接收一个参数，要取得的元素的 <code>id，</code>返回该元素或者 <code>null</code></li>
+<li><code>document.getElementsByName</code>()方法，会返回带有给定 <code>name属</code>性的所有元素，一般用于单选按钮</li>
+<li><code>document.getElementsByTagName</code>()方法，接收一个参数，要取得的元素的标签名，返回一个 <code>HTMLCollection对</code>象，该对象与 <code>NodeList类</code>似。<ol>
+<li><code>HTMLCollction对</code>象有一个方法，叫做 <code>namedItem(</code>)，使用这个方法可以通过元素的 <code>name特</code>性取得特定的项</li>
+<li><code>HTMLCollection对</code>象还支持方括号语法访问，例如<br><code>var myImage = document.getElementsByTagName(&#39;img&#39;)[&#39;myImage&#39;]</code><br>用于访问 <code>&lt;img&gt;</code>标签中，<code>name</code>属性为’myImage’的哪一个</li>
+</ol>
+</li>
+</ul>
+<p>特殊集合：</p>
+<ul>
+<li><code>document.anchors</code>,包含文档中所有带 <code>name</code>特性的 <code>a</code>元素</li>
+<li><code>document.forms</code>，包含文档中所有 <code>&lt;form&gt;</code>元素</li>
+<li><code>document.images</code>，包含文档中所有’<code>&lt;img&gt;</code>‘元素</li>
+<li><code>document.links</code>，包含文档中所有带 <code>href</code>特性的 ‘<code>&lt;a&gt;</code>‘元素</li>
+</ul>
+<p><code>Dom</code>一致性检测：使用 <code>document.implementation.hasFeature(feature, version)</code></p>
+<p>文档写入:</p>
+<ul>
+<li><code>document.write</code>()方法，接受字符串，字符串会原样写入文档，可直接写入 <code>html</code>代码</li>
+<li><code>document.writeIn</code>()方法，同上，但在末尾会加入一个换行符\n</li>
+</ul>
+<h2 id="Element类型"><a href="#Element类型" class="headerlink" title="Element类型"></a><code>Element</code>类型</h2><p><code>Element</code>节点的特性:</p>
+<ul>
+<li><code>nodeType</code>= 1;</li>
+<li><code>nodeName</code>的值为元素的标签名；</li>
+<li><code>nodeValue</code>= <code>null</code>;</li>
+<li><code>parentNode</code>可能是 <code>Document</code>或者 <code>Element</code>;</li>
+</ul>
+<p>元素特性：</p>
+<ul>
+<li><code>Element</code>可以通过属性访问或者赋值下列标准特性:<ol>
+<li><code>id</code></li>
+<li><code>title</code></li>
+<li><code>lang</code></li>
+<li><code>dir</code></li>
+<li><code>className</code><br><code>document.getElementById(&#39;wte&#39;).id|className</code><br>注意，通过属性方法定义的属性不会自动变成元素的特性</li>
+</ol>
+</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> div = <span class="built_in">document</span>.getElementById(<span class="string">'div'</span>)</span><br><span class="line">div.mycolor = <span class="string">'red'</span></span><br><span class="line">alert(div.getAttribute(<span class="string">'mycolor'</span>)); <span class="comment">//null</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>对于自定义的特性，一般使用 <code>element.getAttribute</code>()方法访问，接受特性名作为参数；使用 <code>element.setAttribute</code>()方法赋值，接受两个参数：特性名和要赋的值，如果特性已存在，则以值取代原有的值。</li>
+<li><code>element.removeAttribute</code>()用于完全移除特性</li>
+</ul>
+<p><code>Element</code>的 <code>attribute</code>属性：</p>
+<ul>
+<li><code>attribute</code>属性中包含一个 <code>NamedNodeMap</code>，与 <code>NodeList</code>类似，是一个’动态’的集合，元素的每个特性都有一个 <code>Attribute</code>节点表示，节点的 <code>nodeName</code>就是特性的名称，<code>nodeValue</code>就是特性的值。可以用属性或者方括号访问节点的值，如<br><code>var id = element.attribute[&#39;id&#39;].nodeValue</code></li>
+</ul>
+<p>创建元素:可以使用 <code>document.createElement</code>()方法创建元素，接收一个参数，即要创建的元素名，或者完整的 <code>HTML</code>标签。创建的元素需要手动添加到文档树。</p>
+<h2 id="Text类型"><a href="#Text类型" class="headerlink" title="Text类型"></a><code>Text</code>类型</h2><p><code>Text</code>节点特征：</p>
+<ul>
+<li><code>nodeType</code>= 3</li>
+<li><code>nodeName</code>= ‘#text’</li>
+<li><code>nodeValue</code>的值为节点所包含的文本</li>
+<li><code>parentNode</code>是一个 <code>ELement</code></li>
+<li>不支持子节点</li>
+</ul>
+<p>操作文本的方法：可以通过 <code>nodeValue</code>属性或者 <code>data</code>属性访问和修改 <code>Text</code>节点中包含的文本，在此处的 <code>Html</code>代码会被转码。</p>
+<p>创建文本节点：<code>document.createTextNode</code>()方法，接受一个参数，要插入节点中的文本，文本中的 <code>html</code>代码将会被转码。创建以后需要被加载到文档中才能被看到。</p>
+<p>一般来说，一个元素中只能有一个文本节点，如果两个文本节点是响铃的同胞节点，那么这两个节点中的文本就会连接起来显示，中间没有空格。</p>
+<p>分割文本节点：<code>splitText</code>()方法，会将一个文本节点分成两个文本节点，即按照指定的位置分割 <code>nodeValue</code>值。原来的文本节点将包含从开始到指定位置之前的内容，新文本节点将包含剩下的文本。这个方法会返回一个新文本节点，该节点的 <code>parentNode</code>与源节点的相同。</p>
+<h2 id="DocumentFragment类型"><a href="#DocumentFragment类型" class="headerlink" title="DocumentFragment类型"></a><code>DocumentFragment</code>类型</h2><p><code>DocumentFragment</code>节点的特征：</p>
+<ul>
+<li><code>nodeType</code>= 11;</li>
+<li><code>nodeName</code>= ‘#<code>document-fragment</code>‘</li>
+<li><code>nodeValue</code>= <code>null</code>;</li>
+<li><code>parentNode</code>= <code>null</code></li>
+<li>子节点可以使 <code>element</code>,<code>processingInstruction</code>, <code>comment</code>, <code>text</code>, <code>CDATASection</code>, <code>entityReference</code></li>
+</ul>
+<p>文档片段本身永远不会成为文档树的一部分，当可以将它作为一个仓库使用，在里面可以保存将来可能会添加到文档中的节点。当文档片段中的节点被添加到文档树中时，该节点从文档片段中消失<br>创建方法：<code>document.createDocumentFragment</code>()</p>
+<h2 id="元素遍历"><a href="#元素遍历" class="headerlink" title="元素遍历"></a>元素遍历</h2><p>对于元素间的空格，<code>Ie9</code>和之前版本不会反悔文本节点，而其他浏览器都会返回文本节点。这样就导致了在使用 <code>childNode</code>和 <code>firstChild</code>等属性是的行为不一致，为了弥补这一差异，而同时又保持 <code>Dom</code>规范不变，新定义了一组属性：</p>
+<ul>
+<li><code>childElementCount</code></li>
+<li><code>firstELementChild</code></li>
+<li><code>lastElementChild</code></li>
+<li><code>previousELementSibling</code></li>
+<li><code>nextELementSibling</code></li>
+</ul>
+<h2 id="HTML5"><a href="#HTML5" class="headerlink" title="HTML5"></a><code>HTML5</code></h2><h3 id="classList属性"><a href="#classList属性" class="headerlink" title="classList属性"></a><code>classList</code>属性</h3><p><code>HTML5</code>新增了一种操作雷鸣的方式，就是 <code>classList</code>属性，这个属性石心机和类型 <code>DOMTokenList</code>的实例。<code>DOMTokenList</code>有一个 <code>length</code>属性，可以使用 <code>item</code>()方法或者方括号语法访问和操作一个 <code>class</code>，此外，还定义了一下方法：</p>
+<ul>
+<li><code>add</code>(<code>value</code>)，将给定的字符串值添加到列表中</li>
+<li><code>contains</code>(<code>value</code>)，表示列表中是否存在给定的值</li>
+<li><code>remove</code>(<code>value</code>)</li>
+<li><code>toggle</code>(<code>value</code>)</li>
+</ul>
+<h3 id="焦点管理"><a href="#焦点管理" class="headerlink" title="焦点管理"></a>焦点管理</h3><p><code>document.activeElement</code>属性，会始终引用 <code>DOM</code>中当前获得了焦点的元素<br><code>document.focus</code>()方法，确定文档是否获得了焦点</p>
+<h3 id="插入标记"><a href="#插入标记" class="headerlink" title="插入标记"></a>插入标记</h3><p><code>element.innerHTML</code>属性,在读模式的情况下，返回与调用元素的所有子节点相对应的 <code>HTML</code>标记。在写模式的情况下，会根据传入的参数创建新的 <code>DOM</code>数，这个 <code>DOM</code>树将完全替换调用元素原先的子节点。</p>
+<p><code>element.outerHTML</code>属性，在读模式下，返回调用它的元素和所有子节点的 <code>HTML</code>标签。在写模式下，<code>outterHTML</code>会根据指定的 <code>HTML</code>字符串创建新的 <code>DOM</code>树，然后用这个 <code>DOM</code>树完全替换调用元素</p>
+<p><code>insertAdjacentHTML</code>()方法，接受两个参数，插入位置和要插入的 <code>HTML</code>文本，第一个参数必须是以下之一：</p>
+<ul>
+<li><code>beforebegin</code>， 在当前元素之前插入一个紧邻的同辈元素</li>
+<li><code>afterbegin</code>， 在当前元素之下插入一个新的子元素或者在第一个子元素之前再插入新的子元素</li>
+<li><code>beforeend</code>在当前元素之下插入一个新的子元素或者在最后一个子元素之前再插入新的子元素</li>
+<li><code>afterend</code>在当前元素之后插入一个紧邻的同辈元素</li>
+</ul>
+<h3 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h3><p><code>element.children</code>属性，这个属性是 <code>HTMLCollection</code>的实例，只包含元素中同样还是元素的子节点，有 <code>length</code>属性，可以通过方括号表示法访问</p>
+<p> <code>someNode.contains</code>()方法，用于测试一个节点是否包含某个子节点，接受一个参数，即要检测的后代节点</p>
+<p> <code>innerText</code>属性。读模式下，会按照由浅入深的顺序，将子文档树中的所有文本拼接起来。在写模式下，结果会删除元素的所有子节点，插入包含相应文本的文本节点</p>
+<p> <code>outterText</code>属性，读模式下，与 <code>innerText</code>完全一致；在写模式下，会替换整个元素（包括子节点）</p>
+<h2 id="DOM2"><a href="#DOM2" class="headerlink" title="DOM2"></a><code>DOM2</code></h2><h3 id="样式"><a href="#样式" class="headerlink" title="样式"></a>样式</h3><h4 id="访问元素的样式"><a href="#访问元素的样式" class="headerlink" title="访问元素的样式"></a>访问元素的样式</h4><p>任何支持 <code>style</code>特性的 <code>HTML</code>元素在 <code>javascript</code>中都有一个对应的 <code>style</code>属性，这个 <code>style</code>对象时 <code>CSSStyleDeclaration</code>的实例，包含着 <strong>通过 <code>HTML</code>的 <code>style</code>特性所制定的所有样式信息</strong> ，但不包括与外部样式表或嵌入样式表经过层叠而来的样式。在 <code>style</code>特性中指定的任何 <code>CSS</code>属性都将表现为这个 <code>style</code>对象的响应属性。可以通过属性或者方括号语法来进行访问或修改，如：<br><code>document.getElementById(&#39;myDiv&#39;).style.width == document.getElementById(&#39;myDiv&#39;).style[&#39;width&#39;]</code></p>
+<p>DOM样式的属性和方法：</p>
+<ul>
+<li><code>cssText</code>通过它能访问到 <code>Style</code>特性中的 <code>css</code>代码</li>
+<li><code>length</code>引用给元素的 <code>CSS</code>属性的数量</li>
+<li><code>parentRule</code>表示 <code>CSS</code>的信息的 <code>CSSRule</code>对象</li>
+<li><code>getPropertyCSSValue</code>(<code>propertyName</code>) 返回包含给定属性值的 <code>CSSValue</code>对象，包含两个属性，<code>cssText</code>和 <code>cssValueType</code>，其中，<code>cssText</code>属性的值与 <code>getpropertyValue</code>()返回的值相同，而 <code>cssValueType</code>属性则是一个数值常量，表示值的类型：0表示继承的值，1表示基本的值，2表示值列表，3表示自定义的值。</li>
+<li><code>getPropertyPriority</code>(<code>propertyName</code>) 如果给定的属性使用了!<code>important</code>设置，则返回’<code>important</code>‘， 反则返回空字符串</li>
+<li><code>getPropertyValuee</code>(<code>propertyName</code>) 返回给定属性的字符串值</li>
+<li><code>item</code>(<code>index</code>) 返回给定位置的 <code>CSS</code>属性的名称</li>
+<li><code>removeProperty</code>(<code>propertyName</code>) 从样式中删除给定属性</li>
+<li><code>setProperty</code>(<code>propertyName</code>, <code>value</code>, <code>priority</code>) 将给定属性设置为相应的值，并加上优先权标志（<code>important</code>或者一个空字符串）</li>
+</ul>
+<p>计算样式，指实际应用于浏览器中表现出来的样式，可以使用 <code>document.defaultView.getComputedStyle()</code>方法，取得计算样式。该方法接受两个参数，要取得计算样式的元素和一个为元素字符串（可以为空）。用法：<br><code>document.defaultView.getComputedStyle(document.getElementById(&#39;mydiv&#39;), null)</code><br> <strong>注意，计算样式不可修改，只能访问</strong></p>
+<h4 id="操作样式表"><a href="#操作样式表" class="headerlink" title="操作样式表"></a>操作样式表</h4><p><code>CSSstyleSheet</code>类型表示的是样式表，包括通过 <code>&lt;link&gt;</code>元素包含的样式表和在 <code>&lt;style&gt;</code>元素中定义的样式表，该对象只是一套只读的接口（一个属性例外），不可修改。</p>
+<p>应用于文档中的样式表通过 <code>document.styleSheets</code>集合来访问，有 <code>length</code>属性，可以通过方括号或者 <code>item</code>()方法来访问没一个样式表:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> sheet = <span class="literal">null</span>;</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; <span class="built_in">document</span>.styleSheets.length; i++) &#123;</span><br><span class="line">  sheet = <span class="built_in">document</span>.styleSheets[i];</span><br><span class="line">  alert(sheet.href)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><code>CSSStyleSheets</code>继承自 <code>StyleSheet</code>，后者可以作为一个基础借口来定义非 <code>CSS</code>样式表，从中继承而来的属性有：</p>
+<ul>
+<li><code>disable</code>表示是否禁用样式表，可读写，true为禁用</li>
+<li><code>href</code>通过 <code>&lt;link&gt;</code>元素包含的，则是样式表的 <code>URL</code>，否则为 <code>Null</code></li>
+<li><code>media</code>当前样式表支持的所有媒体类型的集合</li>
+<li><code>ownerNode</code>指向拥有当前样式表的节点的指针,样式表可能是通过 <code>HTML</code>中的 <code>&lt;link&gt;</code><br><code>&lt;style&gt;</code>元素引入的。如果是通过@<code>import</code>引入，则该属性值为 <code>null</code></li>
+<li><code>parentStyleSheet</code>在当前样式是通过@<code>import</code>导入的情况下，该属性是一个指向引入他的样式表的指针</li>
+<li><code>title ownerNode</code>中的 <code>title</code>属性值</li>
+<li><code>type</code>表示样式表类型的字符串。对 <code>CSS</code>样式表而言，这个字符串时’<code>type</code>/<code>css</code>‘</li>
+<li><strong><code>cssRules</code></strong> 样式表中包含的样式规则的集合，<code>IE</code>中为 <code>rules</code>属性</li>
+<li><code>ownerRule</code>如果样式表示通过@<code>import</code>导入的，这个属性就是一个指针，指向表示导入的规则，否则，为 <code>null</code>。<code>ie</code>不支持</li>
+<li><code>deleteRule</code>(<code>index</code>) 删除 <code>cssRules</code>集合中指定位置的规则。<code>IE</code>使用 <code>removeRule</code>()</li>
+<li><code>insertRule</code>(<code>rule</code>, <code>index</code>) 向 <code>cssRules</code>集合中指定的位置插入 <code>rule</code>字符串。<code>IE</code>使用 <code>addRule</code>()</li>
+</ul>
+<p><code>CSS</code>规则：<br><code>CSSRule</code>规则表示样式表中的每一条规则。实际上，<code>CSSRule</code>是一个供其他多种类型继承的基类型，其中最常见的就是 <code>CSSStyleRule</code>类型，表示样式信息。<code>CSSStyleRule</code>对象包含以下属性，常用的有 <code>cssText selectorText ``style</code>三个属性：</p>
+<ul>
+<li><strong><code>cssText</code></strong> 返回整条规则对应的文本，只读属性。<code>IE</code>不支持</li>
+<li><code>parentRule</code>如果当前规则是导入的规则，这个属性引用的就是导入规则，否则为 <code>Null</code>，<code>IE</code>不支持</li>
+<li><code>parentStyleSheet</code>当前规则所属的样式表，<code>IE</code>不支持</li>
+<li><strong><code>selectorText</code></strong> 返回当前规则的选选择符文本，<code>IE</code>不支持</li>
+<li><strong><code>style</code></strong> 一个 <code>CSSStyleDeclaration</code>对象，可通过他设置和取得规则中特定的样式值，用法：</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> sheet = <span class="built_in">document</span>.styleSheets[<span class="number">0</span>]</span><br><span class="line"><span class="keyword">var</span> rules = sheet.cssRules</span><br><span class="line"><span class="keyword">var</span> rule = rules[<span class="number">0</span>]</span><br><span class="line">rule.style.backgroundColor = <span class="string">'red'</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><code>type</code>表示规则类型的常量值，对于样式规则，这个值为1，<code>IE</code>不支持</li>
+</ul>
+</div><ul class="post-copyright"><li><strong>本文标题：</strong><a href="https://kerbalhao.github.io/posts/5b12dbf7/">DOM学习</a></li><li><strong>本文作者：</strong><a href="https://kerbalhao.github.io">KerbalHao</a></li><li><strong>本文链接：</strong><a href="https://kerbalhao.github.io/posts/5b12dbf7/">https://kerbalhao.github.io/posts/5b12dbf7/</a></li><li><strong>版权声明：</strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" rel="external nofollow" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明出处！</li></ul><div><div class="recommend-post"><span class="is-size-6 has-text-grey has-mr-7"># 相关文章</span><br><span>  1.<a class="is-size-6" href="/posts/7928995a/" target="_blank">表单脚本</a><br></span><span>  2.<a class="is-size-6" href="/posts/4a819108/" target="_blank">事件(event)学习</a><br></span><span>  3.<a class="is-size-6" href="/posts/116542a5/" target="_blank">Js基本包装类型与拓展运算符学习</a><br></span><span>  4.<a class="is-size-6" href="/posts/a306f6df/" target="_blank">Js 引用类型类型引用类型类型(下)</a><br></span><span>  5.<a class="is-size-6" href="/posts/fdfe1e96/" target="_blank">Js 引用类型类型(上)</a><br></span><span>  6.<a class="is-size-6" href="/posts/43ab4c6/" target="_blank">Js 基本数据类型</a><br></span><span>  7.<a class="is-size-6" href="/posts/1afcff0/" target="_blank">Js运算符和基本语句</a><br></span></div><div class="recommend-post"><span class="is-size-6 has-text-grey has-mr-7"># 推荐文章</span><br><span>  1.<a class="is-size-6" href="/posts/66c0dcbe/" target="_blank">JS 12个重要概念以及reduce方法详解</a><br></span><span>  2.<a class="is-size-6" href="/posts/70af37a7/" target="_blank">React 思维导图</a><br></span><span>  3.<a class="is-size-6" href="/posts/f79b72d/" target="_blank">Lua学习</a><br></span><span>  4.<a class="is-size-6" href="/posts/f4f838c8/" target="_blank">个人 dota2 项目</a><br></span><span>  5.<a class="is-size-6" href="/posts/b8c7ab12/" target="_blank">基于HTTP网络层的前端性能优化</a><br></span><span>  6.<a class="is-size-6" href="/posts/3424aad5/" target="_blank">手写 promise</a><br></span></div></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/css/share.min.css"><div class="social-share"></div><script src="https://cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/js/social-share.min.js"></script></article></div><!--!--><nav class="post-navigation mt-4 level is-mobile"><div class="level-start"><a class="article-nav-prev level level-item link-muted" href="/posts/ba01e83a/"><i class="level-item fas fa-chevron-left"></i><span class="level-item">Scss基础</span></a></div><div class="level-end"><a class="article-nav-next level level-item link-muted" href="/posts/2cd522ad/"><span class="level-item">深拷贝与浅拷贝的区别，实现深拷贝的几种方法</span><i class="level-item fas fa-chevron-right"></i></a></div></nav><div class="card"><div class="card-content"><h3 class="title is-5">评论</h3><div id="comment-container"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1.6.0/dist/gitalk.css"><script> $.getScript('https://cdn.jsdelivr.net/gh/kerbalhao/kerbalhao.github.io/js/gitalk.min.js', function () { 
+            var gitalk = new Gitalk({
+            id: '65e7e2689b05d725c9b67bd98d6dd105',
+            repo: 'blog_comment',
+            owner: 'kerbalhao',
+            clientID: 'a71d38c4a8dafab99dc9',
+            clientSecret: '2ac14858f30545b5beea2e920b90d25dcbf1c78b',
+            admin: ["kerbalhao"],
+            createIssueManually: true,
+            distractionFreeMode: false,
+            perPage: 10,
+            pagerDirection: 'last',
+            
+            
+            enableHotKey: true,
+            isLocked: false
+        })
+        gitalk.render('comment-container')});</script></div></div></div><div class="column column-left is-4-tablet is-4-desktop is-4-widescreen  order-1 is-sticky"><!--!--><div class="card widget"><div class="card-content"><nav class="level"><div class="level-item has-text-centered flex-shrink-1"><div><figure class="image is-128x128 mx-auto mb-2"><img class="is-rounded" src="https://cdn.jsdelivr.net/gh/kerbalhao/blog_images/avatar.jpg" alt="KerbalHao"></figure><p class="title is-size-4 is-block line-height-inherit">KerbalHao</p><p class="is-size-6 is-block">不咕了，从今天开始种树</p><p class="is-size-6 is-flex justify-content-center"><i class="fas fa-map-marker-alt mr-1"></i><span>广州</span></p></div></div></nav><nav class="level is-mobile"><div class="level-item has-text-centered is-marginless"><div><p class="heading">文章</p><a href="/archives"><p class="title">58</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">分类</p><a href="/categories"><p class="title">11</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">标签</p><a href="/tags"><p class="title">44</p></a></div></div></nav><div class="level"><a class="level-item button is-primary is-rounded" href="/" target="_blank" rel="noopener">关注我</a></div><div class="level is-mobile"><a class="level-item button is-transparent is-white is-marginless" target="_blank" rel="noopener" title="Github" href="https://github.com/kerbalhao"><i class="fab fa-github"></i></a><a class="level-item button is-transparent is-white is-marginless" target="_blank" rel="noopener" title="Email" href="mailto:kerbalhao@foxmail.com"><i class="fa fa-envelope"></i></a><a class="level-item button is-transparent is-white is-marginless" target="_blank" rel="noopener" title="RSS" href="/atom.xml"><i class="fas fa-rss"></i></a></div><div><hr><p id="hitokoto">:D 一言句子获取中...</p><script type="text/javascript" defer>function getYiyan(){
+                                $.getJSON("https://v1.hitokoto.cn/", function (data) {
+                                if(data){
+                                    $('#hitokoto').html("");
+                                    $('#hitokoto').append("<strong style='color: #3273dc;'>"+data.hitokoto+"</strong>"+
+                                    "<p>"+"来源《"+data.from+"》</p><p>提供者-"+data.creator+"</p>");
+                                }});}
+                                $(function (){getYiyan();$('#hitokoto').click(function(){getYiyan();})});</script></div></div></div><div class="card widget"><div class="card-content"><div class="menu"><h3 class="menu-label">分类</h3><ul class="menu-list"><li><a class="level is-mobile is-marginless" href="/categories/ES6/"><span class="level-start"><span class="level-item">ES6</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile is-marginless" href="/categories/ES6-JS/"><span class="level-start"><span class="level-item">ES6 JS</span></span><span class="level-end"><span class="level-item tag">5</span></span></a></li><li><a class="level is-mobile is-marginless" href="/categories/ES6-JS-Morden-JavaScript-Tutorial/"><span class="level-start"><span class="level-item">ES6, JS, Morden JavaScript Tutorial</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile is-marginless" href="/categories/HTTP/"><span class="level-start"><span class="level-item">HTTP</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile is-marginless" href="/categories/JS%E8%AF%AD%E8%A8%80%E7%B2%BE%E7%B2%B9/"><span class="level-start"><span class="level-item">JS语言精粹</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile is-marginless" href="/categories/JS%E9%AB%98%E7%BA%A7%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/"><span class="level-start"><span class="level-item">JS高级程序设计</span></span><span class="level-end"><span class="level-item tag">8</span></span></a></li><li><a class="level is-mobile is-marginless" href="/categories/MDN/"><span class="level-start"><span class="level-item">MDN</span></span><span class="level-end"><span class="level-item tag">3</span></span></a></li><li><a class="level is-mobile is-marginless" href="/categories/Morden-JavaScript-Tutorial/"><span class="level-start"><span class="level-item">Morden JavaScript Tutorial</span></span><span class="level-end"><span class="level-item tag">8</span></span></a></li><li><a class="level is-mobile is-marginless" href="/categories/React/"><span class="level-start"><span class="level-item">React</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile is-marginless" href="/categories/browser/"><span class="level-start"><span class="level-item">browser</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><a class="level is-mobile is-marginless" href="/categories/"><span class="level-start"><span class="level-item">查看全部&gt;&gt;</span></span></a></ul></div></div></div><div class="card widget"><div class="card-content"><div class="menu"><h3 class="menu-label">归档</h3><ul class="menu-list"><li><a class="level is-mobile is-marginless" href="/archives/2022/04/"><span class="level-start"><span class="level-item">四月 2022</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile is-marginless" href="/archives/2021/04/"><span class="level-start"><span class="level-item">四月 2021</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile is-marginless" href="/archives/2021/03/"><span class="level-start"><span class="level-item">三月 2021</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile is-marginless" href="/archives/2021/01/"><span class="level-start"><span class="level-item">一月 2021</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile is-marginless" href="/archives/2020/04/"><span class="level-start"><span class="level-item">四月 2020</span></span><span class="level-end"><span class="level-item tag">3</span></span></a></li><a class="level is-mobile is-marginless" href="/archives/"><span class="level-start"><span class="level-item">查看全部&gt;&gt;</span></span></a></ul></div></div></div><div class="card widget"><div class="card-content"><div class="menu"><h3 class="menu-label">标签</h3><div class="field is-grouped is-grouped-multiline"><div class="control"><a class="tags has-addons" href="/tags/JS/"><span class="tag">JS</span><span class="tag is-grey-lightest">9</span></a></div><div class="control"><a class="tags has-addons" href="/tags/HTML5/"><span class="tag">HTML5</span><span class="tag is-grey-lightest">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/JS-%E5%BC%95%E7%94%A8%E7%B1%BB%E5%9E%8B/"><span class="tag">JS 引用类型</span><span class="tag is-grey-lightest">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Bootstrap/"><span class="tag">Bootstrap</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/CSS/"><span class="tag">CSS</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/CSS-HTML5/"><span class="tag">CSS HTML5</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/CSS-MDN/"><span class="tag">CSS MDN</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/CSS-flex-grid/"><span class="tag">CSS flex grid</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/ES6-JS-%E5%9D%97%E7%BA%A7/"><span class="tag">ES6 JS 块级</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/ES6-Set-Map-JS/"><span class="tag">ES6 Set Map JS</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/ES6-Symbol-JS/"><span class="tag">ES6 Symbol JS</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/ES6-%E5%87%BD%E6%95%B0-JS/"><span class="tag">ES6 函数 JS</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/ES6-%E5%AF%B9%E8%B1%A1-JS/"><span class="tag">ES6 对象 JS</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/ES6-%E8%A7%A3%E6%9E%84-JS/"><span class="tag">ES6 解构 JS</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/ES6-%E8%BF%AD%E4%BB%A3%E5%99%A8%E4%B8%8E%E7%94%9F%E6%88%90%E5%99%A8-JS/"><span class="tag">ES6 迭代器与生成器 JS</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/ES6-%E8%BF%AD%E4%BB%A3%E5%99%A8%E4%B8%8E%E7%94%9F%E6%88%90%E5%99%A8-JS-MJT/"><span class="tag">ES6 迭代器与生成器 JS MJT</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/HTML-MDN/"><span class="tag">HTML MDN</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/HTTP/"><span class="tag">HTTP</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Head-First-CSS-HTML/"><span class="tag">Head-First CSS HTML</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/JQ-js/"><span class="tag">JQ js</span><span class="tag is-grey-lightest">1</span></a></div></div><div class="field is-grouped is-grouped-multiline"><a class="tags has-addons" href="/tags/"><span class="tag">查看全部&gt;&gt;</span></a></div></div></div></div></div></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="https://cdn.jsdelivr.net/gh/kerbalhao/blog_images/log.jpg" alt="kerbalHao" height="28"></a><p class="size-small"><span>&copy; 2022 KerbalHao</span>  Powered by <a href="https://hexo.io/" target="_blank">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank">Icarus</a>,Modify by <a href="https://github.com/removeif/hexo-theme-amazing" target="_blank">removeif</a> <br><span>© 版权说明：[本网站所有内容均收集于互联网或自己创作,<br>    方便于网友与自己学习交流，如有侵权，请<a href="/message" target="_blank">留言</a>，立即处理]<br></span><div class="size-small"><span id="busuanzi_container_site_uv">❤️感谢<strong> <span id="busuanzi_value_site_uv">99+</span> </strong></span>小伙伴的<strong> <span id="busuanzi_value_site_pv">99+</span> </strong>次光临！❤️</div></p></div><div class="level-end"><div class="field has-addons"><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Creative Commons" href="https://creativecommons.org/"><i class="fab fa-creative-commons"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/"><i class="fab fa-creative-commons-by"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/kerbalhao"><i class="fab fa-github"></i></a></p></div></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script>moment.locale("zh-CN");</script><script>var IcarusThemeSettings = {
+            site: {
+                url: 'https://kerbalhao.github.io',
+                external_link: {"enable":true,"exclude":[]}
+            },
+            article: {
+                highlight: {
+                    clipboard: true,
+                    fold: 'unfolded'
+                }
+            }
+        };</script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script src="https://cdn.jsdelivr.net/gh/kerbalhao/kerbalhao.github.io/js/animation.min.js"></script><a id="back-to-top" title="回到顶端" href="javascript:;"><i class="fas fa-chevron-up"></i></a><script src="https://cdn.jsdelivr.net/gh/kerbalhao/kerbalhao.github.io/js/back-to-top.min.js" defer></script><!--!--><!--!--><script src="https://cdn.jsdelivr.net/npm/lightgallery@1.6.12/dist/js/lightgallery-all.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/js/jquery.justifiedGallery.min.js" defer></script><!--!--><!--!--><!--!--><script src="https://cdn.jsdelivr.net/gh/kerbalhao/kerbalhao.github.io/js/toc.min.js" defer></script><script src="https://cdn.jsdelivr.net/gh/kerbalhao/kerbalhao.github.io/js/main.min.js" defer></script><script src="https://cdn.jsdelivr.net/gh/kerbalhao/kerbalhao.github.io/js/comment-issue-data.min.js" defer></script><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kerbalhao/kerbalhao.github.io/css/insight.min.css"><div class="searchbox ins-search"><div class="searchbox-container ins-search-container"><div class="searchbox-input-wrapper"><input class="searchbox-input ins-search-input" type="text" placeholder="想要查找什么..."><span class="searchbox-close ins-close ins-selectable"><i class="fa fa-times-circle"></i></span></div><div class="searchbox-result-wrapper ins-section-wrapper"><div class="ins-section-container"></div></div></div></div><script>(function (window) {
+            var INSIGHT_CONFIG = {
+                TRANSLATION: {
+                    POSTS: '文章',
+                    PAGES: '页面',
+                    CATEGORIES: '分类',
+                    TAGS: '标签',
+                    UNTITLED: '(无标题)',
+                },
+                CONTENT_URL: 'https://cdn.jsdelivr.net/gh/kerbalhao/kerbalhao.github.io/content.json',
+            };
+            window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+        })(window);</script><script src="https://cdn.jsdelivr.net/gh/kerbalhao/kerbalhao.github.io/js/insight.min.js" defer></script></body></html>

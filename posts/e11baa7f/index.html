@@ -1,0 +1,349 @@
+<!doctype html>
+<html lang="zh"><head><meta charset="utf-8"><meta name="generator" content="Hexo 4.2.0"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>MDN教程学习-CSS - kerbalHao</title><meta description="CSS基本连接符 空格连接符(‘ ‘)，表示选择所有后代元素 div p，表示选择 div内的所有 p元素 &amp;gt; 连接符, 表示选择直接子元素 div &amp;gt; p，表示选择 div内的直接的子元素 p(们) ，p(们) 的父元素就是 div + 连接符，表示选择相邻的唯一兄弟元素。div + p，表示选择 div后面的第一个 p元素 ~ 连接符，表示选择之后的所有符合的兄弟元素。div ~"><meta property="og:type" content="article"><meta property="og:title" content="MDN教程学习-CSS"><meta property="og:url" content="https://kerbalhao.github.io/posts/e11baa7f/"><meta property="og:site_name" content="KerbalHao"><meta property="og:description" content="CSS基本连接符 空格连接符(‘ ‘)，表示选择所有后代元素 div p，表示选择 div内的所有 p元素 &amp;gt; 连接符, 表示选择直接子元素 div &amp;gt; p，表示选择 div内的直接的子元素 p(们) ，p(们) 的父元素就是 div + 连接符，表示选择相邻的唯一兄弟元素。div + p，表示选择 div后面的第一个 p元素 ~ 连接符，表示选择之后的所有符合的兄弟元素。div ~"><meta property="og:locale" content="zh_CN"><meta property="og:image" content="https://cdn.jsdelivr.net/gh/kerbalhao/blog_images/avatar.jpg"><meta property="article:published_time" content="2019-01-18T10:36:09.000Z"><meta property="article:modified_time" content="2022-04-06T10:48:44.280Z"><meta property="article:author" content="KerbalHao"><meta property="article:tag" content="CSS MDN"><meta property="twitter:card" content="summary"><meta property="twitter:image" content="https://cdn.jsdelivr.net/gh/kerbalhao/blog_images/avatar.jpg"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://kerbalhao.github.io/posts/e11baa7f/"},"headline":"MDN教程学习-CSS","image":["https://cdn.jsdelivr.net/gh/kerbalhao/blog_images/avatar.jpg"],"datePublished":"2019-01-18T10:36:09.000Z","dateModified":"2022-04-06T10:48:44.280Z","author":{"@type":"Person","name":"KerbalHao"},"description":"CSS基本连接符 空格连接符(‘ ‘)，表示选择所有后代元素 div p，表示选择 div内的所有 p元素 &gt; 连接符, 表示选择直接子元素 div &gt; p，表示选择 div内的直接的子元素 p(们) ，p(们) 的父元素就是 div + 连接符，表示选择相邻的唯一兄弟元素。div + p，表示选择 div后面的第一个 p元素 ~ 连接符，表示选择之后的所有符合的兄弟元素。div ~"}</script><link rel="alternative" href="/atom.xml" title="kerbalHao" type="application/atom+xml"><link rel="icon" href="https://cdn.jsdelivr.net/gh/removeif/removeif.github.io@latest/img/wico.png"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:400,600|Source+Code+Pro|Monda:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|Microsoft YaHei:300,300italic,400,400italic,700,700italic|PT Mono:300,300italic,400,400italic,700,700italic&amp;amp;subset=latin,latin-ext|Inconsolata|Itim|Lobster.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/atom-one-dark.css"><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><script src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" defer></script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.6.12/dist/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/css/justifiedGallery.min.css"><!--!--><!--!--><script src="https://cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js"></script><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kerbalhao/kerbalhao.github.io/css/style.min.css"><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/gh/kerbalhao/kerbalhao.github.io/js/globalUtils.min.js"></script></head><body class="is-3-column has-navbar-fixed-top"><nav class="navbar navbar-main is-fixed-top"><div class="container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="https://cdn.jsdelivr.net/gh/kerbalhao/blog_images/log.jpg" alt="kerbalHao" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">首页</a><a class="navbar-item" href="/archives">归档</a><a class="navbar-item" href="/categories">分类</a><a class="navbar-item" href="/tags">标签</a><a class="navbar-item" href="/self-talking">碎碎念</a><a class="navbar-item" href="/message">留言</a><a class="navbar-item" href="/about">关于</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/kerbalhao"><i class="fab fa-github"></i></a><a class="navbar-item search" title="搜索" href="javascript:;"><i class="fas fa-search"></i></a><a class="navbar-item" id="night-nav" title="Night Mode" href="javascript:;"><i class="fas fa-moon" id="night-icon"></i></a></div></div></div></nav><script type="text/javascript" src="https://cdn.jsdelivr.net/gh/kerbalhao/kerbalhao.github.io/js/theme-setting.min.js"></script><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-9-widescreen"><div class="card"><article class="card-content article" role="article"><div class="article-meta size-small is-uppercase level is-mobile"><div class="level-left"><time class="level-item" dateTime="2019-01-18T10:36:09.000Z">2019-01-18</time><a class="commentCountImg" href="/posts/e11baa7f/#comment-container"><span class="display-none-class">fce3bed406a02f4eb2b6f5bb3d8e7006</span><img class="not-gallery-item" src="https://cdn.jsdelivr.net/gh/kerbalhao/kerbalhao.github.io/img/chat.svg"> <span class="commentCount" id="fce3bed406a02f4eb2b6f5bb3d8e7006"> 99+</span>    </a><span class="level-item">30 分钟 读完 (大约 4549 个字)</span><span class="level-item" id="busuanzi_container_page_pv"><i class="far fa-eye"></i>&nbsp;&nbsp;<span id="busuanzi_value_page_pv">0</span>次访问</span></div></div><h1 class="title is-3 is-size-4-mobile">MDN教程学习-CSS</h1><div class="content"><h1 id="CSS"><a href="#CSS" class="headerlink" title="CSS"></a>CSS</h1><h2 id="基本"><a href="#基本" class="headerlink" title="基本"></a>基本</h2><h3 id="连接符"><a href="#连接符" class="headerlink" title="连接符"></a>连接符</h3><ol>
+<li>空格连接符(‘ ‘)，表示选择所有后代元素 <code>div p</code>，表示选择 <code>div</code>内的所有 <code>p</code>元素</li>
+<li>&gt; 连接符, 表示选择直接子元素 <code>div &gt; p</code>，表示选择 <code>div</code>内的直接的子元素 <code>p</code>(们) ，<code>p</code>(们) 的父元素就是 <code>div</code></li>
+<li>+ 连接符，表示选择相邻的唯一兄弟元素。<code>div + p</code>，表示选择 <code>div</code>后面的第一个 <code>p</code>元素</li>
+<li>~ 连接符，表示选择之后的所有符合的兄弟元素。<code>div ~ p</code>，表示选择 <code>div</code>后面的所有 <code>p</code>元素</li>
+</ol>
+<a id="more"></a>
+
+
+<h3 id="单位"><a href="#单位" class="headerlink" title="单位"></a>单位</h3><p>1em 相对单位，与字体大小有关，默认为页面字体大小，但会继承父元素的字体大小</p>
+<p>1rem(<code>root em</code>),一直保持页面字体大小，不继承父元素字体大小</p>
+<h3 id="特殊规则"><a href="#特殊规则" class="headerlink" title="特殊规则"></a>特殊规则</h3><p><code>@support</code> 查询，用于判断浏览器是否支持某个特性，如果支持，则对选择器选中的元素使用该特性，例如：</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">@supports</span> (<span class="attribute">display:</span> grid) &#123;</span><br><span class="line">  <span class="selector-class">.item</span> &#123;</span><br><span class="line">      <span class="attribute">width</span>: auto;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>上面是对于浏览器是否支持 <code>grid</code> 布局进行了判断，如果支持 <code>grid</code> ，则将 <code>.item</code> 元素的宽度设置为 <code>auto</code></p>
+<h2 id="字体"><a href="#字体" class="headerlink" title="字体"></a>字体</h2><h3 id="text"><a href="#text" class="headerlink" title="text"></a><code>text</code></h3><table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>color</td>
+<td>Sets the color of text</td>
+</tr>
+<tr>
+<td>direction</td>
+<td>Specifies the text direction/writing direction</td>
+</tr>
+<tr>
+<td>letter-spacing</td>
+<td>Increases or decreases the space between characters in a text</td>
+</tr>
+<tr>
+<td>line-height</td>
+<td>Sets the line height</td>
+</tr>
+<tr>
+<td>text-align</td>
+<td>Specifies the horizontal alignment of text</td>
+</tr>
+<tr>
+<td>text-decoration</td>
+<td>Specifies the decoration added to text</td>
+</tr>
+<tr>
+<td>text-indent</td>
+<td>Specifies the indentation of the first line in a text-block</td>
+</tr>
+<tr>
+<td>text-shadow</td>
+<td>Specifies the shadow effect added to text</td>
+</tr>
+<tr>
+<td>text-transform</td>
+<td>Controls the capitalization of text</td>
+</tr>
+<tr>
+<td>text-overflow</td>
+<td>Specifies how overflowed content that is not displayed should be signaled to the user</td>
+</tr>
+<tr>
+<td>unicode-bidi</td>
+<td>Used together with the direction property to set or return whether the text should be overridden to support multiple languages in the same document</td>
+</tr>
+<tr>
+<td>vertical-align</td>
+<td>Sets the vertical alignment of an element</td>
+</tr>
+<tr>
+<td>white-space</td>
+<td>Specifies how white-space inside an element is handled</td>
+</tr>
+<tr>
+<td>word-spacing</td>
+<td>Increases or decreases the space between words in a text</td>
+</tr>
+</tbody></table>
+<h3 id="font"><a href="#font" class="headerlink" title="font"></a>font</h3><p>font-size: W3C标准推荐使用em单位，一般来说 em 以页面字体大小为基准,一般为 16px = 1em，应对IE浏览器，使用 em 时，可以在样式表开头添加一条样式 <code>body {font-size: 100%}</code>,使用如下：</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">body</span> &#123;</span><br><span class="line">  <span class="attribute">font-size</span>: <span class="number">100%</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">h1</span> &#123;</span><br><span class="line">  <span class="attribute">font-size</span>: <span class="number">2.5em</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>font-variant:normal|small-caps|initial|inherit;<br>The font-variant property specifies whether or not a text should be displayed in a small-caps font.(which means uppercase the letter with a smaller font size)</p>
+<h3 id="align"><a href="#align" class="headerlink" title="align"></a>align</h3><p>text-align: left|center|right(horizontal align)<br>vertical-align: top|center|bottom<br>元素水平居中：</p>
+<ol>
+<li>margin: auto</li>
+<li>使用 position: absolute;left: 50%; transform: translateX(-50%)</li>
+</ol>
+<p>文本/图片（inline元素）水平垂直居中：</p>
+<ol>
+<li>使用 padding: vertical horizonal; text-align: center</li>
+<li>使用 position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%)  (translate 的 % 单位，是基于该元素的宽和高的百分比)</li>
+<li>设置 line-height 的值与元素的 height 值一致，文字垂直居中，详细可看<a href="https://segmentfault.com/a/1190000005122321">CSS行高（line-height）及文本垂直居中原理</a></li>
+</ol>
+<h2 id="区块"><a href="#区块" class="headerlink" title="区块"></a>区块</h2><h3 id="max-width-min-width"><a href="#max-width-min-width" class="headerlink" title="max-width|min-width"></a>max-width|min-width</h3><p>max-height|min-height<br>如果要设置最大最小，不要设置基础的width和height，因为最大最小会被覆盖</p>
+<h3 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h3><p>background-color<br>background-image<br>background-repeat<br>background-attachment<br>background-position<br>background:is shorthand property of all above, allow missing value, but need to in order</p>
+<p>box-sizing:content-box(width数值不包含内边距和边框宽度)|border-box(width数值包括了内边距和边框宽度)</p>
+<p><code>background-image</code> 属性可以使用函数 <code>linear-gradient(direction, color1, color2 [position], color3 [position]....)</code> 设置背景渐变,position 用于控制在哪渐变。</p>
+<p><code>bg-image</code> 还可以使用多个背景，每个背景按由近到远次序排列，第一个背景置于顶层。</p>
+<p><code>bg-clip</code> 用于设置背景图像或颜色出现的区域，值介绍：</p>
+<ul>
+<li>content-box : 只出现于 content 区域</li>
+<li>padding-box : 出现于 padding 和 content 区域</li>
+<li>border-box ： 出现于 border padding 和 content 区域</li>
+</ul>
+<p>简写属性 <code>background</code>: 可以在一次声明中定义一个或多个属性</p>
+<p><code>background</code> 属性被指定多个背景层时，使用逗号分隔每个背景层。</p>
+<p>每一层的语法如下：</p>
+<p>在每一层中，下列的值可以出现 0 次或 1 次：</p>
+<ul>
+<li><code>&lt;attachment&gt;</code></li>
+<li><code>&lt;bg-image&gt;</code></li>
+<li><code>&lt;position&gt;</code></li>
+<li><code>&lt;bg-size&gt;</code></li>
+<li><code>&lt;repeat-style&gt;</code></li>
+<li><code>&lt;bg-size&gt;</code> 只能紧接着 <code>&lt;position&gt;</code> 出现，以”/“分割，如： “center/80%”.</li>
+<li><code>&lt;box&gt;</code> 可能出现 0 次、1 次或 2 次。如果出现 1 次，它同时设定 background-origin 和 <code>background-clip</code>。如果出现 2 次，第一次的出现设置 <code>background-origin</code>，第二次的出现设置 <code>background-clip</code>。</li>
+<li><code>&lt;background-color&gt;</code> 只能被包含在最后一层。</li>
+</ul>
+<h3 id="边框"><a href="#边框" class="headerlink" title="边框"></a>边框</h3><p><code>border-image</code> CSS属性允许在元素的边框上绘制图像, 使用 border-image 时，其将会替换掉 border-style 属性所设置的边框样式。</p>
+<p>相关属性介绍：</p>
+<ul>
+<li>border-image-source: url(url) : 设置边框图片</li>
+<li>border-image-slice: 该属性将 <code>border-image-source</code> 引入的文件，根据值用4条线切为9宫格，图片的4个角的形状为相应的边框的角的形状，值如下：<ul>
+<li>数字或百分比： 百分比是基于图片大小来说，数字是对于矢量图片的偏移值</li>
+<li>fill : 确定是否将图片填满内容区</li>
+</ul>
+</li>
+<li>border-image-width: 定义图像边框宽度。假如border-image-width大于已指定的border-width，那么它将向内部(padding/content)扩展.其值与margin等的设置相似。<br>border-image-outset: 定义边框图像可超出边框盒的大小。值与margin等的设置相似</li>
+<li>border-image-repeat: 指定我们希望图像如何填充边界，值如下：<ul>
+<li>stretch：默认;侧面的图像被拉伸来填满边界。这通常看起来很糟糕和像素化，所以不推荐。</li>
+<li>repeat：边图像被重复，直到边界被填满。根据具体情况，这可能看起来不错，但您可能会看到一些难看的图像片段。</li>
+<li>round： 边的图像被重复，直到边界被填满，它们都被稍微拉伸，这样就不会出现碎片。(<strong>推荐</strong>)</li>
+<li>space：边图像被重复，直到边界被填满，每个拷贝之间添加了少量的间隔，这样就不会出现任何片段。这个值只在Safari(9+)和Internet Explorer(11+)中得到支持。</li>
+</ul>
+</li>
+</ul>
+<h3 id="outline"><a href="#outline" class="headerlink" title="outline"></a>outline</h3><p>outline 环绕在 border 外，对盒模型的大小没有任何影响，还有可能会与其他元素的内容产生重叠效果。用法与 border 类似，有一个 outline-offset 属性，可以设置outline 与 border 的距离。两者之间的距离是透明的</p>
+<h3 id="list"><a href="#list" class="headerlink" title="list"></a>list</h3><table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>list-style</td>
+<td>Sets all the properties for a list in one declaration</td>
+</tr>
+<tr>
+<td>list-style-image</td>
+<td>Specifies an image as the list-item marker</td>
+</tr>
+<tr>
+<td>list-style-position</td>
+<td>Specifies the position of the list-item markers (bullet points)</td>
+</tr>
+<tr>
+<td>list-style-type</td>
+<td>Specifies the type of list-item marker</td>
+</tr>
+</tbody></table>
+<h3 id="table"><a href="#table" class="headerlink" title="table"></a>table</h3><table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>border</td>
+<td>Sets all the border properties in one declaration</td>
+</tr>
+<tr>
+<td>border-collapse</td>
+<td>Specifies whether or not table borders should be collapsed</td>
+</tr>
+<tr>
+<td>border-spacing</td>
+<td>Specifies the distance between the borders of adjacent cells</td>
+</tr>
+<tr>
+<td>caption-side</td>
+<td>Specifies the placement of a table caption</td>
+</tr>
+<tr>
+<td>empty-cells</td>
+<td>Specifies whether or not to display borders and background on empty cells in a table</td>
+</tr>
+<tr>
+<td>table-layout</td>
+<td>Sets the layout algorithm to be used for a table(设定表格宽度显示布局： auto</td>
+</tr>
+</tbody></table>
+<h2 id="布局"><a href="#布局" class="headerlink" title="布局"></a>布局</h2><h3 id="visibility"><a href="#visibility" class="headerlink" title="visibility"></a>visibility</h3><p>visibility:hidden;隐藏元素，但页面仍然保留布局<br>display:none;隐藏元素，页面布局不保留，仿佛该元素不存在</p>
+<h3 id="float"><a href="#float" class="headerlink" title="float"></a>float</h3><p>float 元素可以设置正常的 margin,padding 和 border 值。float 元素会超出正常的文档流。</p>
+<p>float 元素中,当浮动元素的高度不一致，清除浮动后可能会出现高度问题，导致接下来的区块元素与高度最大的元素仅仅贴合在一起，形成难看的布局，我们可以使用以下 clearfix 区块方法或者 overflow:auto 方法：</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*clearfix 区块方法主要是使用一个空白的区块元素 &lt;div&gt;，取代需要的元素，与浮动元素的底部紧密贴合，而后在将需要的元素卸载 clearfix 区块后面，解决高度问题*/</span></span><br><span class="line"><span class="selector-class">.clearfix</span> &#123;</span><br><span class="line">  <span class="attribute">content</span>: <span class="string">''</span>;</span><br><span class="line">  <span class="attribute">clear</span>: both;</span><br><span class="line">  <span class="attribute">display</span>:table</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/* overflow 只是使用bfc，固定浮动元素宽度并将超出部分滚动而已 */</span></span><br><span class="line"><span class="selector-class">.clearfix</span> &#123;</span><br><span class="line">  <span class="attribute">overflow</span>: auto</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="定位-position"><a href="#定位-position" class="headerlink" title="定位(position)"></a>定位(position)</h3><p>position: absolute; 绝对定位是基于最近的 非静态定位(static) 的祖先元素定位的</p>
+<p>position: sticky，是一个比其他属性要新一些的属性。这基本上是相对位置和固定位置之间的混合，其允许定位的元件像它被相对定位一样动作，直到其滚动到某一阈值点（例如，从视口顶部10像素），之后它变得固定。</p>
+<h3 id="Flex-弹性布局"><a href="#Flex-弹性布局" class="headerlink" title="Flex(弹性布局)"></a>Flex(弹性布局)</h3><p>(详情请看阮一峰-flex)[<a href="http://www.ruanyifeng.com/blog/2015/07/flex-grammar.html]">http://www.ruanyifeng.com/blog/2015/07/flex-grammar.html]</a></p>
+<p>采用 Flex 布局的元素，称为 Flex 容器（flex container），简称”容器”。它的所有子元素自动成为容器成员，称为 Flex 项目（flex item），简称”项目”。</p>
+<p>容器默认存在两根轴：水平的主轴（main axis）和垂直的交叉轴（cross axis）。主轴的开始位置（与边框的交叉点）叫做main start，结束位置叫做main end；交叉轴的开始位置叫做cross start，结束位置叫做cross end。</p>
+<p>项目默认沿主轴排列。单个项目占据的主轴空间叫做main size，占据的交叉轴空间叫做cross size。</p>
+<h4 id="容器属性"><a href="#容器属性" class="headerlink" title="容器属性"></a>容器属性</h4><p>以下6个属性设置在容器上。</p>
+<h5 id="flex-direction"><a href="#flex-direction" class="headerlink" title="flex-direction"></a>flex-direction</h5><p>flex-direction属性决定主轴的方向（即项目的排列方向）。</p>
+<p>语法： <code>flex-direction: row | row-reverse | column | column-reverse;</code></p>
+<p>值介绍：</p>
+<ul>
+<li>row（默认值）：主轴为水平方向，起点在左端。</li>
+<li>row-reverse：主轴为水平方向，起点在右端。</li>
+<li>column：主轴为垂直方向，起点在上沿。</li>
+<li>column-reverse：主轴为垂直方向，起点在下沿。</li>
+</ul>
+<h5 id="flex-wrap"><a href="#flex-wrap" class="headerlink" title="flex-wrap"></a>flex-wrap</h5><p>默认情况下，项目都排在一条线（又称”轴线”）上。flex-wrap属性定义，如果一条轴线排不下，如何换行。</p>
+<p>语法: <code>flex-wrap: nowrap | wrap | wrap-reverse;</code></p>
+<p>值介绍：</p>
+<ul>
+<li>nowrap（默认）：不换行。</li>
+<li>wrap：换行，第一行在上方。</li>
+<li>wrap-reverse：换行，第一行在下方。</li>
+</ul>
+<h5 id="flex-flow"><a href="#flex-flow" class="headerlink" title="flex-flow"></a>flex-flow</h5><p>flex-flow属性是flex-direction属性和flex-wrap属性的简写形式，默认值为row nowrap。</p>
+<h5 id="justify-content"><a href="#justify-content" class="headerlink" title="justify-content"></a>justify-content</h5><p>justify-content属性定义了项目在主轴上的对齐方式。</p>
+<p>语法： <code>justify-content: flex-start | flex-end | center | space-between | space-around;</code></p>
+<p>值介绍：</p>
+<ul>
+<li>flex-start（默认值）：左对齐</li>
+<li>flex-end：右对齐</li>
+<li>center： 居中</li>
+<li>space-between：两端对齐，项目之间的间隔都相等。与 space-around 区别在于，首末两个项目与容器没有间隔</li>
+<li>space-around：每个项目两侧的间隔相等。所以，项目之间的间隔比项目与边框的间隔大一倍。</li>
+</ul>
+<h5 id="align-items"><a href="#align-items" class="headerlink" title="align-items"></a>align-items</h5><p>align-items属性定义项目在交叉轴上如何对齐。</p>
+<p>语法： <code>align-items: flex-start | flex-end | center | baseline | stretch;</code></p>
+<p>值介绍：</p>
+<ul>
+<li>flex-start：交叉轴的起点对齐。</li>
+<li>flex-end：交叉轴的终点对齐。</li>
+<li>center：交叉轴的中点对齐。</li>
+<li>baseline: 项目的第一行文字的基线对齐。</li>
+<li>stretch（默认值）：如果项目未设置高度或设为auto，将占满整个容器的高度。</li>
+</ul>
+<h5 id="align-content"><a href="#align-content" class="headerlink" title="align-content"></a>align-content</h5><p>align-content属性定义了多根轴线的对齐方式。如果项目只有一根轴线，该属性不起作用。一定程度上可理解为 只有当 flex-wrap 设置为 wrap 时，有多行项目时才能生效。</p>
+<p>语法： <code>align-content: flex-start | flex-end | center | space-between | space-around | stretch;</code></p>
+<p>值介绍：</p>
+<ul>
+<li>flex-start：与交叉轴的起点对齐。</li>
+<li>flex-end：与交叉轴的终点对齐。</li>
+<li>center：与交叉轴的中点对齐。</li>
+<li>space-between：与交叉轴两端对齐，轴线之间的间隔平均分布。</li>
+<li>space-around：每根轴线两侧的间隔都相等。所以，轴线之间的间隔比轴线与边框的间隔大一倍。</li>
+<li>stretch（默认值）：轴线占满整个交叉轴。</li>
+</ul>
+<h4 id="项目属性"><a href="#项目属性" class="headerlink" title="项目属性"></a>项目属性</h4><h5 id="order"><a href="#order" class="headerlink" title="order"></a>order</h5><p>order属性定义项目的排列顺序。数值越小，排列越靠前，默认为0。可以为负数</p>
+<p>语法： <code>order: &lt;integer&gt;;</code></p>
+<h5 id="flex-grow"><a href="#flex-grow" class="headerlink" title="flex-grow"></a>flex-grow</h5><p>flex-grow属性定义项目的放大比例，默认为0，即如果存在剩余空间，也不放大。（剩余空间：容器内的 外边距，内边距，边框和内容框大小以外 的空间）</p>
+<p>语法： <code>flex-grow: &lt;number&gt;; /* default 0 */</code></p>
+<p>如果所有项目的flex-grow属性都为1，则它们将等分剩余空间（如果有的话）。如果一个项目的flex-grow属性为2，其他项目都为1，则前者占据的剩余空间将比其他项多一倍。</p>
+<h5 id="flex-shrink"><a href="#flex-shrink" class="headerlink" title="flex-shrink"></a>flex-shrink</h5><p>flex-shrink属性定义了项目的缩小比例，默认为1，即如果空间不足，该项目将缩小。</p>
+<p>语法：  <code>flex-shrink: &lt;number&gt;; /* default 1 */</code></p>
+<p>如果所有项目的flex-shrink属性都为1，当空间不足时，都将等比例缩小。如果一个项目的flex-shrink属性为0，其他项目都为1，则空间不足时，前者不缩小，其他缩小。</p>
+<p>负值对该属性无效。</p>
+<h5 id="flex-basis"><a href="#flex-basis" class="headerlink" title="flex-basis"></a>flex-basis</h5><p>flex-basis属性定义了在分配多余空间之前，项目占据的主轴空间（main size）。浏览器根据这个属性，计算主轴是否有多余空间。它的默认值为auto，即项目的本来大小。</p>
+<p>语法： <code>flex-basis: &lt;length&gt; | auto; /* default auto */</code></p>
+<p>它可以设为跟width或height属性一样的值（比如350px），则项目将占据固定空间。</p>
+<h5 id="flex"><a href="#flex" class="headerlink" title="flex"></a>flex</h5><p>flex属性是flex-grow, flex-shrink 和 flex-basis的简写，默认值为0 1 auto。后两个属性可选。</p>
+<p>语法: <code>flex: none | [ &lt;&#39;flex-grow&#39;&gt; &lt;&#39;flex-shrink&#39;&gt;? || &lt;&#39;flex-basis&#39;&gt; ]</code></p>
+<p> 该属性有两个快捷值：auto (1 1 auto) 和 none (0 0 auto)。</p>
+<p>建议优先使用这个属性，而不是单独写三个分离的属性，因为浏览器会推算相关值。</p>
+<h5 id="align-self"><a href="#align-self" class="headerlink" title="align-self"></a>align-self</h5><p>align-self属性允许单个项目有与其他项目不一样的对齐方式，可覆盖align-items属性。默认值为 <code>auto</code>，表示继承父元素的 <code>align-items</code> 属性，如果没有父元素，则等同于 <code>stretch</code>。</p>
+<p>语法： <code>align-self: auto | flex-start | flex-end | center | baseline | stretch;</code></p>
+<p>该属性可能取6个值，除了auto，其他都与align-items属性完全一致。</p>
+<h3 id="Grid-网格布局"><a href="#Grid-网格布局" class="headerlink" title="Grid(网格布局)"></a>Grid(网格布局)</h3><p>详细看阮一峰的 <a href="http://www.ruanyifeng.com/blog/2019/03/grid-layout-tutorial.html">CSS Grid 网格布局教程</a></p>
+<p><strong>注意，网格布局的项目中的 width 属性如果设置为 百分数，则该百分数值是基于容器对项目的 grid-template-column 属性的宽度定义的。</strong></p>
+<h3 id="多列布局简单方法"><a href="#多列布局简单方法" class="headerlink" title="多列布局简单方法"></a>多列布局简单方法</h3><p>使用基础的 <code>column-count</code> 属性和与之配套的其他基本属性。</p>
+<h4 id="columns"><a href="#columns" class="headerlink" title="columns"></a>columns</h4><p><code>columns</code> 是一个简写的CSS 属性，允许同时设置 <code>column-width</code> 和 <code>column-count</code> 属性。<br>语法：<code>columns: &lt;&#39;column-width&#39;&gt; || &lt;&#39;column-count&#39;&gt;</code></p>
+<h5 id="column-count"><a href="#column-count" class="headerlink" title="column-count"></a>column-count</h5><p><code>column-content</code> 用于确定需要分成多少列布局，语法：<code>column-count: auto | &lt;integer&gt;</code></p>
+<h5 id="column-width"><a href="#column-width" class="headerlink" title="column-width"></a>column-width</h5><p><code>column-width</code> 用于确定布局内每列需要的宽度，根据该宽度尽可能的划分多的列,语法 <code>column-width: auto | &lt;length&gt;</code></p>
+<h4 id="column-rule"><a href="#column-rule" class="headerlink" title="column-rule"></a>column-rule</h4><p>column-rule 是一个简写的css 属性，允许同时设置 <code>column-rule-width</code>, <code>column-rule-style</code> 和 <code>column-rule-color</code> 的值</p>
+<p>语法: <code>column-rule: &lt;&#39;column-rule-width&#39;&gt; || &lt;&#39;column-rule-style&#39;&gt; || &lt;&#39;column-rule-color&#39;&gt;</code>,与 <code>border</code> 属性一致</p>
+<h5 id="column-rule-style"><a href="#column-rule-style" class="headerlink" title="column-rule-style"></a>column-rule-style</h5><p>CSS 特性 <code>column-rule-style</code> 让你可以设置在多列布局中被画在两列之间的规则（线条）的样式。语法同 <code>border-style</code> 一致</p>
+<h5 id="column-rule-color"><a href="#column-rule-color" class="headerlink" title="column-rule-color"></a>column-rule-color</h5><p>CSS 特性 <code>column-rule-color</code> 让你可以设置在多列布局中被画在两列之间的规则（线条）的颜色。语法同 <code>border-color</code> 一致</p>
+<h5 id="column-rule-width"><a href="#column-rule-width" class="headerlink" title="column-rule-width"></a>column-rule-width</h5><p>CSS 特性 <code>column-rule-width</code> 让你可以设置在多列布局中被画在两列之间的规则（线条）的宽度。语法同 <code>border-width</code> 一致</p>
+<h4 id="column-gap"><a href="#column-gap" class="headerlink" title="column-gap"></a>column-gap</h4><p><code>column-gap</code> 该 <code>CSS</code> 属性用来设置元素列之间的间隔 (gutter) 大小。<br>语法：<code>column-gap: normal | &lt;length&gt; | &lt;percentage&gt;</code></p>
+<h4 id="break-inside"><a href="#break-inside" class="headerlink" title="break-inside"></a>break-inside</h4><p><code>break-inside</code> CSS 属性描述了在多列布局页面下的内容盒子如何中断，如果多列布局没有内容盒子，这个属性会被忽略。</p>
+<p>在每一个元素的边界，都可能生成一个中断点，这些中断点由三个属性来定义。break-after 属性定义之前元素的中断点，break-before 定义了之后元素的中断点， break-inside 定义了当前元素的中断点。</p>
+<p>语法：<code>break-inside: auto | avoid | avoid-page | avoid-column | avoid-region</code></p>
+<h2 id="小技巧"><a href="#小技巧" class="headerlink" title="小技巧"></a>小技巧</h2><h3 id="居中方法"><a href="#居中方法" class="headerlink" title="居中方法"></a>居中方法</h3><h4 id="1-水平居中"><a href="#1-水平居中" class="headerlink" title="1. 水平居中"></a>1. 水平居中</h4><p>简单的水平居中，可以使用 <code>CSS</code> 属性 <code>margin: 0 auto</code>， 实现，该方法将元素的左右外边距设置为 <code>50%</code>，从而实现内容的水平居中。但这种方法无法做到水平垂直居中。</p>
+<h4 id="2-水平垂直居中"><a href="#2-水平垂直居中" class="headerlink" title="2. 水平垂直居中"></a>2. 水平垂直居中</h4><p>我所知道的水平垂直居中的方法有以下几种：</p>
+<ol>
+<li>绝对定位法：如下：</li>
+</ol>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.align</span> &#123;</span><br><span class="line">  <span class="comment">/* 此处绝对定位使用的 50%，是将元素整体移动到位于相对元素的 50% 的地方，即元素左上角所代表的坐标是位于父元素最中心的位置，因而会存在一定的误差 */</span></span><br><span class="line">  <span class="attribute">position</span>: absolute;</span><br><span class="line">  <span class="attribute">top</span>: <span class="number">50%</span>; </span><br><span class="line">  <span class="attribute">left</span>: <span class="number">50%</span>;</span><br><span class="line">  <span class="comment">/* 此处的 tranform： translate() 用于调整上述误差。translate(百分比) 此处的百分比是相对该元素的宽高的，正数为向右转移，负数为向左转移，（-50%， -50%）意味着将该元素向左移动该元素一半的宽度，向上移动该元素一一半的宽度*/</span></span><br><span class="line">  <span class="attribute">transform</span>: <span class="built_in">translate</span>( -<span class="number">50%</span>, -<span class="number">50%</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li>flex 方法，为需要垂直水平居中的元素添加一个父元素，父元素 <code>css</code> 设置如下：</li>
+</ol>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.parent</span> &#123;</span><br><span class="line">  <span class="attribute">display</span>:flex;</span><br><span class="line">  <span class="comment">/* 设置子项在交叉轴上的对齐方式*/</span></span><br><span class="line">  <span class="attribute">align-items</span>: center;</span><br><span class="line">  <span class="comment">/*设置子项在主轴上的对齐方式*/</span></span><br><span class="line">  <span class="attribute">justify-content</span>: center|space-around|space-between</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</div><ul class="post-copyright"><li><strong>本文标题：</strong><a href="https://kerbalhao.github.io/posts/e11baa7f/">MDN教程学习-CSS</a></li><li><strong>本文作者：</strong><a href="https://kerbalhao.github.io">KerbalHao</a></li><li><strong>本文链接：</strong><a href="https://kerbalhao.github.io/posts/e11baa7f/">https://kerbalhao.github.io/posts/e11baa7f/</a></li><li><strong>版权声明：</strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" rel="external nofollow" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明出处！</li></ul><div><div class="recommend-post"><span class="is-size-6 has-text-grey has-mr-7"># 相关文章</span><br><span>  1.<a class="is-size-6" href="/posts/cb9aac77/" target="_blank">MDN教程学习-JS</a><br></span><span>  2.<a class="is-size-6" href="/posts/6b3c3b6a/" target="_blank">MDN教程学习-HTML</a><br></span></div><div class="recommend-post"><span class="is-size-6 has-text-grey has-mr-7"># 推荐文章</span><br><span>  1.<a class="is-size-6" href="/posts/66c0dcbe/" target="_blank">JS 12个重要概念以及reduce方法详解</a><br></span><span>  2.<a class="is-size-6" href="/posts/70af37a7/" target="_blank">React 思维导图</a><br></span><span>  3.<a class="is-size-6" href="/posts/f79b72d/" target="_blank">Lua学习</a><br></span><span>  4.<a class="is-size-6" href="/posts/f4f838c8/" target="_blank">个人 dota2 项目</a><br></span><span>  5.<a class="is-size-6" href="/posts/b8c7ab12/" target="_blank">基于HTTP网络层的前端性能优化</a><br></span><span>  6.<a class="is-size-6" href="/posts/3424aad5/" target="_blank">手写 promise</a><br></span></div></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/css/share.min.css"><div class="social-share"></div><script src="https://cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/js/social-share.min.js"></script></article></div><!--!--><nav class="post-navigation mt-4 level is-mobile"><div class="level-start"><a class="article-nav-prev level level-item link-muted" href="/posts/ef632e96/"><i class="level-item fas fa-chevron-left"></i><span class="level-item">Css部分介绍</span></a></div><div class="level-end"><a class="article-nav-next level level-item link-muted" href="/posts/cb9aac77/"><span class="level-item">MDN教程学习-JS</span><i class="level-item fas fa-chevron-right"></i></a></div></nav><div class="card"><div class="card-content"><h3 class="title is-5">评论</h3><div id="comment-container"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1.6.0/dist/gitalk.css"><script> $.getScript('https://cdn.jsdelivr.net/gh/kerbalhao/kerbalhao.github.io/js/gitalk.min.js', function () { 
+            var gitalk = new Gitalk({
+            id: 'fce3bed406a02f4eb2b6f5bb3d8e7006',
+            repo: 'blog_comment',
+            owner: 'kerbalhao',
+            clientID: 'a71d38c4a8dafab99dc9',
+            clientSecret: '2ac14858f30545b5beea2e920b90d25dcbf1c78b',
+            admin: ["kerbalhao"],
+            createIssueManually: true,
+            distractionFreeMode: false,
+            perPage: 10,
+            pagerDirection: 'last',
+            
+            
+            enableHotKey: true,
+            isLocked: false
+        })
+        gitalk.render('comment-container')});</script></div></div></div><div class="column column-left is-4-tablet is-4-desktop is-4-widescreen  order-1 is-sticky"><!--!--><div class="card widget"><div class="card-content"><nav class="level"><div class="level-item has-text-centered flex-shrink-1"><div><figure class="image is-128x128 mx-auto mb-2"><img class="is-rounded" src="https://cdn.jsdelivr.net/gh/kerbalhao/blog_images/avatar.jpg" alt="KerbalHao"></figure><p class="title is-size-4 is-block line-height-inherit">KerbalHao</p><p class="is-size-6 is-block">不咕了，从今天开始种树</p><p class="is-size-6 is-flex justify-content-center"><i class="fas fa-map-marker-alt mr-1"></i><span>广州</span></p></div></div></nav><nav class="level is-mobile"><div class="level-item has-text-centered is-marginless"><div><p class="heading">文章</p><a href="/archives"><p class="title">58</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">分类</p><a href="/categories"><p class="title">11</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">标签</p><a href="/tags"><p class="title">44</p></a></div></div></nav><div class="level"><a class="level-item button is-primary is-rounded" href="/" target="_blank" rel="noopener">关注我</a></div><div class="level is-mobile"><a class="level-item button is-transparent is-white is-marginless" target="_blank" rel="noopener" title="Github" href="https://github.com/kerbalhao"><i class="fab fa-github"></i></a><a class="level-item button is-transparent is-white is-marginless" target="_blank" rel="noopener" title="Email" href="mailto:kerbalhao@foxmail.com"><i class="fa fa-envelope"></i></a><a class="level-item button is-transparent is-white is-marginless" target="_blank" rel="noopener" title="RSS" href="/atom.xml"><i class="fas fa-rss"></i></a></div><div><hr><p id="hitokoto">:D 一言句子获取中...</p><script type="text/javascript" defer>function getYiyan(){
+                                $.getJSON("https://v1.hitokoto.cn/", function (data) {
+                                if(data){
+                                    $('#hitokoto').html("");
+                                    $('#hitokoto').append("<strong style='color: #3273dc;'>"+data.hitokoto+"</strong>"+
+                                    "<p>"+"来源《"+data.from+"》</p><p>提供者-"+data.creator+"</p>");
+                                }});}
+                                $(function (){getYiyan();$('#hitokoto').click(function(){getYiyan();})});</script></div></div></div><div class="card widget"><div class="card-content"><div class="menu"><h3 class="menu-label">分类</h3><ul class="menu-list"><li><a class="level is-mobile is-marginless" href="/categories/ES6/"><span class="level-start"><span class="level-item">ES6</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile is-marginless" href="/categories/ES6-JS/"><span class="level-start"><span class="level-item">ES6 JS</span></span><span class="level-end"><span class="level-item tag">5</span></span></a></li><li><a class="level is-mobile is-marginless" href="/categories/ES6-JS-Morden-JavaScript-Tutorial/"><span class="level-start"><span class="level-item">ES6, JS, Morden JavaScript Tutorial</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile is-marginless" href="/categories/HTTP/"><span class="level-start"><span class="level-item">HTTP</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile is-marginless" href="/categories/JS%E8%AF%AD%E8%A8%80%E7%B2%BE%E7%B2%B9/"><span class="level-start"><span class="level-item">JS语言精粹</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile is-marginless" href="/categories/JS%E9%AB%98%E7%BA%A7%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/"><span class="level-start"><span class="level-item">JS高级程序设计</span></span><span class="level-end"><span class="level-item tag">8</span></span></a></li><li><a class="level is-mobile is-marginless" href="/categories/MDN/"><span class="level-start"><span class="level-item">MDN</span></span><span class="level-end"><span class="level-item tag">3</span></span></a></li><li><a class="level is-mobile is-marginless" href="/categories/Morden-JavaScript-Tutorial/"><span class="level-start"><span class="level-item">Morden JavaScript Tutorial</span></span><span class="level-end"><span class="level-item tag">8</span></span></a></li><li><a class="level is-mobile is-marginless" href="/categories/React/"><span class="level-start"><span class="level-item">React</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile is-marginless" href="/categories/browser/"><span class="level-start"><span class="level-item">browser</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><a class="level is-mobile is-marginless" href="/categories/"><span class="level-start"><span class="level-item">查看全部&gt;&gt;</span></span></a></ul></div></div></div><div class="card widget"><div class="card-content"><div class="menu"><h3 class="menu-label">归档</h3><ul class="menu-list"><li><a class="level is-mobile is-marginless" href="/archives/2022/04/"><span class="level-start"><span class="level-item">四月 2022</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile is-marginless" href="/archives/2021/04/"><span class="level-start"><span class="level-item">四月 2021</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile is-marginless" href="/archives/2021/03/"><span class="level-start"><span class="level-item">三月 2021</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile is-marginless" href="/archives/2021/01/"><span class="level-start"><span class="level-item">一月 2021</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile is-marginless" href="/archives/2020/04/"><span class="level-start"><span class="level-item">四月 2020</span></span><span class="level-end"><span class="level-item tag">3</span></span></a></li><a class="level is-mobile is-marginless" href="/archives/"><span class="level-start"><span class="level-item">查看全部&gt;&gt;</span></span></a></ul></div></div></div><div class="card widget"><div class="card-content"><div class="menu"><h3 class="menu-label">标签</h3><div class="field is-grouped is-grouped-multiline"><div class="control"><a class="tags has-addons" href="/tags/JS/"><span class="tag">JS</span><span class="tag is-grey-lightest">9</span></a></div><div class="control"><a class="tags has-addons" href="/tags/HTML5/"><span class="tag">HTML5</span><span class="tag is-grey-lightest">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/JS-%E5%BC%95%E7%94%A8%E7%B1%BB%E5%9E%8B/"><span class="tag">JS 引用类型</span><span class="tag is-grey-lightest">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Bootstrap/"><span class="tag">Bootstrap</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/CSS/"><span class="tag">CSS</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/CSS-HTML5/"><span class="tag">CSS HTML5</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/CSS-MDN/"><span class="tag">CSS MDN</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/CSS-flex-grid/"><span class="tag">CSS flex grid</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/ES6-JS-%E5%9D%97%E7%BA%A7/"><span class="tag">ES6 JS 块级</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/ES6-Set-Map-JS/"><span class="tag">ES6 Set Map JS</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/ES6-Symbol-JS/"><span class="tag">ES6 Symbol JS</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/ES6-%E5%87%BD%E6%95%B0-JS/"><span class="tag">ES6 函数 JS</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/ES6-%E5%AF%B9%E8%B1%A1-JS/"><span class="tag">ES6 对象 JS</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/ES6-%E8%A7%A3%E6%9E%84-JS/"><span class="tag">ES6 解构 JS</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/ES6-%E8%BF%AD%E4%BB%A3%E5%99%A8%E4%B8%8E%E7%94%9F%E6%88%90%E5%99%A8-JS/"><span class="tag">ES6 迭代器与生成器 JS</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/ES6-%E8%BF%AD%E4%BB%A3%E5%99%A8%E4%B8%8E%E7%94%9F%E6%88%90%E5%99%A8-JS-MJT/"><span class="tag">ES6 迭代器与生成器 JS MJT</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/HTML-MDN/"><span class="tag">HTML MDN</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/HTTP/"><span class="tag">HTTP</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Head-First-CSS-HTML/"><span class="tag">Head-First CSS HTML</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/JQ-js/"><span class="tag">JQ js</span><span class="tag is-grey-lightest">1</span></a></div></div><div class="field is-grouped is-grouped-multiline"><a class="tags has-addons" href="/tags/"><span class="tag">查看全部&gt;&gt;</span></a></div></div></div></div></div></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="https://cdn.jsdelivr.net/gh/kerbalhao/blog_images/log.jpg" alt="kerbalHao" height="28"></a><p class="size-small"><span>&copy; 2022 KerbalHao</span>  Powered by <a href="https://hexo.io/" target="_blank">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank">Icarus</a>,Modify by <a href="https://github.com/removeif/hexo-theme-amazing" target="_blank">removeif</a> <br><span>© 版权说明：[本网站所有内容均收集于互联网或自己创作,<br>    方便于网友与自己学习交流，如有侵权，请<a href="/message" target="_blank">留言</a>，立即处理]<br></span><div class="size-small"><span id="busuanzi_container_site_uv">❤️感谢<strong> <span id="busuanzi_value_site_uv">99+</span> </strong></span>小伙伴的<strong> <span id="busuanzi_value_site_pv">99+</span> </strong>次光临！❤️</div></p></div><div class="level-end"><div class="field has-addons"><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Creative Commons" href="https://creativecommons.org/"><i class="fab fa-creative-commons"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/"><i class="fab fa-creative-commons-by"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/kerbalhao"><i class="fab fa-github"></i></a></p></div></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script>moment.locale("zh-CN");</script><script>var IcarusThemeSettings = {
+            site: {
+                url: 'https://kerbalhao.github.io',
+                external_link: {"enable":true,"exclude":[]}
+            },
+            article: {
+                highlight: {
+                    clipboard: true,
+                    fold: 'unfolded'
+                }
+            }
+        };</script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script src="https://cdn.jsdelivr.net/gh/kerbalhao/kerbalhao.github.io/js/animation.min.js"></script><a id="back-to-top" title="回到顶端" href="javascript:;"><i class="fas fa-chevron-up"></i></a><script src="https://cdn.jsdelivr.net/gh/kerbalhao/kerbalhao.github.io/js/back-to-top.min.js" defer></script><!--!--><!--!--><script src="https://cdn.jsdelivr.net/npm/lightgallery@1.6.12/dist/js/lightgallery-all.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/js/jquery.justifiedGallery.min.js" defer></script><!--!--><!--!--><!--!--><script src="https://cdn.jsdelivr.net/gh/kerbalhao/kerbalhao.github.io/js/toc.min.js" defer></script><script src="https://cdn.jsdelivr.net/gh/kerbalhao/kerbalhao.github.io/js/main.min.js" defer></script><script src="https://cdn.jsdelivr.net/gh/kerbalhao/kerbalhao.github.io/js/comment-issue-data.min.js" defer></script><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kerbalhao/kerbalhao.github.io/css/insight.min.css"><div class="searchbox ins-search"><div class="searchbox-container ins-search-container"><div class="searchbox-input-wrapper"><input class="searchbox-input ins-search-input" type="text" placeholder="想要查找什么..."><span class="searchbox-close ins-close ins-selectable"><i class="fa fa-times-circle"></i></span></div><div class="searchbox-result-wrapper ins-section-wrapper"><div class="ins-section-container"></div></div></div></div><script>(function (window) {
+            var INSIGHT_CONFIG = {
+                TRANSLATION: {
+                    POSTS: '文章',
+                    PAGES: '页面',
+                    CATEGORIES: '分类',
+                    TAGS: '标签',
+                    UNTITLED: '(无标题)',
+                },
+                CONTENT_URL: 'https://cdn.jsdelivr.net/gh/kerbalhao/kerbalhao.github.io/content.json',
+            };
+            window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+        })(window);</script><script src="https://cdn.jsdelivr.net/gh/kerbalhao/kerbalhao.github.io/js/insight.min.js" defer></script></body></html>

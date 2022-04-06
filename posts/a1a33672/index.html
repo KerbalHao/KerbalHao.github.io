@@ -1,0 +1,310 @@
+<!doctype html>
+<html lang="zh"><head><meta charset="utf-8"><meta name="generator" content="Hexo 4.2.0"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>Js现代教程笔记 -- DOM - kerbalHao</title><meta description="DOM访问节点对于一个Dom节点，可以通过导航属性来立即访问和它直接相邻的节点  这些属性主要分两组： 对于所有的节点：parentNode、childNodes、firstChild、lastChild、previousSibling 和 nextSibling。 仅用于元素节点：parentElement、children、firstElementChild、lastElementChild、"><meta property="og:type" content="article"><meta property="og:title" content="Js现代教程笔记 -- DOM"><meta property="og:url" content="https://kerbalhao.github.io/posts/a1a33672/"><meta property="og:site_name" content="KerbalHao"><meta property="og:description" content="DOM访问节点对于一个Dom节点，可以通过导航属性来立即访问和它直接相邻的节点  这些属性主要分两组： 对于所有的节点：parentNode、childNodes、firstChild、lastChild、previousSibling 和 nextSibling。 仅用于元素节点：parentElement、children、firstElementChild、lastElementChild、"><meta property="og:locale" content="zh_CN"><meta property="og:image" content="https://cdn.jsdelivr.net/gh/kerbalhao/blog_images/avatar.jpg"><meta property="article:published_time" content="2019-04-22T10:36:09.000Z"><meta property="article:modified_time" content="2022-04-06T10:48:44.280Z"><meta property="article:author" content="KerbalHao"><meta property="article:tag" content="JS 浏览器"><meta property="twitter:card" content="summary"><meta property="twitter:image" content="https://cdn.jsdelivr.net/gh/kerbalhao/blog_images/avatar.jpg"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://kerbalhao.github.io/posts/a1a33672/"},"headline":"Js现代教程笔记 -- DOM","image":["https://cdn.jsdelivr.net/gh/kerbalhao/blog_images/avatar.jpg"],"datePublished":"2019-04-22T10:36:09.000Z","dateModified":"2022-04-06T10:48:44.280Z","author":{"@type":"Person","name":"KerbalHao"},"description":"DOM访问节点对于一个Dom节点，可以通过导航属性来立即访问和它直接相邻的节点  这些属性主要分两组： 对于所有的节点：parentNode、childNodes、firstChild、lastChild、previousSibling 和 nextSibling。 仅用于元素节点：parentElement、children、firstElementChild、lastElementChild、"}</script><link rel="alternative" href="/atom.xml" title="kerbalHao" type="application/atom+xml"><link rel="icon" href="https://cdn.jsdelivr.net/gh/removeif/removeif.github.io@latest/img/wico.png"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:400,600|Source+Code+Pro|Monda:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|Microsoft YaHei:300,300italic,400,400italic,700,700italic|PT Mono:300,300italic,400,400italic,700,700italic&amp;amp;subset=latin,latin-ext|Inconsolata|Itim|Lobster.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/atom-one-dark.css"><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><script src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" defer></script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.6.12/dist/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/css/justifiedGallery.min.css"><!--!--><!--!--><script src="https://cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js"></script><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kerbalhao/kerbalhao.github.io/css/style.min.css"><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/gh/kerbalhao/kerbalhao.github.io/js/globalUtils.min.js"></script></head><body class="is-3-column has-navbar-fixed-top"><nav class="navbar navbar-main is-fixed-top"><div class="container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="https://cdn.jsdelivr.net/gh/kerbalhao/blog_images/log.jpg" alt="kerbalHao" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">首页</a><a class="navbar-item" href="/archives">归档</a><a class="navbar-item" href="/categories">分类</a><a class="navbar-item" href="/tags">标签</a><a class="navbar-item" href="/self-talking">碎碎念</a><a class="navbar-item" href="/message">留言</a><a class="navbar-item" href="/about">关于</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/kerbalhao"><i class="fab fa-github"></i></a><a class="navbar-item search" title="搜索" href="javascript:;"><i class="fas fa-search"></i></a><a class="navbar-item" id="night-nav" title="Night Mode" href="javascript:;"><i class="fas fa-moon" id="night-icon"></i></a></div></div></div></nav><script type="text/javascript" src="https://cdn.jsdelivr.net/gh/kerbalhao/kerbalhao.github.io/js/theme-setting.min.js"></script><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-9-widescreen"><div class="card"><article class="card-content article" role="article"><div class="article-meta size-small is-uppercase level is-mobile"><div class="level-left"><time class="level-item" dateTime="2019-04-22T10:36:09.000Z">2019-04-22</time><a class="commentCountImg" href="/posts/a1a33672/#comment-container"><span class="display-none-class">27aaa156901a69a9fa44de899b6e587a</span><img class="not-gallery-item" src="https://cdn.jsdelivr.net/gh/kerbalhao/kerbalhao.github.io/img/chat.svg"> <span class="commentCount" id="27aaa156901a69a9fa44de899b6e587a"> 99+</span>    </a><span class="level-item">23 分钟 读完 (大约 3429 个字)</span><span class="level-item" id="busuanzi_container_page_pv"><i class="far fa-eye"></i>&nbsp;&nbsp;<span id="busuanzi_value_page_pv">0</span>次访问</span></div></div><h1 class="title is-3 is-size-4-mobile">Js现代教程笔记 -- DOM</h1><div class="content"><h2 id="DOM"><a href="#DOM" class="headerlink" title="DOM"></a>DOM</h2><h3 id="访问节点"><a href="#访问节点" class="headerlink" title="访问节点"></a>访问节点</h3><p>对于一个Dom节点，可以通过导航属性来立即访问和它直接相邻的节点</p>
+<ul>
+<li>这些属性主要分两组：<ul>
+<li>对于所有的节点：parentNode、childNodes、firstChild、lastChild、previousSibling 和 nextSibling。</li>
+<li>仅用于元素节点：parentElement、children、firstElementChild、lastElementChild、previousElementSibling 和 nextElementSibling。</li>
+<li>某些类型的 DOM 元素，比如说像 tables，提供了额外的属性和集合用于访问其内容。<br><code>&lt;table&gt;</code> 元素支持 (除了上面给出的之外) 以下这些属性:<ul>
+<li>table.rows — 用于表示表中 <code>&lt;tr&gt;</code> 元素的集合。</li>
+<li>table.caption/tHead/tFoot — 用于访问元素 <code>&lt;caption&gt;</code>、<code>&lt;thead&gt;</code>、<code>&lt;tfoot&gt;</code>。</li>
+<li>table.tBodies — <code>&lt;tbody&gt;</code> 元素的集合（根据标准该元素数量可以很多）。</li>
+</ul>
+</li>
+<li><code>&lt;thead&gt;</code>、<code>&lt;tfoot&gt;</code>、<code>&lt;tbody&gt;</code> 元素提供了 rows 属性：<ul>
+<li>tbody.rows — 表内部 <code>&lt;tr&gt;</code> 元素的集合。</li>
+</ul>
+</li>
+<li><code>&lt;tr&gt;</code>：<ul>
+<li>tr.cells — 在给定 <code>&lt;tr&gt;</code> 元素下 <code>&lt;td&gt;</code> 和 <code>&lt;th&gt;</code> 单元格的集合。</li>
+<li>tr.sectionRowIndex — 在封闭的 <code>&lt;thead&gt;</code>/<code>&lt;tbody&gt;</code> 中 <code>&lt;tr&gt;</code> 的编号。</li>
+<li>tr.rowIndex — 在表中 <code>&lt;tr&gt;</code> 元素的编号。</li>
+</ul>
+</li>
+<li><code>&lt;td&gt;</code> 和 <code>&lt;th&gt;</code>：<ul>
+<li>td.cellIndex — 在封闭的 <code>&lt;tr&gt;</code> 中单元格的编号。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<a id="more"></a>
+
+
+<h3 id="搜索指定元素"><a href="#搜索指定元素" class="headerlink" title="搜索指定元素"></a>搜索指定元素</h3><p>有 6 种主要的方法，可以在 DOM 中进行搜素：</p>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Searches by…</th>
+<th>Can call on an element?</th>
+<th>Live?(动态变化 Dom)</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>getElementById</td>
+<td>id</td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
+<td>getElementsByName</td>
+<td>name</td>
+<td>-</td>
+<td>✔</td>
+</tr>
+<tr>
+<td>getElementsByTagName</td>
+<td>tag or ‘*’</td>
+<td>✔</td>
+<td>✔</td>
+</tr>
+<tr>
+<td>getElementsByClassName</td>
+<td>class</td>
+<td>✔</td>
+<td>✔</td>
+</tr>
+<tr>
+<td>querySelector</td>
+<td>CSS-selector</td>
+<td>✔</td>
+<td>-</td>
+</tr>
+<tr>
+<td>querySelectorAll</td>
+<td>CSS-selector</td>
+<td>✔</td>
+<td>-</td>
+</tr>
+</tbody></table>
+<p>请注意，只有在文档 document.getElementById(…) 的上下文中才能调用 getElementById 和 getElementsByName。但元素中没有 elem.getElementById(…) 回报错。</p>
+<p>也可以在元素上调用其他方法，例如 elem.querySelectorAll(…) 将会在 elem（在 DOM 子树中）内部进行搜素。</p>
+<p>除此以外：</p>
+<ul>
+<li>elem.matches(css) 用于检查 elem 与给定的 CSS 选择器是否匹配。</li>
+<li>elem.closest(css) 用于查找与给定 CSS 选择器相匹配的最近的祖先。elem 本身也会被检查。<br>最后我们在提一种检查父子关系的方法：</li>
+</ul>
+<p>如果 elemB 在 elemA（elemA 的后代）中或者当 elemA==elemB 时 elemA.contains(elemB) 将返回 true。</p>
+<h3 id="节点属性"><a href="#节点属性" class="headerlink" title="节点属性"></a>节点属性</h3><p>每个 DOM 节点都属于某个类。这些类形成层次结构。完整的属性和方法集是继承的结果。</p>
+<p>DOM 节点的属性主要有：</p>
+<ul>
+<li>nodeType：<br>我们可以从 DOM 对象类中获取 nodeType，但我们通常只需要查看它是文本节点还是元素节点。nodeType 属性就可以我们的需求。它有数值，最重要的是：1 —— 是元素，3 —— 是文本。只读。</li>
+<li>nodeName/tagName<br>对于元素来说，就是标记名（除了 XML 模式外都要大写）。对于非元素节点，nodeName 则描述了它是什么。只读。</li>
+<li>innerHTML<br>HTML 的元素文本内容。可以被修改。修改结果会实时渲染在页面上</li>
+<li>outerHTML<br>元素的完整 HTML。写入 elem.outerHTML 的操作不会涉及 elem 自身。相反，它会在外部上下文中被替换成新的 HTML。结果不会实时渲染，如果需要操作，需要重新查询来获取元素引用</li>
+<li>nodeValue/data<br>非元素节点（文本、注释）内容。两者几乎一样，我们通常使用 data。允许被修改。</li>
+<li>textContent<br>元素中的文本，基本上是 HTML 减去所有 <code>&lt;tags&gt;</code>。将文本写入元素中，并把所有特殊字符和标记完全视为文本。可以安全地插入用户生成的文本，防止不必要的 HTML 插入。</li>
+<li>hidden<br>当设置为 true 时，执行与 CSS display:none 相同的操作。</li>
+</ul>
+<p>DOM 节点还具有其他属性，具体内容则取决于它们的类。例如，<code>&lt;input&gt;</code>元素（HTMLInputElement）支持 value、type，而 <code>&lt;a&gt;</code> 元素（HTMLAnchorElement）则支持 href 等。大多数标准 HTML 属性都具有相应的 DOM 属性。</p>
+<h3 id="特性和属性"><a href="#特性和属性" class="headerlink" title="特性和属性"></a>特性和属性</h3><p>Attributes —— 写在 HTML 中。<br>Properties —— 是一个 DOM 对象。</p>
+<table>
+<thead>
+<tr>
+<th>-</th>
+<th>Properties</th>
+<th>Attributes</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>类型</td>
+<td>一些值，标准化的属性值在规范中有类型描述</td>
+<td>字符串</td>
+</tr>
+<tr>
+<td>名字</td>
+<td>键名大小写敏感</td>
+<td>键名大小写不敏感</td>
+</tr>
+</tbody></table>
+<p>当浏览器加载页面时，它会“读取”（或者称之为：“解析”）HTML 文本并生成 DOM 对象。对于元素节点，<em>大多数</em> HTML 特性会自动变成 DOM 对象的属性。</p>
+<h4 id="Dom-属性"><a href="#Dom-属性" class="headerlink" title="Dom 属性"></a>Dom 属性</h4><p>DOM 上的属性和方法其实就像是一个标准的 Javascript 对象：</p>
+<ul>
+<li>它可以有很多值。</li>
+<li>它是大小写敏感的（要写成 elem.nodeType，而不是 elem.NoDeTyPe）</li>
+</ul>
+<h4 id="HTML-特性"><a href="#HTML-特性" class="headerlink" title="HTML 特性"></a>HTML 特性</h4><p>在 HTML 语言中，标签可能拥有特性。当浏览器读取 HTML 文本并根据标签生成 DOM 对象，它会辨别标准化特性然后以此创建 DOM 属性。但非标准化的特性会被忽略，读取其 DOM 属性将会返回 undefined。</p>
+<p>一下使针对元素特性的操作(可操作非标准化的特性):</p>
+<ul>
+<li>elem.hasAttribute(name) —— 检验是否拥这个特性。</li>
+<li>elem.getAttribute(name) —— 获取到这个特性值。</li>
+<li>elem.setAttribute(name, value) —— 设置这个特性值。</li>
+<li>elem.removeAttribute(name) —— 移除这个特性。</li>
+</ul>
+<p>我们可以通过 elem.attributes 读取到该元素的所有特性：这些特性都被一个名为 Attr 的内置类以 name 和 value 这样的键-值对收集起来。</p>
+<ul>
+<li>特性的键名大小写不敏感。</li>
+<li>attributes 以 name 和 value 这样的键—值对收集在一个可迭代对象里。</li>
+</ul>
+<h4 id="属性—特性的同步"><a href="#属性—特性的同步" class="headerlink" title="属性—特性的同步"></a>属性—特性的同步</h4><p>当一个标准化的特性被改变，相应的属性随之改变（有极个别除外），反之亦然。比如input.value，只能从特性同步到属性，反过来则不行</p>
+<p>此外，href 特性 DOM 属性总是一个绝对路径的，而特性值只包含相对路径或者只包含 #hash 这一部分。</p>
+<h4 id="非标准化的特性，dataset"><a href="#非标准化的特性，dataset" class="headerlink" title="非标准化的特性，dataset"></a>非标准化的特性，dataset</h4><p>所有以 “data-” 开头的特性值可以给编程人员正常使用，同时它还是 dataset 合法值。</p>
+<p>例如, 如果一个 elem 有一个键名是 “data-about” 的特性，那么可以通过 elem.dataset.about 取到这个合法值。<br>像 data-order-state 的多字特性键名可以写成驼峰式属性dataset.orderState。</p>
+<h3 id="修改文档内容"><a href="#修改文档内容" class="headerlink" title="修改文档内容"></a>修改文档内容</h3><p>DOM（document object model 文档对象模型，此文中全部以缩写 DOM 表示）的可修改性是网页能“实时”刷新的关键。</p>
+<ul>
+<li><p>创建节点的方法：</p>
+<ul>
+<li>document.createElement(tag) —— 用给定标签创建一个节点，</li>
+<li>document.createTextNode(value) —— 创建一个文本节点（很少使用），</li>
+<li>elem.cloneNode(boolean) —— 如果参数 为true 将元素及后代子元素进行克隆。为 false 则只克隆元素本身</li>
+</ul>
+</li>
+<li><p>插入和移除节点的方法：<br>注意，如果我们想要移动一个元素到另一个地方 —— 不需要移除旧的元素。<br>所有插入操作都会从节点原来的位置把节点移除掉。</p>
+<ul>
+<li><p>从 parent</p>
+<ul>
+<li>parent.appendChild(node)</li>
+<li>parent.insertBefore(node, nextSibling)</li>
+<li>parent.removeChild(node)</li>
+<li>parent.replaceChild(newElem, node)<br>这些方法都返回 node。</li>
+</ul>
+</li>
+<li><p>添加一些节点和字符串：</p>
+<ul>
+<li>node.append(…nodes or strings) —— 在 node 末尾位置增加，</li>
+<li>node.prepend(…nodes or strings) —— 在 node开头位置增加 ，</li>
+<li>node.before(…nodes or strings) —— 在 node 之前位置增加，</li>
+<li>node.after(…nodes or strings) —— 在 node 之后位置增加，</li>
+<li>node.replaceWith(…nodes or strings) —— 替换 node。</li>
+<li>node.remove() —— 移除 node。<br><img src="https://zh.javascript.info/article/modifying-document/before-prepend-append-after@2x.png" alt="如图所示"><br>把字符串当成“文本”插入。</li>
+</ul>
+</li>
+<li><p>在 HTML 中添加内容 elem.insertAdjacentHTML(where, html)，在 where 位置进行操作：</p>
+<ul>
+<li>“beforebegin” —— 将 html 插入 elem 到开头的前面位置，</li>
+<li>“afterbegin” —— 将 html 插入 elem 到开头的后面位置，</li>
+<li>“beforeend” —— 将 html 插入 elem 到结尾的前面位置，</li>
+<li>“afterend” —— 将 html 插入 elem 到结尾的后面位置。<br><img src="https://zh.javascript.info/article/modifying-document/insert-adjacent@2x.png" alt="如图所示"><br>elem.insertAdjacentText 和 elem.insertAdjacentElement 跟 elem.insertAdjacentHTML 很相似，只不过他们一个用来插入字符串，一个用来插入元素，但是很少使用这两个方法。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>在页面加载完成之前添加 HTML 到页面中：</p>
+<p>document.write(html)<br>如果是在页面加载完成以后调用会擦除加载完毕的内容。通常在很老的脚本才会使用这个方法了。</p>
+</li>
+</ul>
+<h3 id="样式和类"><a href="#样式和类" class="headerlink" title="样式和类"></a>样式和类</h3><p>通常有两种方式来设计元素样式：</p>
+<ul>
+<li>在 CSS 中创建一个类并添加它：<code>&lt;div class=&quot;...&quot;&gt;</code></li>
+<li>将属性直接写入 style：<code>&lt;div style=&quot;...&quot;&gt;</code>。<br>CSS 总是首选的方式 —— 不仅用于 HTML，在 JavaScript 中也是如此。</li>
+</ul>
+<p>只有当类“无法处理时”，我们才会操作 style 属性。</p>
+<hr>
+在管理 class 时，有两个 DOM 属性：
+
+<ul>
+<li>className —— 字符串值可以很好地管理整个类集合。</li>
+<li>classList —— 拥有 add/remove/toggle/contains 方法的对象可以很好地支持单独的类。</li>
+</ul>
+<p>改变样式：</p>
+<ul>
+<li>style 属性是一个带有 camelCased 样式的对象。对它的读取和修改 “style” 属性中的单个属性等价。要留意如果应用 important 和其他稀有内容 —— 在 <a href="https://developer.mozilla.org/zh/docs/Web/API/CSSStyleDeclaration">MDN</a> 上有一个方法列表。</li>
+<li>style.cssText 属性对应于整个“样式”属性，即完整的样式字符串。</li>
+</ul>
+<p>获取已经解析的样式（对应于所有类，在应用所有 CSS 并计算最终值后）：</p>
+<ul>
+<li>getComputedStyle(elem[, pseudo]) 返回与 style 对象类似且包含了所有类的对象，是只读的。</li>
+</ul>
+<h3 id="元素-elem-的尺寸与滚动"><a href="#元素-elem-的尺寸与滚动" class="headerlink" title="元素 (elem) 的尺寸与滚动"></a>元素 (elem) 的尺寸与滚动</h3><p>元素具有以下几何属性：</p>
+<ul>
+<li><code>offsetParent</code> — 是最近的有定位属性的祖先元素，或者是 <code>td、th、table、body。</code></li>
+<li><code>offsetLeft/offsetTop</code> — 是相对于 offsetParent 的左上角边缘坐标。</li>
+<li><code>offsetWidth/offsetHeight</code> — 元素的“外部”宽/高 ，边框尺寸计算在内。</li>
+<li><code>clientLeft/clientTop</code> — 从元素左上角外部到内部的距离(相当于 <code>border</code>的宽度)，对于从左到右渲染元素的操作系统，它始终是左/顶部边界的宽度，而对于从右到左的操作系统，垂直滚动条在左边，所以 <code>clientLeft</code> 也包括滚动条的宽度。</li>
+<li><code>clientWidth/clientHeight</code> — 内容的宽度/高度，包括内间距，但没有滚动条。(<code>clientWidth/clientHeight</code> 相当于 <code>width|height</code> + <code>paddingLeft|paddingTop</code> + <code>paddingRight|paddingBottom</code>)</li>
+<li><code>scrollWidth/scrollHeight</code> — 内容的宽度/高度，包括可滚动的可视区域外的尺寸，也包括内间距，但不包括滚动条。</li>
+<li><code>scrollLeft/scrollTop</code> — 从左上角开始的元素的滚动部分的宽度/高度。<br>除了 <code>scrollLeft/scrollTop</code> 之外，所有属性都是只读的。如果更改，浏览器会使元素滚动。</li>
+</ul>
+<p>不要从 <code>CSS</code> 中获取宽高,我们应该使用集合属性获得宽高：</p>
+<ul>
+<li>首先，<code>CSS</code> 宽度/高度取决于另一个属性：<code>box-sizing</code>，它定义了 “什么是” <code>CSS</code> 宽度和高度。用作 <code>CSS</code> 样式的 <code>box-sizing</code> 的更改可能会破坏这样的 JavaScript 定义。</li>
+<li>其次，<code>CSS</code> 的 <code>width/height</code> 可能是 <code>auto</code></li>
+<li>还有一个原因：滚动条。有时，没有滚动条的代码工作得很好，因为它在一些浏览器中占据了内容的一部分空间。因此，内容的实际宽度比 CSS 宽度要小。</li>
+</ul>
+<h3 id="窗口-Window-的尺寸和滚动"><a href="#窗口-Window-的尺寸和滚动" class="headerlink" title="窗口 (Window) 的尺寸和滚动"></a>窗口 (Window) 的尺寸和滚动</h3><p>窗口的几何属性:</p>
+<ul>
+<li>文档可视范围的宽度/高度（内容区域的宽高）：<br><code>document.documentElement.clientWidth/Height</code></li>
+<li>整个文档的宽度/高度，包括滚动区域外的部分：</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> scrollHeight = <span class="built_in">Math</span>.max(</span><br><span class="line">  <span class="built_in">document</span>.body.scrollHeight, <span class="built_in">document</span>.documentElement.scrollHeight,</span><br><span class="line">  <span class="built_in">document</span>.body.offsetHeight, <span class="built_in">document</span>.documentElement.offsetHeight,</span><br><span class="line">  <span class="built_in">document</span>.body.clientHeight, <span class="built_in">document</span>.documentElement.clientHeight</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
+
+<p>窗口的滚动：</p>
+<ul>
+<li><p>读取当前的滚动：<code>window.pageYOffset/pageXOffset</code></p>
+</li>
+<li><p>改变当前的滚动：</p>
+<ul>
+<li><code>window.scrollTo(pageX,pageY)</code> — 绝对定位<br>-<code>window.scrollBy(x,y)</code> — 相对当前位置的滚动</li>
+<li>elem.scrollIntoView(true|false) — 滚动到正好 <code>elem</code>可视的位置（<code>elem</code> 与- 窗口的顶部/底部对齐）</li>
+</ul>
+</li>
+</ul>
+<h3 id="坐标"><a href="#坐标" class="headerlink" title="坐标"></a>坐标</h3><p>大多数 <code>JavaScript</code> 方法处理的是以下两种坐标系中的一个：</p>
+<ul>
+<li><p>相对于窗口（或者另一个 <code>viewport</code>）顶部/左侧计算的坐标 – <code>elem.getBoundingClientRect()</code>,该方法返回一个 <code>elem</code> 的窗口坐标对象，这个对象有以下这些属性：</p>
+<ul>
+<li><code>top</code> — 元素顶部边缘的 Y 坐标</li>
+<li><code>left</code> — 元素左边边缘的 X 坐标</li>
+<li><code>right</code> — 元素右边边缘的 X 坐标</li>
+<li><code>bottom</code> — 元素底部边缘的 Y 坐标<br>该方法的效果相当于 <code>position: fixed</code></li>
+</ul>
+</li>
+<li><p>相对于文档顶部/左侧计算的坐标 – <code>elem.getBoundingClientRect()</code> + 加上当前页面滚动的长度。<br>还方法相当于 relate 到 <code>body</code> 中的 <code>position: absolute</code></p>
+</li>
+</ul>
+<p>两个坐标系可以通过由公式相连接：</p>
+<ul>
+<li>pageY = clientY + 文档垂直部分滚动的高度。</li>
+<li>pageX = clientX + 文档水平部分滚动的宽度。</li>
+</ul>
+<p><code>elementFromPoint(x, y)</code>，该方法返回该窗口坐标(x, y)所在的元素<br>注意，当参数为负数或超出窗口 (viewport) 大小时，将会返回 null</p>
+<p>获取一个元素文档坐标的标准方法：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 获取元素的文档坐标</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">getCoords</span>(<span class="params">elem</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">let</span> box = elem.getBoundingClientRect();</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> &#123;</span><br><span class="line">    top: box.top + <span class="built_in">window</span>.pageYOffset,</span><br><span class="line">    left: box.left + <span class="built_in">window</span>.pageXOffset</span><br><span class="line">  &#125;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</div><ul class="post-copyright"><li><strong>本文标题：</strong><a href="https://kerbalhao.github.io/posts/a1a33672/">Js现代教程笔记 -- DOM</a></li><li><strong>本文作者：</strong><a href="https://kerbalhao.github.io">KerbalHao</a></li><li><strong>本文链接：</strong><a href="https://kerbalhao.github.io/posts/a1a33672/">https://kerbalhao.github.io/posts/a1a33672/</a></li><li><strong>版权声明：</strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" rel="external nofollow" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明出处！</li></ul><div><div class="recommend-post"><span class="is-size-6 has-text-grey has-mr-7"># 相关文章</span><br><span>  1.<a class="is-size-6" href="/posts/6f845446/" target="_blank">Js现代教程笔记 -- Class</a><br></span><span>  2.<a class="is-size-6" href="/posts/7443f62b/" target="_blank">Js现代教程笔记 -- 原型与继承</a><br></span><span>  3.<a class="is-size-6" href="/posts/90bdcb8c/" target="_blank">Js现代教程笔记 -- 对象属性</a><br></span><span>  4.<a class="is-size-6" href="/posts/3e0df05/" target="_blank">Js现代教程笔记 -- 数据类型</a><br></span><span>  5.<a class="is-size-6" href="/posts/14294c2c/" target="_blank">Js现代教程笔记 -- 对于函数参数的见解</a><br></span><span>  6.<a class="is-size-6" href="/posts/a284be5d/" target="_blank">Js现代教程笔记 -- 函数高阶应用</a><br></span><span>  7.<a class="is-size-6" href="/posts/24667931/" target="_blank">Js现代教程笔记 -- this 值的探索</a><br></span></div><div class="recommend-post"><span class="is-size-6 has-text-grey has-mr-7"># 推荐文章</span><br><span>  1.<a class="is-size-6" href="/posts/66c0dcbe/" target="_blank">JS 12个重要概念以及reduce方法详解</a><br></span><span>  2.<a class="is-size-6" href="/posts/70af37a7/" target="_blank">React 思维导图</a><br></span><span>  3.<a class="is-size-6" href="/posts/f79b72d/" target="_blank">Lua学习</a><br></span><span>  4.<a class="is-size-6" href="/posts/f4f838c8/" target="_blank">个人 dota2 项目</a><br></span><span>  5.<a class="is-size-6" href="/posts/b8c7ab12/" target="_blank">基于HTTP网络层的前端性能优化</a><br></span><span>  6.<a class="is-size-6" href="/posts/3424aad5/" target="_blank">手写 promise</a><br></span></div></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/css/share.min.css"><div class="social-share"></div><script src="https://cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/js/social-share.min.js"></script></article></div><!--!--><nav class="post-navigation mt-4 level is-mobile"><div class="level-start"><a class="article-nav-prev level level-item link-muted" href="/posts/90bdcb8c/"><i class="level-item fas fa-chevron-left"></i><span class="level-item">Js现代教程笔记 -- 对象属性</span></a></div><div class="level-end"><a class="article-nav-next level level-item link-muted" href="/posts/3e0df05/"><span class="level-item">Js现代教程笔记 -- 数据类型</span><i class="level-item fas fa-chevron-right"></i></a></div></nav><div class="card"><div class="card-content"><h3 class="title is-5">评论</h3><div id="comment-container"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1.6.0/dist/gitalk.css"><script> $.getScript('https://cdn.jsdelivr.net/gh/kerbalhao/kerbalhao.github.io/js/gitalk.min.js', function () { 
+            var gitalk = new Gitalk({
+            id: '27aaa156901a69a9fa44de899b6e587a',
+            repo: 'blog_comment',
+            owner: 'kerbalhao',
+            clientID: 'a71d38c4a8dafab99dc9',
+            clientSecret: '2ac14858f30545b5beea2e920b90d25dcbf1c78b',
+            admin: ["kerbalhao"],
+            createIssueManually: true,
+            distractionFreeMode: false,
+            perPage: 10,
+            pagerDirection: 'last',
+            
+            
+            enableHotKey: true,
+            isLocked: false
+        })
+        gitalk.render('comment-container')});</script></div></div></div><div class="column column-left is-4-tablet is-4-desktop is-4-widescreen  order-1 is-sticky"><!--!--><div class="card widget"><div class="card-content"><nav class="level"><div class="level-item has-text-centered flex-shrink-1"><div><figure class="image is-128x128 mx-auto mb-2"><img class="is-rounded" src="https://cdn.jsdelivr.net/gh/kerbalhao/blog_images/avatar.jpg" alt="KerbalHao"></figure><p class="title is-size-4 is-block line-height-inherit">KerbalHao</p><p class="is-size-6 is-block">不咕了，从今天开始种树</p><p class="is-size-6 is-flex justify-content-center"><i class="fas fa-map-marker-alt mr-1"></i><span>广州</span></p></div></div></nav><nav class="level is-mobile"><div class="level-item has-text-centered is-marginless"><div><p class="heading">文章</p><a href="/archives"><p class="title">58</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">分类</p><a href="/categories"><p class="title">11</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">标签</p><a href="/tags"><p class="title">44</p></a></div></div></nav><div class="level"><a class="level-item button is-primary is-rounded" href="/" target="_blank" rel="noopener">关注我</a></div><div class="level is-mobile"><a class="level-item button is-transparent is-white is-marginless" target="_blank" rel="noopener" title="Github" href="https://github.com/kerbalhao"><i class="fab fa-github"></i></a><a class="level-item button is-transparent is-white is-marginless" target="_blank" rel="noopener" title="Email" href="mailto:kerbalhao@foxmail.com"><i class="fa fa-envelope"></i></a><a class="level-item button is-transparent is-white is-marginless" target="_blank" rel="noopener" title="RSS" href="/atom.xml"><i class="fas fa-rss"></i></a></div><div><hr><p id="hitokoto">:D 一言句子获取中...</p><script type="text/javascript" defer>function getYiyan(){
+                                $.getJSON("https://v1.hitokoto.cn/", function (data) {
+                                if(data){
+                                    $('#hitokoto').html("");
+                                    $('#hitokoto').append("<strong style='color: #3273dc;'>"+data.hitokoto+"</strong>"+
+                                    "<p>"+"来源《"+data.from+"》</p><p>提供者-"+data.creator+"</p>");
+                                }});}
+                                $(function (){getYiyan();$('#hitokoto').click(function(){getYiyan();})});</script></div></div></div><div class="card widget"><div class="card-content"><div class="menu"><h3 class="menu-label">分类</h3><ul class="menu-list"><li><a class="level is-mobile is-marginless" href="/categories/ES6/"><span class="level-start"><span class="level-item">ES6</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile is-marginless" href="/categories/ES6-JS/"><span class="level-start"><span class="level-item">ES6 JS</span></span><span class="level-end"><span class="level-item tag">5</span></span></a></li><li><a class="level is-mobile is-marginless" href="/categories/ES6-JS-Morden-JavaScript-Tutorial/"><span class="level-start"><span class="level-item">ES6, JS, Morden JavaScript Tutorial</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile is-marginless" href="/categories/HTTP/"><span class="level-start"><span class="level-item">HTTP</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile is-marginless" href="/categories/JS%E8%AF%AD%E8%A8%80%E7%B2%BE%E7%B2%B9/"><span class="level-start"><span class="level-item">JS语言精粹</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile is-marginless" href="/categories/JS%E9%AB%98%E7%BA%A7%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/"><span class="level-start"><span class="level-item">JS高级程序设计</span></span><span class="level-end"><span class="level-item tag">8</span></span></a></li><li><a class="level is-mobile is-marginless" href="/categories/MDN/"><span class="level-start"><span class="level-item">MDN</span></span><span class="level-end"><span class="level-item tag">3</span></span></a></li><li><a class="level is-mobile is-marginless" href="/categories/Morden-JavaScript-Tutorial/"><span class="level-start"><span class="level-item">Morden JavaScript Tutorial</span></span><span class="level-end"><span class="level-item tag">8</span></span></a></li><li><a class="level is-mobile is-marginless" href="/categories/React/"><span class="level-start"><span class="level-item">React</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile is-marginless" href="/categories/browser/"><span class="level-start"><span class="level-item">browser</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><a class="level is-mobile is-marginless" href="/categories/"><span class="level-start"><span class="level-item">查看全部&gt;&gt;</span></span></a></ul></div></div></div><div class="card widget"><div class="card-content"><div class="menu"><h3 class="menu-label">归档</h3><ul class="menu-list"><li><a class="level is-mobile is-marginless" href="/archives/2022/04/"><span class="level-start"><span class="level-item">四月 2022</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile is-marginless" href="/archives/2021/04/"><span class="level-start"><span class="level-item">四月 2021</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile is-marginless" href="/archives/2021/03/"><span class="level-start"><span class="level-item">三月 2021</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile is-marginless" href="/archives/2021/01/"><span class="level-start"><span class="level-item">一月 2021</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile is-marginless" href="/archives/2020/04/"><span class="level-start"><span class="level-item">四月 2020</span></span><span class="level-end"><span class="level-item tag">3</span></span></a></li><a class="level is-mobile is-marginless" href="/archives/"><span class="level-start"><span class="level-item">查看全部&gt;&gt;</span></span></a></ul></div></div></div><div class="card widget"><div class="card-content"><div class="menu"><h3 class="menu-label">标签</h3><div class="field is-grouped is-grouped-multiline"><div class="control"><a class="tags has-addons" href="/tags/JS/"><span class="tag">JS</span><span class="tag is-grey-lightest">9</span></a></div><div class="control"><a class="tags has-addons" href="/tags/HTML5/"><span class="tag">HTML5</span><span class="tag is-grey-lightest">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/JS-%E5%BC%95%E7%94%A8%E7%B1%BB%E5%9E%8B/"><span class="tag">JS 引用类型</span><span class="tag is-grey-lightest">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Bootstrap/"><span class="tag">Bootstrap</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/CSS/"><span class="tag">CSS</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/CSS-HTML5/"><span class="tag">CSS HTML5</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/CSS-MDN/"><span class="tag">CSS MDN</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/CSS-flex-grid/"><span class="tag">CSS flex grid</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/ES6-JS-%E5%9D%97%E7%BA%A7/"><span class="tag">ES6 JS 块级</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/ES6-Set-Map-JS/"><span class="tag">ES6 Set Map JS</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/ES6-Symbol-JS/"><span class="tag">ES6 Symbol JS</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/ES6-%E5%87%BD%E6%95%B0-JS/"><span class="tag">ES6 函数 JS</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/ES6-%E5%AF%B9%E8%B1%A1-JS/"><span class="tag">ES6 对象 JS</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/ES6-%E8%A7%A3%E6%9E%84-JS/"><span class="tag">ES6 解构 JS</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/ES6-%E8%BF%AD%E4%BB%A3%E5%99%A8%E4%B8%8E%E7%94%9F%E6%88%90%E5%99%A8-JS/"><span class="tag">ES6 迭代器与生成器 JS</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/ES6-%E8%BF%AD%E4%BB%A3%E5%99%A8%E4%B8%8E%E7%94%9F%E6%88%90%E5%99%A8-JS-MJT/"><span class="tag">ES6 迭代器与生成器 JS MJT</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/HTML-MDN/"><span class="tag">HTML MDN</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/HTTP/"><span class="tag">HTTP</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Head-First-CSS-HTML/"><span class="tag">Head-First CSS HTML</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/JQ-js/"><span class="tag">JQ js</span><span class="tag is-grey-lightest">1</span></a></div></div><div class="field is-grouped is-grouped-multiline"><a class="tags has-addons" href="/tags/"><span class="tag">查看全部&gt;&gt;</span></a></div></div></div></div></div></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="https://cdn.jsdelivr.net/gh/kerbalhao/blog_images/log.jpg" alt="kerbalHao" height="28"></a><p class="size-small"><span>&copy; 2022 KerbalHao</span>  Powered by <a href="https://hexo.io/" target="_blank">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank">Icarus</a>,Modify by <a href="https://github.com/removeif/hexo-theme-amazing" target="_blank">removeif</a> <br><span>© 版权说明：[本网站所有内容均收集于互联网或自己创作,<br>    方便于网友与自己学习交流，如有侵权，请<a href="/message" target="_blank">留言</a>，立即处理]<br></span><div class="size-small"><span id="busuanzi_container_site_uv">❤️感谢<strong> <span id="busuanzi_value_site_uv">99+</span> </strong></span>小伙伴的<strong> <span id="busuanzi_value_site_pv">99+</span> </strong>次光临！❤️</div></p></div><div class="level-end"><div class="field has-addons"><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Creative Commons" href="https://creativecommons.org/"><i class="fab fa-creative-commons"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/"><i class="fab fa-creative-commons-by"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/kerbalhao"><i class="fab fa-github"></i></a></p></div></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script>moment.locale("zh-CN");</script><script>var IcarusThemeSettings = {
+            site: {
+                url: 'https://kerbalhao.github.io',
+                external_link: {"enable":true,"exclude":[]}
+            },
+            article: {
+                highlight: {
+                    clipboard: true,
+                    fold: 'unfolded'
+                }
+            }
+        };</script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script src="https://cdn.jsdelivr.net/gh/kerbalhao/kerbalhao.github.io/js/animation.min.js"></script><a id="back-to-top" title="回到顶端" href="javascript:;"><i class="fas fa-chevron-up"></i></a><script src="https://cdn.jsdelivr.net/gh/kerbalhao/kerbalhao.github.io/js/back-to-top.min.js" defer></script><!--!--><!--!--><script src="https://cdn.jsdelivr.net/npm/lightgallery@1.6.12/dist/js/lightgallery-all.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/js/jquery.justifiedGallery.min.js" defer></script><!--!--><!--!--><!--!--><script src="https://cdn.jsdelivr.net/gh/kerbalhao/kerbalhao.github.io/js/toc.min.js" defer></script><script src="https://cdn.jsdelivr.net/gh/kerbalhao/kerbalhao.github.io/js/main.min.js" defer></script><script src="https://cdn.jsdelivr.net/gh/kerbalhao/kerbalhao.github.io/js/comment-issue-data.min.js" defer></script><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kerbalhao/kerbalhao.github.io/css/insight.min.css"><div class="searchbox ins-search"><div class="searchbox-container ins-search-container"><div class="searchbox-input-wrapper"><input class="searchbox-input ins-search-input" type="text" placeholder="想要查找什么..."><span class="searchbox-close ins-close ins-selectable"><i class="fa fa-times-circle"></i></span></div><div class="searchbox-result-wrapper ins-section-wrapper"><div class="ins-section-container"></div></div></div></div><script>(function (window) {
+            var INSIGHT_CONFIG = {
+                TRANSLATION: {
+                    POSTS: '文章',
+                    PAGES: '页面',
+                    CATEGORIES: '分类',
+                    TAGS: '标签',
+                    UNTITLED: '(无标题)',
+                },
+                CONTENT_URL: 'https://cdn.jsdelivr.net/gh/kerbalhao/kerbalhao.github.io/content.json',
+            };
+            window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+        })(window);</script><script src="https://cdn.jsdelivr.net/gh/kerbalhao/kerbalhao.github.io/js/insight.min.js" defer></script></body></html>

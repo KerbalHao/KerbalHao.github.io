@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="zh"><head><meta charset="utf-8"><meta name="generator" content="Hexo 4.2.0"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>jQuery基础 - kerbalHao</title><meta description="jQuery123$(document).ready(function() &amp;amp;#123;    &amp;amp;#125;)  .addClass()方法 .removeClass()方法 .css()方法，直接修改 Css,接收两个参数，修改的属性和修改的值 .prop()方法，直接修改元素属性，接收两个参数，修改的属性和修改的值 .html()方法，不传递参数则获取目标元素的内容(包括 html标签)，如传"><meta property="og:type" content="article"><meta property="og:title" content="jQuery基础"><meta property="og:url" content="https://kerbalhao.github.io/posts/889563/"><meta property="og:site_name" content="KerbalHao"><meta property="og:description" content="jQuery123$(document).ready(function() &amp;amp;#123;    &amp;amp;#125;)  .addClass()方法 .removeClass()方法 .css()方法，直接修改 Css,接收两个参数，修改的属性和修改的值 .prop()方法，直接修改元素属性，接收两个参数，修改的属性和修改的值 .html()方法，不传递参数则获取目标元素的内容(包括 html标签)，如传"><meta property="og:locale" content="zh_CN"><meta property="og:image" content="https://cdn.jsdelivr.net/gh/kerbalhao/blog_images/avatar.jpg"><meta property="article:published_time" content="2018-10-25T07:36:09.000Z"><meta property="article:modified_time" content="2022-04-06T10:48:44.276Z"><meta property="article:author" content="KerbalHao"><meta property="article:tag" content="JQ js"><meta property="twitter:card" content="summary"><meta property="twitter:image" content="https://cdn.jsdelivr.net/gh/kerbalhao/blog_images/avatar.jpg"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://kerbalhao.github.io/posts/889563/"},"headline":"jQuery基础","image":["https://cdn.jsdelivr.net/gh/kerbalhao/blog_images/avatar.jpg"],"datePublished":"2018-10-25T07:36:09.000Z","dateModified":"2022-04-06T10:48:44.276Z","author":{"@type":"Person","name":"KerbalHao"},"description":"jQuery123$(document).ready(function() &amp;#123;    &amp;#125;)  .addClass()方法 .removeClass()方法 .css()方法，直接修改 Css,接收两个参数，修改的属性和修改的值 .prop()方法，直接修改元素属性，接收两个参数，修改的属性和修改的值 .html()方法，不传递参数则获取目标元素的内容(包括 html标签)，如传"}</script><link rel="alternative" href="/atom.xml" title="kerbalHao" type="application/atom+xml"><link rel="icon" href="https://cdn.jsdelivr.net/gh/removeif/removeif.github.io@latest/img/wico.png"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:400,600|Source+Code+Pro|Monda:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|Microsoft YaHei:300,300italic,400,400italic,700,700italic|PT Mono:300,300italic,400,400italic,700,700italic&amp;amp;subset=latin,latin-ext|Inconsolata|Itim|Lobster.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/atom-one-dark.css"><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><script src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" defer></script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.6.12/dist/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/css/justifiedGallery.min.css"><!--!--><!--!--><script src="https://cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js"></script><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kerbalhao/kerbalhao.github.io/css/style.min.css"><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/gh/kerbalhao/kerbalhao.github.io/js/globalUtils.min.js"></script></head><body class="is-3-column has-navbar-fixed-top"><nav class="navbar navbar-main is-fixed-top"><div class="container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="https://cdn.jsdelivr.net/gh/kerbalhao/blog_images/log.jpg" alt="kerbalHao" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">首页</a><a class="navbar-item" href="/archives">归档</a><a class="navbar-item" href="/categories">分类</a><a class="navbar-item" href="/tags">标签</a><a class="navbar-item" href="/self-talking">碎碎念</a><a class="navbar-item" href="/message">留言</a><a class="navbar-item" href="/about">关于</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/kerbalhao"><i class="fab fa-github"></i></a><a class="navbar-item search" title="搜索" href="javascript:;"><i class="fas fa-search"></i></a><a class="navbar-item" id="night-nav" title="Night Mode" href="javascript:;"><i class="fas fa-moon" id="night-icon"></i></a></div></div></div></nav><script type="text/javascript" src="https://cdn.jsdelivr.net/gh/kerbalhao/kerbalhao.github.io/js/theme-setting.min.js"></script><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-9-widescreen"><div class="card"><article class="card-content article" role="article"><div class="article-meta size-small is-uppercase level is-mobile"><div class="level-left"><time class="level-item" dateTime="2018-10-25T07:36:09.000Z">2018-10-25</time><a class="commentCountImg" href="/posts/889563/#comment-container"><span class="display-none-class">c10c2f409a1e76a1e7859076a07902b5</span><img class="not-gallery-item" src="https://cdn.jsdelivr.net/gh/kerbalhao/kerbalhao.github.io/img/chat.svg"> <span class="commentCount" id="c10c2f409a1e76a1e7859076a07902b5"> 99+</span>    </a><span class="level-item">16 分钟 读完 (大约 2356 个字)</span><span class="level-item" id="busuanzi_container_page_pv"><i class="far fa-eye"></i>&nbsp;&nbsp;<span id="busuanzi_value_page_pv">0</span>次访问</span></div></div><h1 class="title is-3 is-size-4-mobile">jQuery基础</h1><div class="content"><h2 id="jQuery"><a href="#jQuery" class="headerlink" title="jQuery"></a><code>jQuery</code></h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="built_in">document</span>).ready(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line"></span><br><span class="line">    &#125;)</span><br></pre></td></tr></table></figure>
+
+<p><code>.addClass</code>()方法</p>
+<p><code>.removeClass</code>()方法</p>
+<p><code>.css</code>()方法，直接修改 <code>Css</code>,接收两个参数，修改的属性和修改的值</p>
+<p><code>.prop</code>()方法，直接修改元素属性，接收两个参数，修改的属性和修改的值</p>
+<p><code>.html</code>()方法，不传递参数则获取目标元素的内容(包括 <code>html</code>标签)，如传递参数，则直接修改元素内容，原有内容会被替换，参数是任何字符串，可以将 <code>html</code>标签以字符串形式传递进去，从而实现内嵌 <code>html</code>元素。相当于原生 <code>DOM</code>的 <code>.innerhtml</code>()</p>
+<p><code>.text</code>()方法，不传递参数则获取目标元素的内容(不包括 <code>html</code>标签，只有文本内容)，如传递参数直接修改元素内容，原有内容会被替换，参数是任何字符串，不会转变为 <code>html</code>标签。相当于原生 <code>DOM</code>的 <code>.innertext</code>()</p>
+<a id="more"></a>
+
+
+<p><code>getJSON</code>()方法：用于获取 <code>JSON</code>数据，接收2个参数，第一个是 <code>JSON</code>文件的存储位置，第二个是一个回调函数。如下所示:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$.getJSON(<span class="string">"/json/cats.json"</span>, <span class="function"><span class="keyword">function</span>(<span class="params">json</span>) </span>&#123;</span><br><span class="line">  $(<span class="string">".message"</span>).html(<span class="built_in">JSON</span>.stringify(json));</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<p><code>.remove</code>()</p>
+<p><code>.appendTo</code>()方法，将目标元素添加到参数（另一个元素）中（排在最后）</p>
+<p><code>.clone</code>()方法，复制目标元素，返回目标元素，不接受参数</p>
+<p><code>.parent</code>()返回直接父元素</p>
+<p><code>.children</code>()返回所有的直接子元素</p>
+<p><code>nth-child</code>(n)     父元素下的第n个子元素，n必须大于0，索引都是从1开始。</p>
+<p><code>target:nth-child</code>(n) 返回属于目标元素的父元素的第n个 <code>target</code>元素 如·<code>$(&quot;.target:nth-child(3)&quot;).addClass(&quot;animated bounce&quot;); //给.target元素的父元素，的第3个.target元素添加Class</code></p>
+<p><code>target:odd|:even</code> 选择器:返回所有奇数|偶数的 <code>target</code>元素 索引值从 0 开始，第一个元素是偶数 (0)，第二个元素是奇数 (1)，以此类推。</p>
+<h2 id="事件"><a href="#事件" class="headerlink" title="事件"></a>事件</h2><p><code>click</code>()</p>
+<p><code>dblclick</code>()</p>
+<p><code>mouseenter</code>()</p>
+<p><code>mouseleave</code>()</p>
+<p><code>mousedown</code>()</p>
+<p><code>mouseup</code>()</p>
+<p><code>hover</code>()</p>
+<p><code>blur</code>()</p>
+<p><code>focus</code>()</p>
+<h2 id="常用效果"><a href="#常用效果" class="headerlink" title="常用效果"></a>常用效果</h2><h3 id="隐藏和显示"><a href="#隐藏和显示" class="headerlink" title="隐藏和显示"></a>隐藏和显示</h3><p>$(<code>selector</code>)<code>.hide</code>(<code>speed</code>, <code>callback</code>)</p>
+<p>$(<code>selector</code>)<code>.show</code>(<code>speed</code>, <code>callback</code>)</p>
+<p>$(<code>selector</code>)<code>.toggle</code>(<code>speed</code>, <code>callback</code>)</p>
+<h3 id="淡入淡出"><a href="#淡入淡出" class="headerlink" title="淡入淡出"></a>淡入淡出</h3><p>$(<code>selector</code>)<code>.fadeIn</code>(<code>speed</code>, <code>callback</code>)</p>
+<p>$(<code>selector</code>)<code>.fadeOut</code>(<code>speed</code>, <code>callback</code>)</p>
+<p>$(<code>selector</code>)<code>.fadeToggle</code>(<code>speed</code>, <code>callback</code>)</p>
+<p>$(<code>selector</code>)<code>.fadeTo</code>(<code>speed</code>, <code>opacity</code>, <code>callback</code>): <code>fade</code>到 <code>opacity</code>指定的程度</p>
+<h3 id="滑动"><a href="#滑动" class="headerlink" title="滑动"></a>滑动</h3><p>$(<code>selector</code>)<code>.slideDown</code>(<code>speed</code>, <code>callback</code>)</p>
+<p>$(<code>selector</code>)<code>.slideUp</code>(<code>speed</code>, <code>callback</code>)</p>
+<p>$(<code>selector</code>)<code>.slideToggle</code>(<code>speed</code>, <code>callback</code>)</p>
+<h3 id="动画"><a href="#动画" class="headerlink" title="动画"></a>动画</h3><p>$(<code>selector</code>)<code>.animate</code>({<code>params</code>},<code>speed</code>,<code>callback</code>)： 必需的 <code>params</code>参数定义形成动画的 <code>CSS</code>属性， <code>params</code>参数是一个 <code>css</code>对象，可以操作多个属性。</p>
+<p><code>jQuery</code>提供针对动画的队列功能。</p>
+<p>这意味着如果您在彼此之后编写多个 <code>animate</code>() 调用，<code>jQuery</code>会创建包含这些方法调用的”内部”队列。然后逐一运行这些 <code>animate</code>调用。</p>
+<p><code>DEMO</code>如下：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">"button"</span>).click(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">  <span class="keyword">var</span> div=$(<span class="string">"div"</span>);</span><br><span class="line">  div.animate(&#123;<span class="attr">height</span>:<span class="string">'300px'</span>,<span class="attr">opacity</span>:<span class="string">'0.4'</span>&#125;,<span class="string">"slow"</span>);</span><br><span class="line">  div.animate(&#123;<span class="attr">width</span>:<span class="string">'300px'</span>,<span class="attr">opacity</span>:<span class="string">'0.8'</span>&#125;,<span class="string">"slow"</span>);</span><br><span class="line">  div.animate(&#123;<span class="attr">height</span>:<span class="string">'100px'</span>,<span class="attr">opacity</span>:<span class="string">'0.4'</span>&#125;,<span class="string">"slow"</span>);</span><br><span class="line">  div.animate(&#123;<span class="attr">width</span>:<span class="string">'100px'</span>,<span class="attr">opacity</span>:<span class="string">'0.8'</span>&#125;,<span class="string">"slow"</span>);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<h4 id="停止动画"><a href="#停止动画" class="headerlink" title="停止动画"></a>停止动画</h4><p>$(<code>selector</code>)<code>.stop</code>(<code>stopAll</code>,<code>goToEnd</code>)<br>可选的 <code>stopAll</code>参数规定是否应该清除动画队列。默认是 <code>false</code>，即仅停止活动的动画，允许任何排入队列的动画向后执行。</p>
+<p>可选的 <code>goToEnd</code>参数规定是否立即完成当前动画。默认是 <code>false</code>。</p>
+<p>因此，默认地，<code>stop</code>() 会清除在被选元素上指定的当前动画。</p>
+<h2 id="DOM操作"><a href="#DOM操作" class="headerlink" title="DOM操作"></a><code>DOM</code>操作</h2><h3 id="获得与设置内容-text-、html-以及-val"><a href="#获得与设置内容-text-、html-以及-val" class="headerlink" title="获得与设置内容 - text()、html() 以及 val()"></a>获得与设置内容 - <code>text</code>()、<code>html</code>() 以及 <code>val</code>()</h3><ul>
+<li><code>text</code>() - 设置或返回所选元素的文本内容</li>
+<li><code>html</code>() - 设置或返回所选元素的内容（包括 <code>HTML</code>标记）</li>
+<li><code>val</code>() - 设置或返回表单字段的值<br>都可接受参数，参数作为将会替换其中的内容</li>
+</ul>
+<h3 id="获取与设置属性"><a href="#获取与设置属性" class="headerlink" title="获取与设置属性"></a>获取与设置属性</h3><p>$(<code>selector</code>)<code>.attr</code>(<code>prop</code>, <code>value</code>)，第二个参数 <code>value</code>可为空，即获取属性值; 给定的第二个参数可以修改属性的值</p>
+<h3 id="添加元素"><a href="#添加元素" class="headerlink" title="添加元素"></a>添加元素</h3><ul>
+<li><code>append</code>(<code>elem</code>) - 在被选元素的结尾插入内容</li>
+<li><code>prepend</code>(<code>elem</code>) - 在被选元素的开头插入内容</li>
+<li><code>after</code>(<code>elem</code>) - 在被选元素之后插入内容</li>
+<li><code>before</code>(<code>elem1</code>,<code>elem2</code>, …) - 在被选元素之前插入内容<br>可添加多个参数，即为添加若干新元素</li>
+</ul>
+<h3 id="删除元素"><a href="#删除元素" class="headerlink" title="删除元素"></a>删除元素</h3><ul>
+<li><code>remove</code>() - 删除被选元素（及其子元素）， <code>remove</code>() 方法也可接受一个参数，允许您对被删元素进行过滤。</li>
+<li><code>empty</code>() - 从被选元素中删除子元素</li>
+</ul>
+<h3 id="获取并设置-CSS类"><a href="#获取并设置-CSS类" class="headerlink" title="获取并设置 CSS类"></a>获取并设置 <code>CSS</code>类</h3><ul>
+<li><code>addClass</code>() - 向被选元素添加一个或多个类, 用 <code>,</code>分隔</li>
+<li><code>removeClass</code>() - 从被选元素删除一个或多个类</li>
+<li><code>toggleClass</code>() - 对被选元素进行添加/删除类的切换操作</li>
+<li><code>css</code>() - 设置或返回样式属性<ul>
+<li><code>css</code>(“<code>propertyname</code>“) ,可返回指定的 <code>CSS</code>属性的值</li>
+<li><code>css</code>(“<code>propertyname</code>“,”<code>value</code>“);设置指定的 <code>CSS</code>属性</li>
+<li><code>css</code>({“<code>propertyname</code>“:”<code>value</code>“,”<code>propertyname</code>“:”<code>value</code>“,…}) 设置多个 <code>CSS</code>属性</li>
+</ul>
+</li>
+</ul>
+<h3 id="尺寸方法"><a href="#尺寸方法" class="headerlink" title="尺寸方法"></a>尺寸方法</h3><ul>
+<li>设置或返回元素的高度|宽度（不包括内边距、边框或外边距）<ul>
+<li><code>width</code>()</li>
+<li><code>height</code>()</li>
+</ul>
+</li>
+<li>设置或返回元素的高度|宽度（包括内边距）</li>
+<li><code>innerWidth</code>()</li>
+<li><code>innerHeight</code>()</li>
+<li>设置或返回元素的高度|宽度（包括内边距和边框），可接受一个 <code>boolean</code>参数，默认为 <code>false</code>, 当为 <code>true</code>时，元素的高度|宽度（包括外边距，内边距和边框）</li>
+<li><code>outerWidth</code>()</li>
+<li><code>outerHeight</code>()</li>
+</ul>
+<h2 id="遍历"><a href="#遍历" class="headerlink" title="遍历"></a>遍历</h2><h3 id="向上遍历-DOM树（祖先）"><a href="#向上遍历-DOM树（祖先）" class="headerlink" title="向上遍历 DOM树（祖先）"></a>向上遍历 <code>DOM</code>树（祖先）</h3><ul>
+<li><p><code>parent</code>() 返回被选元素的直接父元素。该方法只会向上一级对 <code>DOM</code>树进行遍历。</p>
+</li>
+<li><p><code>parents</code>() 返回被选元素的所有祖先元素，它一路向上直到文档的根元素 (<code>&lt;html&gt;</code>)。</p>
+<p>可使用可选参数来过滤对祖先元素的搜索。如 <code>$(&quot;span&quot;).parents(&quot;ul&quot;);</code>，返回所有 <code>&lt;span&gt;</code>元素的所有祖先，并且它是 <code>&lt;ul&gt;</code> 元素</p>
+</li>
+<li><p><code>parentsUntil</code>()返回介于两个给定元素之间的所有祖先元素。<br>如 <code>$(&quot;span&quot;).parentsUntil(&quot;div&quot;)</code>返回介于 <code>&lt;span&gt;</code> 与 <code>&lt;div&gt;</code> 元素之间的所有祖先元素</p>
+</li>
+</ul>
+<h3 id="向下遍历-DOM树-后代"><a href="#向下遍历-DOM树-后代" class="headerlink" title="向下遍历 DOM树(后代)"></a>向下遍历 <code>DOM</code>树(后代)</h3><ul>
+<li><code>children</code>() 返回被选元素的所有直接子元素。只会向下一级对 <code>DOM</code>树进行遍历。</li>
+<li><code>find</code>() 返回被选元素的后代元素，一路向下直到最后一个后代。</li>
+</ul>
+<h3 id="在-DOM树中水平遍历-兄弟"><a href="#在-DOM树中水平遍历-兄弟" class="headerlink" title="在 DOM树中水平遍历(兄弟)"></a>在 <code>DOM</code>树中水平遍历(兄弟)</h3><ul>
+<li><code>siblings</code>() 返回被选元素的所有同胞元素。</li>
+<li><code>next</code>() 返回被选元素的下一个同胞元素。</li>
+<li><code>nextAll</code>() 返回被选元素的所有跟随的同胞元素。</li>
+<li><code>nextUntil</code>() 返回介于两个给定参数之间的所有跟随的同胞元素。</li>
+<li><code>prev</code>() 返回被选元素的上一个同胞元素。</li>
+<li><code>prevAll</code>() 返回被选元素的所有之前的同胞元素。</li>
+<li><code>prevUntil</code>() 返回介于两个给定参数之间的所有跟随的同胞元素<br>以上都可以使用参数（<code>CSS</code>选择器）进行过滤</li>
+</ul>
+<h3 id="缩小搜索元素的范围（过滤）"><a href="#缩小搜索元素的范围（过滤）" class="headerlink" title="缩小搜索元素的范围（过滤）"></a>缩小搜索元素的范围（过滤）</h3><ul>
+<li><code>first</code>() 方法返回被选元素的首个元素。</li>
+<li><code>last</code>() 方法返回被选元素的最后一个元素。</li>
+<li><code>eq</code>() 方法返回被选元素中带有指定索引号的元素。</li>
+<li><code>filter</code>() 方法允许您规定一个标准。不匹配这个标准的元素会被从集合中删除，匹配的元素会被返回。</li>
+<li><code>not</code>() 方法返回不匹配标准的所有元素。与 <code>fliler</code>方法相反</li>
+</ul>
+<h2 id="jQuery-AJAX"><a href="#jQuery-AJAX" class="headerlink" title="jQuery AJAX"></a><code>jQuery AJAX</code></h2><h3 id="AJAX-load-方法"><a href="#AJAX-load-方法" class="headerlink" title="AJAX load() 方法"></a><code>AJAX load</code>() 方法</h3><p><code>$(selector).load(URL,data,callback)</code></p>
+<ul>
+<li><p>必需的 <code>URL</code>参数规定您希望加载的 <code>URL</code>。可以使用空白符 <code>space</code>分隔，将 <code>jQuery</code>选择器添加到 <code>URL</code>参数中。</p>
+<ul>
+<li>下面的例子把 “demo_test.txt” 文件中 id=”p1” 的元素的内容，加载到指定的 <code>&lt;div&gt;</code> 元素中：<code>$(&quot;#div1&quot;).load(&quot;demo_test.txt #p1&quot;)</code></li>
+</ul>
+</li>
+<li><p>可选的 <code>data</code>参数规定与请求一同发送的查询字符串键/值对集合。</p>
+</li>
+<li><p>可选的 <code>callback</code>参数是 <code>load</code>() 方法完成后所执行的函数名称。回调函数可以设置不同的参数：</p>
+<ul>
+<li><code>responseTxt -</code>包含调用成功时的结果内容</li>
+<li><code>statusTXT -</code>包含调用的状态</li>
+<li><code>xhr -</code>包含 <code>XMLHttpRequest</code>对象</li>
+</ul>
+</li>
+</ul>
+<h3 id="AJAX-get-和-post-方法"><a href="#AJAX-get-和-post-方法" class="headerlink" title="AJAX get() 和 post() 方法"></a><code>AJAX get</code>() 和 <code>post</code>() 方法</h3><h4 id="jQuery-get-方法"><a href="#jQuery-get-方法" class="headerlink" title="jQuery$.get() 方法"></a><code>jQuery</code>$<code>.get</code>() 方法</h4><p>$<code>.get</code>() 方法通过 <code>HTTP GET</code>请求从服务器上请求数据。<br><code>$.get(URL,callback)</code> 参数说明：</p>
+<ul>
+<li><p>必需的 <code>URL</code>参数规定您希望请求的 <code>URL</code>。</p>
+</li>
+<li><p>可选的 <code>callback</code>参数是请求成功后所执行的函数名。回调函数的参数：</p>
+<ul>
+<li>第一个回调参数存有被请求页面的内容，</li>
+<li>第二个回调参数存有请求的状态。<br>DEMO：</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">"button"</span>).click(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">  $.<span class="keyword">get</span>("demo_test.php",function(data,status)&#123;</span><br><span class="line">    alert(<span class="string">"数据: "</span> + data + <span class="string">"\n状态: "</span> + status);</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<h4 id="jQuery-post-方法"><a href="#jQuery-post-方法" class="headerlink" title="jQuery$.post() 方法"></a><code>jQuery</code>$<code>.post</code>() 方法</h4><p>$<code>.post</code>() 方法通过 <code>HTTP POST</code>请求向服务器提交数据。<br><code>$.post(URL,data,callback)</code> 参数说明：</p>
+<ul>
+<li><p>必需的 <code>URL</code>参数规定您希望请求的 <code>URL</code>。</p>
+</li>
+<li><p>可选的 <code>data</code>参数规定连同请求发送的数据。</p>
+</li>
+<li><p>可选的 <code>callback</code>参数是请求成功后所执行的函数名。回调函数的参数：</p>
+<ul>
+<li>第一个回调参数存有被请求页面的内容，</li>
+<li>第二个参数存有请求的状态。<br>DEMO：</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">"button"</span>).click(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    $.post(<span class="string">"/try/ajax/demo_test_post.php"</span>,</span><br><span class="line">    &#123;</span><br><span class="line">        name:<span class="string">"菜鸟教程"</span>,</span><br><span class="line">        url:<span class="string">"http://www.runoob.com"</span></span><br><span class="line">    &#125;,</span><br><span class="line">        <span class="function"><span class="keyword">function</span>(<span class="params">data,status</span>)</span>&#123;</span><br><span class="line">        alert(<span class="string">"数据: \n"</span> + data + <span class="string">"\n状态: "</span> + status);</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<h2 id="如何在页面上同时使用-jQuery和其他框架？"><a href="#如何在页面上同时使用-jQuery和其他框架？" class="headerlink" title="如何在页面上同时使用 jQuery和其他框架？"></a>如何在页面上同时使用 <code>jQuery</code>和其他框架？</h2><p>可以创建自己的简写。<code>noConflict</code>() 可返回对 <code>jQuery</code>的引用，您可以把它存入变量，以供稍后使用。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> jq = $.noConflict();</span><br><span class="line">jq(<span class="built_in">document</span>).ready(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">  jq(<span class="string">"button"</span>).click(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    jq(<span class="string">"p"</span>).text(<span class="string">"jQuery 仍然在工作!"</span>);</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+</div><ul class="post-copyright"><li><strong>本文标题：</strong><a href="https://kerbalhao.github.io/posts/889563/">jQuery基础</a></li><li><strong>本文作者：</strong><a href="https://kerbalhao.github.io">KerbalHao</a></li><li><strong>本文链接：</strong><a href="https://kerbalhao.github.io/posts/889563/">https://kerbalhao.github.io/posts/889563/</a></li><li><strong>版权声明：</strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" rel="external nofollow" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明出处！</li></ul><div><div class="recommend-post"><span class="is-size-6 has-text-grey has-mr-7"># 相关文章</span><br><span>  1.<a class="is-size-6" href="/posts/f13afe2d/" target="_blank">webpack学习</a><br></span><span>  2.<a class="is-size-6" href="/posts/b6a5ef32/" target="_blank">JS类型检测</a><br></span><span>  3.<a class="is-size-6" href="/posts/3424aad5/" target="_blank">手写 promise</a><br></span><span>  4.<a class="is-size-6" href="/posts/f4f838c8/" target="_blank">个人 dota2 项目</a><br></span><span>  5.<a class="is-size-6" href="/posts/f79b72d/" target="_blank">Lua学习</a><br></span><span>  6.<a class="is-size-6" href="/posts/66c0dcbe/" target="_blank">JS 12个重要概念以及reduce方法详解</a><br></span><span>  7.<a class="is-size-6" href="/posts/1274d57e/" target="_blank">ES6-对象</a><br></span><span>  8.<a class="is-size-6" href="/posts/5ca0b31/" target="_blank">CSS相关与经典布局（双飞翼与圣杯）</a><br></span></div><div class="recommend-post"><span class="is-size-6 has-text-grey has-mr-7"># 推荐文章</span><br><span>  1.<a class="is-size-6" href="/posts/66c0dcbe/" target="_blank">JS 12个重要概念以及reduce方法详解</a><br></span><span>  2.<a class="is-size-6" href="/posts/70af37a7/" target="_blank">React 思维导图</a><br></span><span>  3.<a class="is-size-6" href="/posts/f79b72d/" target="_blank">Lua学习</a><br></span><span>  4.<a class="is-size-6" href="/posts/f4f838c8/" target="_blank">个人 dota2 项目</a><br></span><span>  5.<a class="is-size-6" href="/posts/b8c7ab12/" target="_blank">基于HTTP网络层的前端性能优化</a><br></span><span>  6.<a class="is-size-6" href="/posts/3424aad5/" target="_blank">手写 promise</a><br></span></div></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/css/share.min.css"><div class="social-share"></div><script src="https://cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/js/social-share.min.js"></script></article></div><!--!--><nav class="post-navigation mt-4 level is-mobile"><div class="level-start"><a class="article-nav-prev level level-item link-muted" href="/posts/4a819108/"><i class="level-item fas fa-chevron-left"></i><span class="level-item">事件(event)学习</span></a></div><div class="level-end"><a class="article-nav-next level level-item link-muted" href="/posts/e0d98019/"><span class="level-item">React基础</span><i class="level-item fas fa-chevron-right"></i></a></div></nav><div class="card"><div class="card-content"><h3 class="title is-5">评论</h3><div id="comment-container"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1.6.0/dist/gitalk.css"><script> $.getScript('https://cdn.jsdelivr.net/gh/kerbalhao/kerbalhao.github.io/js/gitalk.min.js', function () { 
+            var gitalk = new Gitalk({
+            id: 'c10c2f409a1e76a1e7859076a07902b5',
+            repo: 'blog_comment',
+            owner: 'kerbalhao',
+            clientID: 'a71d38c4a8dafab99dc9',
+            clientSecret: '2ac14858f30545b5beea2e920b90d25dcbf1c78b',
+            admin: ["kerbalhao"],
+            createIssueManually: true,
+            distractionFreeMode: false,
+            perPage: 10,
+            pagerDirection: 'last',
+            
+            
+            enableHotKey: true,
+            isLocked: false
+        })
+        gitalk.render('comment-container')});</script></div></div></div><div class="column column-left is-4-tablet is-4-desktop is-4-widescreen  order-1 is-sticky"><!--!--><div class="card widget"><div class="card-content"><nav class="level"><div class="level-item has-text-centered flex-shrink-1"><div><figure class="image is-128x128 mx-auto mb-2"><img class="is-rounded" src="https://cdn.jsdelivr.net/gh/kerbalhao/blog_images/avatar.jpg" alt="KerbalHao"></figure><p class="title is-size-4 is-block line-height-inherit">KerbalHao</p><p class="is-size-6 is-block">不咕了，从今天开始种树</p><p class="is-size-6 is-flex justify-content-center"><i class="fas fa-map-marker-alt mr-1"></i><span>广州</span></p></div></div></nav><nav class="level is-mobile"><div class="level-item has-text-centered is-marginless"><div><p class="heading">文章</p><a href="/archives"><p class="title">58</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">分类</p><a href="/categories"><p class="title">11</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">标签</p><a href="/tags"><p class="title">44</p></a></div></div></nav><div class="level"><a class="level-item button is-primary is-rounded" href="/" target="_blank" rel="noopener">关注我</a></div><div class="level is-mobile"><a class="level-item button is-transparent is-white is-marginless" target="_blank" rel="noopener" title="Github" href="https://github.com/kerbalhao"><i class="fab fa-github"></i></a><a class="level-item button is-transparent is-white is-marginless" target="_blank" rel="noopener" title="Email" href="mailto:kerbalhao@foxmail.com"><i class="fa fa-envelope"></i></a><a class="level-item button is-transparent is-white is-marginless" target="_blank" rel="noopener" title="RSS" href="/atom.xml"><i class="fas fa-rss"></i></a></div><div><hr><p id="hitokoto">:D 一言句子获取中...</p><script type="text/javascript" defer>function getYiyan(){
+                                $.getJSON("https://v1.hitokoto.cn/", function (data) {
+                                if(data){
+                                    $('#hitokoto').html("");
+                                    $('#hitokoto').append("<strong style='color: #3273dc;'>"+data.hitokoto+"</strong>"+
+                                    "<p>"+"来源《"+data.from+"》</p><p>提供者-"+data.creator+"</p>");
+                                }});}
+                                $(function (){getYiyan();$('#hitokoto').click(function(){getYiyan();})});</script></div></div></div><div class="card widget"><div class="card-content"><div class="menu"><h3 class="menu-label">分类</h3><ul class="menu-list"><li><a class="level is-mobile is-marginless" href="/categories/ES6/"><span class="level-start"><span class="level-item">ES6</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile is-marginless" href="/categories/ES6-JS/"><span class="level-start"><span class="level-item">ES6 JS</span></span><span class="level-end"><span class="level-item tag">5</span></span></a></li><li><a class="level is-mobile is-marginless" href="/categories/ES6-JS-Morden-JavaScript-Tutorial/"><span class="level-start"><span class="level-item">ES6, JS, Morden JavaScript Tutorial</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile is-marginless" href="/categories/HTTP/"><span class="level-start"><span class="level-item">HTTP</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile is-marginless" href="/categories/JS%E8%AF%AD%E8%A8%80%E7%B2%BE%E7%B2%B9/"><span class="level-start"><span class="level-item">JS语言精粹</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile is-marginless" href="/categories/JS%E9%AB%98%E7%BA%A7%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/"><span class="level-start"><span class="level-item">JS高级程序设计</span></span><span class="level-end"><span class="level-item tag">8</span></span></a></li><li><a class="level is-mobile is-marginless" href="/categories/MDN/"><span class="level-start"><span class="level-item">MDN</span></span><span class="level-end"><span class="level-item tag">3</span></span></a></li><li><a class="level is-mobile is-marginless" href="/categories/Morden-JavaScript-Tutorial/"><span class="level-start"><span class="level-item">Morden JavaScript Tutorial</span></span><span class="level-end"><span class="level-item tag">8</span></span></a></li><li><a class="level is-mobile is-marginless" href="/categories/React/"><span class="level-start"><span class="level-item">React</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile is-marginless" href="/categories/browser/"><span class="level-start"><span class="level-item">browser</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><a class="level is-mobile is-marginless" href="/categories/"><span class="level-start"><span class="level-item">查看全部&gt;&gt;</span></span></a></ul></div></div></div><div class="card widget"><div class="card-content"><div class="menu"><h3 class="menu-label">归档</h3><ul class="menu-list"><li><a class="level is-mobile is-marginless" href="/archives/2022/04/"><span class="level-start"><span class="level-item">四月 2022</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile is-marginless" href="/archives/2021/04/"><span class="level-start"><span class="level-item">四月 2021</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile is-marginless" href="/archives/2021/03/"><span class="level-start"><span class="level-item">三月 2021</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile is-marginless" href="/archives/2021/01/"><span class="level-start"><span class="level-item">一月 2021</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile is-marginless" href="/archives/2020/04/"><span class="level-start"><span class="level-item">四月 2020</span></span><span class="level-end"><span class="level-item tag">3</span></span></a></li><a class="level is-mobile is-marginless" href="/archives/"><span class="level-start"><span class="level-item">查看全部&gt;&gt;</span></span></a></ul></div></div></div><div class="card widget"><div class="card-content"><div class="menu"><h3 class="menu-label">标签</h3><div class="field is-grouped is-grouped-multiline"><div class="control"><a class="tags has-addons" href="/tags/JS/"><span class="tag">JS</span><span class="tag is-grey-lightest">9</span></a></div><div class="control"><a class="tags has-addons" href="/tags/HTML5/"><span class="tag">HTML5</span><span class="tag is-grey-lightest">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/JS-%E5%BC%95%E7%94%A8%E7%B1%BB%E5%9E%8B/"><span class="tag">JS 引用类型</span><span class="tag is-grey-lightest">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Bootstrap/"><span class="tag">Bootstrap</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/CSS/"><span class="tag">CSS</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/CSS-HTML5/"><span class="tag">CSS HTML5</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/CSS-MDN/"><span class="tag">CSS MDN</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/CSS-flex-grid/"><span class="tag">CSS flex grid</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/ES6-JS-%E5%9D%97%E7%BA%A7/"><span class="tag">ES6 JS 块级</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/ES6-Set-Map-JS/"><span class="tag">ES6 Set Map JS</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/ES6-Symbol-JS/"><span class="tag">ES6 Symbol JS</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/ES6-%E5%87%BD%E6%95%B0-JS/"><span class="tag">ES6 函数 JS</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/ES6-%E5%AF%B9%E8%B1%A1-JS/"><span class="tag">ES6 对象 JS</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/ES6-%E8%A7%A3%E6%9E%84-JS/"><span class="tag">ES6 解构 JS</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/ES6-%E8%BF%AD%E4%BB%A3%E5%99%A8%E4%B8%8E%E7%94%9F%E6%88%90%E5%99%A8-JS/"><span class="tag">ES6 迭代器与生成器 JS</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/ES6-%E8%BF%AD%E4%BB%A3%E5%99%A8%E4%B8%8E%E7%94%9F%E6%88%90%E5%99%A8-JS-MJT/"><span class="tag">ES6 迭代器与生成器 JS MJT</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/HTML-MDN/"><span class="tag">HTML MDN</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/HTTP/"><span class="tag">HTTP</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Head-First-CSS-HTML/"><span class="tag">Head-First CSS HTML</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/JQ-js/"><span class="tag">JQ js</span><span class="tag is-grey-lightest">1</span></a></div></div><div class="field is-grouped is-grouped-multiline"><a class="tags has-addons" href="/tags/"><span class="tag">查看全部&gt;&gt;</span></a></div></div></div></div></div></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="https://cdn.jsdelivr.net/gh/kerbalhao/blog_images/log.jpg" alt="kerbalHao" height="28"></a><p class="size-small"><span>&copy; 2022 KerbalHao</span>  Powered by <a href="https://hexo.io/" target="_blank">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank">Icarus</a>,Modify by <a href="https://github.com/removeif/hexo-theme-amazing" target="_blank">removeif</a> <br><span>© 版权说明：[本网站所有内容均收集于互联网或自己创作,<br>    方便于网友与自己学习交流，如有侵权，请<a href="/message" target="_blank">留言</a>，立即处理]<br></span><div class="size-small"><span id="busuanzi_container_site_uv">❤️感谢<strong> <span id="busuanzi_value_site_uv">99+</span> </strong></span>小伙伴的<strong> <span id="busuanzi_value_site_pv">99+</span> </strong>次光临！❤️</div></p></div><div class="level-end"><div class="field has-addons"><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Creative Commons" href="https://creativecommons.org/"><i class="fab fa-creative-commons"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/"><i class="fab fa-creative-commons-by"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/kerbalhao"><i class="fab fa-github"></i></a></p></div></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script>moment.locale("zh-CN");</script><script>var IcarusThemeSettings = {
+            site: {
+                url: 'https://kerbalhao.github.io',
+                external_link: {"enable":true,"exclude":[]}
+            },
+            article: {
+                highlight: {
+                    clipboard: true,
+                    fold: 'unfolded'
+                }
+            }
+        };</script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script src="https://cdn.jsdelivr.net/gh/kerbalhao/kerbalhao.github.io/js/animation.min.js"></script><a id="back-to-top" title="回到顶端" href="javascript:;"><i class="fas fa-chevron-up"></i></a><script src="https://cdn.jsdelivr.net/gh/kerbalhao/kerbalhao.github.io/js/back-to-top.min.js" defer></script><!--!--><!--!--><script src="https://cdn.jsdelivr.net/npm/lightgallery@1.6.12/dist/js/lightgallery-all.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/js/jquery.justifiedGallery.min.js" defer></script><!--!--><!--!--><!--!--><script src="https://cdn.jsdelivr.net/gh/kerbalhao/kerbalhao.github.io/js/toc.min.js" defer></script><script src="https://cdn.jsdelivr.net/gh/kerbalhao/kerbalhao.github.io/js/main.min.js" defer></script><script src="https://cdn.jsdelivr.net/gh/kerbalhao/kerbalhao.github.io/js/comment-issue-data.min.js" defer></script><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kerbalhao/kerbalhao.github.io/css/insight.min.css"><div class="searchbox ins-search"><div class="searchbox-container ins-search-container"><div class="searchbox-input-wrapper"><input class="searchbox-input ins-search-input" type="text" placeholder="想要查找什么..."><span class="searchbox-close ins-close ins-selectable"><i class="fa fa-times-circle"></i></span></div><div class="searchbox-result-wrapper ins-section-wrapper"><div class="ins-section-container"></div></div></div></div><script>(function (window) {
+            var INSIGHT_CONFIG = {
+                TRANSLATION: {
+                    POSTS: '文章',
+                    PAGES: '页面',
+                    CATEGORIES: '分类',
+                    TAGS: '标签',
+                    UNTITLED: '(无标题)',
+                },
+                CONTENT_URL: 'https://cdn.jsdelivr.net/gh/kerbalhao/kerbalhao.github.io/content.json',
+            };
+            window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+        })(window);</script><script src="https://cdn.jsdelivr.net/gh/kerbalhao/kerbalhao.github.io/js/insight.min.js" defer></script></body></html>
