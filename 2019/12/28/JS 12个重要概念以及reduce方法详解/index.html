@@ -1,0 +1,1695 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Js 12个重要概念 | kerbalHao</title>
+  <meta name="keywords" content=" JS ">
+  <meta name="description" content="Js 12个重要概念 | kerbalHao">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="description" content="个人简介  博客信息  本站推荐索引 博客主题相关技术知识点 其他   计划  时间轴记录">
+<meta property="og:type" content="website">
+<meta property="og:title" content="kerbalHao">
+<meta property="og:url" content="https://kerbalhao.github.io/about/index.html">
+<meta property="og:site_name" content="kerbalHao">
+<meta property="og:description" content="个人简介  博客信息  本站推荐索引 博客主题相关技术知识点 其他   计划  时间轴记录">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2018-11-11T08:24:49.000Z">
+<meta property="article:modified_time" content="2022-07-05T03:02:34.959Z">
+<meta property="article:author" content="KerbalHao">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="icon" href="https://avatars.githubusercontent.com/u/42958301?s=40&v=4">
+
+<link href="/css/style.css?v=1.1.0" rel="stylesheet">
+
+<link href="/css/hl_theme/atom-light.css?v=1.1.0" rel="stylesheet">
+
+<link href="//cdn.jsdelivr.net/npm/animate.css@4.1.0/animate.min.css" rel="stylesheet">
+
+<script src="//cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+<script src="/js/titleTip.js?v=1.1.0" ></script>
+
+<script src="//cdn.jsdelivr.net/npm/highlightjs@9.16.2/highlight.pack.min.js"></script>
+<script>
+    hljs.initHighlightingOnLoad();
+</script>
+
+<script src="//cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js"></script>
+
+
+
+<script src="//cdn.jsdelivr.net/npm/jquery.cookie@1.4.1/jquery.cookie.min.js" ></script>
+
+<script src="/js/iconfont.js?v=1.1.0" ></script>
+
+<meta name="generator" content="Hexo 5.4.2"><link rel="alternate" href="/atom.xml" title="kerbalHao" type="application/atom+xml">
+</head>
+<div style="display: none">
+  <input class="theme_disqus_on" value="false">
+  <input class="theme_preload_comment" value="">
+  <input class="theme_blog_path" value="">
+  <input id="theme_shortcut" value="true" />
+  <input id="theme_highlight_on" value="true" />
+  <input id="theme_code_copy" value="true" />
+</div>
+
+
+
+<body>
+<aside class="nav">
+    <div class="nav-left">
+        <a href="/"
+   class="avatar_target">
+    <img class="avatar"
+         src="https://avatars.githubusercontent.com/u/42958301?s=40&amp;v=4"/>
+</a>
+<div class="author">
+    <span>KerbalHao</span>
+</div>
+
+<div class="icon">
+    
+</div>
+
+
+
+
+<ul>
+    <li>
+        <div class="all active" data-rel="全部文章">全部文章
+            
+                <small>(65)</small>
+            
+        </div>
+    </li>
+    
+        
+            
+        
+    
+        
+            
+                <li>
+                    <div data-rel="Git">
+                        
+                        Git
+                        <small>(1)</small>
+                        
+                    </div>
+                    
+                </li>
+            
+        
+    
+        
+            
+        
+    
+        
+            
+                <li>
+                    <div data-rel="HTTP">
+                        
+                        HTTP
+                        <small>(2)</small>
+                        
+                    </div>
+                    
+                </li>
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+                <li>
+                    <div data-rel="RegExp">
+                        
+                        RegExp
+                        <small>(1)</small>
+                        
+                    </div>
+                    
+                </li>
+            
+        
+    
+        
+            
+                <li>
+                    <div data-rel="前端">
+                        <i class="fold iconfont icon-right"></i>
+                        
+                        前端
+                        <small>(45)</small>
+                        
+                    </div>
+                    
+                        <ul class="sub hide">
+                            
+                                <li>
+                                    <div data-rel="前端<--->CSS">
+                                        
+                                        CSS
+                                        
+                                            <small>(2
+                                                )</small>
+                                        
+                                    </div>
+                                    
+                                </li>
+                            
+                                <li>
+                                    <div data-rel="前端<--->HTML">
+                                        
+                                        HTML
+                                        
+                                            <small>(1
+                                                )</small>
+                                        
+                                    </div>
+                                    
+                                </li>
+                            
+                                <li>
+                                    <div data-rel="前端<--->JS源码解析">
+                                        
+                                        JS源码解析
+                                        
+                                            <small>(2
+                                                )</small>
+                                        
+                                    </div>
+                                    
+                                </li>
+                            
+                                <li>
+                                    <div data-rel="前端<--->Js现代教程">
+                                        
+                                        Js现代教程
+                                        
+                                            <small>(9
+                                                )</small>
+                                        
+                                    </div>
+                                    
+                                </li>
+                            
+                                <li>
+                                    <div data-rel="前端<--->JS高程">
+                                        
+                                        JS高程
+                                        
+                                            <small>(2
+                                                )</small>
+                                        
+                                    </div>
+                                    
+                                </li>
+                            
+                                <li>
+                                    <div data-rel="前端<--->JS高级程序设计">
+                                        
+                                        JS高级程序设计
+                                        
+                                            <small>(6
+                                                )</small>
+                                        
+                                    </div>
+                                    
+                                </li>
+                            
+                                <li>
+                                    <div data-rel="前端<--->React">
+                                        
+                                        React
+                                        
+                                            <small>(1
+                                                )</small>
+                                        
+                                    </div>
+                                    
+                                </li>
+                            
+                                <li>
+                                    <div data-rel="前端<--->读书笔记">
+                                        
+                                        读书笔记
+                                        
+                                            <small>(1
+                                                )</small>
+                                        
+                                    </div>
+                                    
+                                </li>
+                            
+                        </ul>
+                    
+                </li>
+            
+        
+    
+        
+            
+                <li>
+                    <div data-rel="读书小记">
+                        
+                        读书小记
+                        <small>(2)</small>
+                        
+                    </div>
+                    
+                </li>
+            
+        
+    
+        
+            
+        
+    
+</ul>
+<div class="left-bottom">
+    <div class="menus">
+        
+            
+            
+            
+    </div>
+    <div>
+        
+        <a 
+                                           class="friends">友链</a>
+        
+    </div>
+</div>
+<input type="hidden" id="yelog_site_posts_number" value="65">
+<input type="hidden" id="yelog_site_word_count" value="134.2k">
+<div style="display: none">
+    <span id="busuanzi_value_site_uv"></span>
+    <span id="busuanzi_value_site_pv"></span>
+</div>
+
+    </div>
+    <div class="nav-right">
+        <div class="friends-area">
+    <div class="friends-title">
+        友情链接
+        <i class="iconfont icon-left"></i>
+    </div>
+    <div class="friends-content">
+        <ul>
+            
+            <li><a target="_blank" href="http://kerbalhao.org/">叶落阁</a></li>
+            
+        </ul>
+    </div>
+</div>
+        <div class="title-list">
+    <div class="right-top">
+        <div id="default-panel">
+            <i class="iconfont icon-search" data-title="搜索 快捷键 i"></i>
+            <div class="right-title">全部文章</div>
+            <i class="iconfont icon-file-tree" data-title="切换到大纲视图 快捷键 w"></i>
+        </div>
+        <div id="search-panel">
+            <i class="iconfont icon-left" data-title="返回"></i>
+            <input id="local-search-input" autocomplete="off"/>
+            <label class="border-line" for="input"></label>
+            <i class="iconfont icon-case-sensitive" data-title="大小写敏感"></i>
+            <i class="iconfont icon-tag" data-title="标签"></i>
+        </div>
+        <div id="outline-panel" style="display: none">
+            <div class="right-title">大纲</div>
+            <i class="iconfont icon-list" data-title="切换到文章列表"></i>
+        </div>
+    </div>
+
+    <div class="tags-list">
+    <input id="tag-search" />
+    <div class="tag-wrapper">
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>Bootstrap</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>CSS</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>ES6</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>HTML MDN</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>HTML5</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>HTTP</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>JQ</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>js</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>JS</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>JS MDN</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>js源码解析</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>Lua</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>MDN</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>React</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>vue</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>作品</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>工作</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>浏览器</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>迭代器与生成器</a>
+            </li>
+        
+    </div>
+
+</div>
+
+    
+    <nav id="title-list-nav">
+        
+        
+        <a  class="全部文章 "
+           href="/2022/04/06/JS%E7%B1%BB%E5%9E%8B%E6%A3%80%E6%B5%8B/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="类型检查">类型检查</span>
+            <span class="post-date" title="2022-04-06 09:50:08">2022/04/06</span>
+        </a>
+        
+        
+        <a  class="全部文章 "
+           href="/2022/03/21/%E6%BA%90%E7%A0%81%E9%98%85%E8%AF%BB-koa-compose%E6%BA%90%E7%A0%81%E8%A7%A3%E6%9E%90/"
+           data-tag="js源码解析"
+           data-author="" >
+            <span class="post-title" title="Koa-Compose 源码解析">Koa-Compose 源码解析</span>
+            <span class="post-date" title="2022-03-21 10:36:09">2022/03/21</span>
+        </a>
+        
+        
+        <a  class="全部文章 前端 "
+           href="/2022/02/16/vue-devtool%20%E4%B8%AD%20open-in-editor%20%E6%BA%90%E7%A0%81%E9%98%85%E8%AF%BB/"
+           data-tag="js源码解析"
+           data-author="" >
+            <span class="post-title" title="Vue-Devtool 中 Open-in-Editor 源码阅读">Vue-Devtool 中 Open-in-Editor 源码阅读</span>
+            <span class="post-date" title="2022-02-16 10:36:09">2022/02/16</span>
+        </a>
+        
+        
+        <a  class="全部文章 "
+           href="/2022/01/21/%E7%94%A8%20ES6%20%E9%87%8D%E5%86%99%20tiny-emitter/"
+           data-tag="js源码解析"
+           data-author="" >
+            <span class="post-title" title="用 ES6 重写 Tiny-Emitter">用 ES6 重写 Tiny-Emitter</span>
+            <span class="post-date" title="2022-01-21 10:36:09">2022/01/21</span>
+        </a>
+        
+        
+        <a  class="全部文章 前端 JS源码解析 "
+           href="/2022/01/10/Vue3%20repease.js%20%E5%AD%A6%E4%B9%A0/"
+           data-tag="JS"
+           data-author="" >
+            <span class="post-title" title="Vue3 repease.js 学习">Vue3 repease.js 学习</span>
+            <span class="post-date" title="2022-01-10 10:36:09">2022/01/10</span>
+        </a>
+        
+        
+        <a  class="全部文章 前端 JS源码解析 "
+           href="/2021/12/16/vue-next%20%E7%9A%84%20shared%20%E6%A8%A1%E5%9D%97%E6%BA%90%E7%A0%81%E9%98%85%E8%AF%BB/"
+           data-tag="JS"
+           data-author="" >
+            <span class="post-title" title="Vue-Next 的 Shared 模块源码阅读">Vue-Next 的 Shared 模块源码阅读</span>
+            <span class="post-date" title="2021-12-16 10:36:09">2021/12/16</span>
+        </a>
+        
+        
+        <a  class="全部文章 前端 "
+           href="/2021/12/05/promissify%20%E5%AE%9E%E7%8E%B0/"
+           data-tag="js源码解析"
+           data-author="" >
+            <span class="post-title" title="Promissify 实现">Promissify 实现</span>
+            <span class="post-date" title="2021-12-05 10:36:09">2021/12/05</span>
+        </a>
+        
+        
+        <a  class="全部文章 前端 "
+           href="/2021/11/10/webpack%E5%AD%A6%E4%B9%A0/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="Webpack 基础配置">Webpack 基础配置</span>
+            <span class="post-date" title="2021-11-10 10:36:09">2021/11/10</span>
+        </a>
+        
+        
+        <a  class="全部文章 "
+           href="/2021/10/21/%E9%A1%B9%E7%9B%AE%E6%8B%86%E5%88%86/"
+           data-tag="工作"
+           data-author="" >
+            <span class="post-title" title="基于后台项目拆分">基于后台项目拆分</span>
+            <span class="post-date" title="2021-10-21 10:36:09">2021/10/21</span>
+        </a>
+        
+        
+        <a  class="全部文章 前端 "
+           href="/2021/10/05/%E8%A7%84%E8%8C%83%E5%9B%A2%E9%98%9F%E5%8C%85%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="规范团队包管理工具">规范团队包管理工具</span>
+            <span class="post-date" title="2021-10-05 10:36:09">2021/10/05</span>
+        </a>
+        
+        
+        <a  class="全部文章 前端 "
+           href="/2021/04/17/%E6%B5%8F%E8%A7%88%E5%99%A8%E6%98%AF%E5%A6%82%E4%BD%95%E6%B8%B2%E6%9F%93%E7%BD%91%E9%A1%B5%E7%9A%84%EF%BC%9F%E2%80%94%E2%80%94DOM,CSSOM%E4%BB%A5%E5%8F%8A%E6%B8%B2%E6%9F%93/"
+           data-tag="浏览器"
+           data-author="" >
+            <span class="post-title" title="浏览器是如何渲染网页的">浏览器是如何渲染网页的</span>
+            <span class="post-date" title="2021-04-17 02:35:10">2021/04/17</span>
+        </a>
+        
+        
+        <a  class="全部文章 HTTP "
+           href="/2021/03/22/%E5%9F%BA%E4%BA%8EHTTP%E7%BD%91%E7%BB%9C%E5%B1%82%E7%9A%84%E5%89%8D%E7%AB%AF%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/"
+           data-tag="HTTP"
+           data-author="" >
+            <span class="post-title" title="从输入 URL 地址到看到页面，HTTP 应用层都经历了什么">从输入 URL 地址到看到页面，HTTP 应用层都经历了什么</span>
+            <span class="post-date" title="2021-03-22 11:48:48">2021/03/22</span>
+        </a>
+        
+        
+        <a  class="全部文章 前端 "
+           href="/2021/01/09/%E6%89%8B%E5%86%99%20promise/"
+           data-tag="JS"
+           data-author="" >
+            <span class="post-title" title="手写Promise">手写Promise</span>
+            <span class="post-date" title="2021-01-09 11:48:48">2021/01/09</span>
+        </a>
+        
+        
+        <a  class="全部文章 前端 React "
+           href="/2020/04/27/LearningReact/"
+           data-tag="JS"
+           data-author="" >
+            <span class="post-title" title="React 思维导图">React 思维导图</span>
+            <span class="post-date" title="2020-04-27 19:01:49">2020/04/27</span>
+        </a>
+        
+        
+        <a  class="全部文章 "
+           href="/2020/04/23/dota2/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="个人 Dota2 项目">个人 Dota2 项目</span>
+            <span class="post-date" title="2020-04-23 22:02:46">2020/04/23</span>
+        </a>
+        
+        
+        <a  class="全部文章 "
+           href="/2020/04/14/Lua%E5%AD%A6%E4%B9%A0/"
+           data-tag="Lua"
+           data-author="" >
+            <span class="post-title" title="Lua 基础学习">Lua 基础学习</span>
+            <span class="post-date" title="2020-04-14 11:08:06">2020/04/14</span>
+        </a>
+        
+        
+        <a  class="全部文章 "
+           href="/2019/12/28/JS%2012%E4%B8%AA%E9%87%8D%E8%A6%81%E6%A6%82%E5%BF%B5%E4%BB%A5%E5%8F%8Areduce%E6%96%B9%E6%B3%95%E8%AF%A6%E8%A7%A3/"
+           data-tag="JS"
+           data-author="" >
+            <span class="post-title" title="Js 12个重要概念">Js 12个重要概念</span>
+            <span class="post-date" title="2019-12-28 19:48:48">2019/12/28</span>
+        </a>
+        
+        
+        <a  class="全部文章 前端 Js现代教程 "
+           href="/2019/09/12/MJT-%E5%BC%82%E6%AD%A5%E8%BF%AD%E4%BB%A3%E5%99%A8%E4%B8%8E%E7%94%9F%E6%88%90%E5%99%A8/"
+           data-tag="JS"
+           data-author="" >
+            <span class="post-title" title="MJT-异步迭代器与生成器">MJT-异步迭代器与生成器</span>
+            <span class="post-date" title="2019-09-12 10:36:09">2019/09/12</span>
+        </a>
+        
+        
+        <a  class="全部文章 前端 "
+           href="/2019/08/19/ES6_%E8%BF%AD%E4%BB%A3%E5%99%A8%E4%B8%8E%E7%94%9F%E6%88%90%E5%99%A8/"
+           data-tag="ES6,迭代器与生成器"
+           data-author="" >
+            <span class="post-title" title="ES6-迭代器与生成器">ES6-迭代器与生成器</span>
+            <span class="post-date" title="2019-08-19 10:36:09">2019/08/19</span>
+        </a>
+        
+        
+        <a  class="全部文章 前端 "
+           href="/2019/08/09/ES6_Set,Map/"
+           data-tag="ES6"
+           data-author="" >
+            <span class="post-title" title="ES6-Set Map">ES6-Set Map</span>
+            <span class="post-date" title="2019-08-09 10:36:09">2019/08/09</span>
+        </a>
+        
+        
+        <a  class="全部文章 前端 "
+           href="/2019/07/20/ES6_Symbol/"
+           data-tag="ES6"
+           data-author="" >
+            <span class="post-title" title="ES6-Symbol">ES6-Symbol</span>
+            <span class="post-date" title="2019-07-20 07:36:09">2019/07/20</span>
+        </a>
+        
+        
+        <a  class="全部文章 前端 "
+           href="/2019/07/10/ES6_%E8%A7%A3%E6%9E%84/"
+           data-tag="ES6"
+           data-author="" >
+            <span class="post-title" title="ES6-解构">ES6-解构</span>
+            <span class="post-date" title="2019-07-10 07:36:09">2019/07/10</span>
+        </a>
+        
+        
+        <a  class="全部文章 "
+           href="/2019/07/06/ES6_%E5%AF%B9%E8%B1%A1/"
+           data-tag="ES6"
+           data-author="" >
+            <span class="post-title" title="ES6-对象">ES6-对象</span>
+            <span class="post-date" title="2019-07-06 01:52:58">2019/07/06</span>
+        </a>
+        
+        
+        <a  class="全部文章 前端 "
+           href="/2019/06/28/ES6_%E5%87%BD%E6%95%B0/"
+           data-tag="ES6"
+           data-author="" >
+            <span class="post-title" title="ES6-函数">ES6-函数</span>
+            <span class="post-date" title="2019-06-28 18:36:09">2019/06/28</span>
+        </a>
+        
+        
+        <a  class="全部文章 前端 "
+           href="/2019/06/18/ES6_%E5%9D%97%E7%BA%A7%E4%BD%9C%E7%94%A8%E5%9F%9F/"
+           data-tag="ES6"
+           data-author="" >
+            <span class="post-title" title="ES6-块级作用域与字符串">ES6-块级作用域与字符串</span>
+            <span class="post-date" title="2019-06-18 18:36:09">2019/06/18</span>
+        </a>
+        
+        
+        <a  class="全部文章 前端 Js现代教程 "
+           href="/2019/05/10/MJT_Class/"
+           data-tag="JS"
+           data-author="" >
+            <span class="post-title" title="Js现代教程笔记 -- Class">Js现代教程笔记 -- Class</span>
+            <span class="post-date" title="2019-05-10 18:36:09">2019/05/10</span>
+        </a>
+        
+        
+        <a  class="全部文章 前端 Js现代教程 "
+           href="/2019/05/01/MJT_%E5%8E%9F%E5%9E%8B%E4%B8%8E%E7%BB%A7%E6%89%BF/"
+           data-tag="JS"
+           data-author="" >
+            <span class="post-title" title="Js现代教程笔记 -- 原型与继承">Js现代教程笔记 -- 原型与继承</span>
+            <span class="post-date" title="2019-05-01 18:36:09">2019/05/01</span>
+        </a>
+        
+        
+        <a  class="全部文章 前端 Js现代教程 "
+           href="/2019/04/23/MJT_%E5%AF%B9%E8%B1%A1%E5%B1%9E%E6%80%A7/"
+           data-tag="JS"
+           data-author="" >
+            <span class="post-title" title="Js现代教程笔记 -- 对象属性">Js现代教程笔记 -- 对象属性</span>
+            <span class="post-date" title="2019-04-23 10:36:09">2019/04/23</span>
+        </a>
+        
+        
+        <a  class="全部文章 前端 Js现代教程 "
+           href="/2019/04/22/MJT_%E6%B5%8F%E8%A7%88%E5%99%A8/"
+           data-tag="JS"
+           data-author="" >
+            <span class="post-title" title="Js现代教程笔记 -- DOM">Js现代教程笔记 -- DOM</span>
+            <span class="post-date" title="2019-04-22 18:36:09">2019/04/22</span>
+        </a>
+        
+        
+        <a  class="全部文章 前端 Js现代教程 "
+           href="/2019/04/21/MJT_%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/"
+           data-tag="JS"
+           data-author="" >
+            <span class="post-title" title="Js现代教程笔记 -- 数据类型">Js现代教程笔记 -- 数据类型</span>
+            <span class="post-date" title="2019-04-21 18:36:09">2019/04/21</span>
+        </a>
+        
+        
+        <a  class="全部文章 前端 Js现代教程 "
+           href="/2019/04/20/MJT_%E5%AF%B9%E4%BA%8E%E5%87%BD%E6%95%B0%E5%8F%82%E6%95%B0%E7%9A%84%E7%AE%80%E4%BB%8B/"
+           data-tag="JS"
+           data-author="" >
+            <span class="post-title" title="Js现代教程笔记 -- 对于函数参数的见解">Js现代教程笔记 -- 对于函数参数的见解</span>
+            <span class="post-date" title="2019-04-20 10:36:09">2019/04/20</span>
+        </a>
+        
+        
+        <a  class="全部文章 前端 Js现代教程 "
+           href="/2019/04/19/MJT_%E5%87%BD%E6%95%B0%E9%AB%98%E9%98%B6%E5%BA%94%E7%94%A8/"
+           data-tag="JS"
+           data-author="" >
+            <span class="post-title" title="Js现代教程笔记 -- 函数高阶应用">Js现代教程笔记 -- 函数高阶应用</span>
+            <span class="post-date" title="2019-04-19 18:36:09">2019/04/19</span>
+        </a>
+        
+        
+        <a  class="全部文章 读书小记 "
+           href="/2019/04/18/LT_little-trick/"
+           data-tag="JS"
+           data-author="" >
+            <span class="post-title" title="随手小记">随手小记</span>
+            <span class="post-date" title="2019-04-18 10:36:09">2019/04/18</span>
+        </a>
+        
+        
+        <a  class="全部文章 前端 Js现代教程 "
+           href="/2019/04/17/MJT_%E2%80%9Cthis%E2%80%9D%E6%8E%A2%E7%B4%A2/"
+           data-tag="JS"
+           data-author="" >
+            <span class="post-title" title="Js现代教程笔记 -- This 值的探索">Js现代教程笔记 -- This 值的探索</span>
+            <span class="post-date" title="2019-04-17 18:36:09">2019/04/17</span>
+        </a>
+        
+        
+        <a  class="全部文章 前端 读书笔记 "
+           href="/2019/04/17/JGP_%E5%AF%B9%E8%B1%A1/"
+           data-tag="JS"
+           data-author="" >
+            <span class="post-title" title="JS语言精粹读书笔记 -- 对象与函数">JS语言精粹读书笔记 -- 对象与函数</span>
+            <span class="post-date" title="2019-04-17 10:36:09">2019/04/17</span>
+        </a>
+        
+        
+        <a  class="全部文章 读书小记 "
+           href="/2019/04/17/LT_%E8%AF%BB%E4%B9%A6%E5%B0%8F%E8%AE%B0/"
+           data-tag="JS"
+           data-author="" >
+            <span class="post-title" title="随手小记">随手小记</span>
+            <span class="post-date" title="2019-04-17 10:36:09">2019/04/17</span>
+        </a>
+        
+        
+        <a  class="全部文章 前端 "
+           href="/2019/02/22/CSS%E7%9B%B8%E5%85%B3%E4%B8%8E%E7%BB%8F%E5%85%B8%E5%B8%83%E5%B1%80%EF%BC%88%E5%8F%8C%E9%A3%9E%E7%BF%BC%E4%B8%8E%E5%9C%A3%E6%9D%AF%EF%BC%89/"
+           data-tag="CSS"
+           data-author="" >
+            <span class="post-title" title="CSS相关与经典布局（双飞翼与圣杯）">CSS相关与经典布局（双飞翼与圣杯）</span>
+            <span class="post-date" title="2019-02-22 06:36:09">2019/02/22</span>
+        </a>
+        
+        
+        <a  class="全部文章 "
+           href="/2019/02/19/html5%E8%AF%AD%E4%B9%89%E5%8C%96%E6%A0%87%E7%AD%BE%E5%AD%A6%E4%B9%A0/"
+           data-tag="HTML5"
+           data-author="" >
+            <span class="post-title" title="HTML5 语义化标签笔记">HTML5 语义化标签笔记</span>
+            <span class="post-date" title="2019-02-19 07:36:09">2019/02/19</span>
+        </a>
+        
+        
+        <a  class="全部文章 "
+           href="/2019/02/19/Html5%E7%9B%B8%E5%85%B3/"
+           data-tag="HTML5"
+           data-author="" >
+            <span class="post-title" title="Html5相关">Html5相关</span>
+            <span class="post-date" title="2019-02-19 06:36:09">2019/02/19</span>
+        </a>
+        
+        
+        <a  class="全部文章 前端 "
+           href="/2019/02/18/symbol%E4%B8%8E%E5%89%8D%E7%AB%AF%E6%9E%B6%E6%9E%84%E5%9B%BE/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="Symbol 与前端架构图">Symbol 与前端架构图</span>
+            <span class="post-date" title="2019-02-18 06:36:09">2019/02/18</span>
+        </a>
+        
+        
+        <a  class="全部文章 "
+           href="/2019/02/18/%E4%BD%9C%E5%93%81/"
+           data-tag="作品"
+           data-author="" >
+            <span class="post-title" title="个人作品集">个人作品集</span>
+            <span class="post-date" title="2019-02-18 06:36:09">2019/02/18</span>
+        </a>
+        
+        
+        <a  class="全部文章 前端 "
+           href="/2019/02/15/Css%E9%83%A8%E5%88%86%E4%BB%8B%E7%BB%8D/"
+           data-tag="CSS"
+           data-author="" >
+            <span class="post-title" title="Css部分介绍">Css部分介绍</span>
+            <span class="post-date" title="2019-02-15 06:36:09">2019/02/15</span>
+        </a>
+        
+        
+        <a  class="全部文章 前端 CSS "
+           href="/2019/01/18/MDN_Css/"
+           data-tag="CSS,MDN"
+           data-author="" >
+            <span class="post-title" title="MDN教程学习-CSS">MDN教程学习-CSS</span>
+            <span class="post-date" title="2019-01-18 10:36:09">2019/01/18</span>
+        </a>
+        
+        
+        <a  class="全部文章 前端 "
+           href="/2019/01/17/MDN_JS/"
+           data-tag="JS MDN"
+           data-author="" >
+            <span class="post-title" title="MDN教程学习-JS">MDN教程学习-JS</span>
+            <span class="post-date" title="2019-01-17 10:36:09">2019/01/17</span>
+        </a>
+        
+        
+        <a  class="全部文章 前端 HTML "
+           href="/2019/01/16/MDN_HTML/"
+           data-tag="HTML MDN"
+           data-author="" >
+            <span class="post-title" title="MDN教程学习-HTML">MDN教程学习-HTML</span>
+            <span class="post-date" title="2019-01-16 10:36:09">2019/01/16</span>
+        </a>
+        
+        
+        <a  class="全部文章 "
+           href="/2019/01/09/Bootstrap_%E5%9F%BA%E6%9C%AC/"
+           data-tag="Bootstrap"
+           data-author="" >
+            <span class="post-title" title="Bootstrap 基本学习">Bootstrap 基本学习</span>
+            <span class="post-date" title="2019-01-09 06:36:09">2019/01/09</span>
+        </a>
+        
+        
+        <a  class="全部文章 前端 CSS "
+           href="/2018/12/30/SCSS_%E5%9F%BA%E7%A1%80/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="Scss基础">Scss基础</span>
+            <span class="post-date" title="2018-12-30 07:36:09">2018/12/30</span>
+        </a>
+        
+        
+        <a  class="全部文章 前端 JS高级程序设计 "
+           href="/2018/12/15/PJW_DOM%E5%AD%A6%E4%B9%A0/"
+           data-tag="JS"
+           data-author="" >
+            <span class="post-title" title="DOM学习">DOM学习</span>
+            <span class="post-date" title="2018-12-15 06:36:09">2018/12/15</span>
+        </a>
+        
+        
+        <a  class="全部文章 前端 "
+           href="/2018/11/28/%E6%B7%B1%E6%8B%B7%E8%B4%9D%E4%B8%8E%E6%B5%85%E6%8B%B7%E8%B4%9D%E7%9A%84%E5%8C%BA%E5%88%AB%EF%BC%8C%E5%AE%9E%E7%8E%B0%E6%B7%B1%E6%8B%B7%E8%B4%9D%E7%9A%84%E5%87%A0%E7%A7%8D%E6%96%B9%E6%B3%95/"
+           data-tag="JS"
+           data-author="" >
+            <span class="post-title" title="深拷贝与浅拷贝的区别，实现深拷贝的几种方法">深拷贝与浅拷贝的区别，实现深拷贝的几种方法</span>
+            <span class="post-date" title="2018-11-28 10:36:09">2018/11/28</span>
+        </a>
+        
+        
+        <a  class="全部文章 前端 JS高级程序设计 "
+           href="/2018/11/25/PJW_%E8%A1%A8%E5%8D%95%E8%84%9A%E6%9C%AC/"
+           data-tag="JS"
+           data-author="" >
+            <span class="post-title" title="表单脚本">表单脚本</span>
+            <span class="post-date" title="2018-11-25 07:36:09">2018/11/25</span>
+        </a>
+        
+        
+        <a  class="全部文章 前端 "
+           href="/2018/11/22/%E6%B7%B1%E5%85%A5%E4%BA%86%E8%A7%A3vue/"
+           data-tag="vue"
+           data-author="" >
+            <span class="post-title" title="VUE深入学习">VUE深入学习</span>
+            <span class="post-date" title="2018-11-22 10:36:09">2018/11/22</span>
+        </a>
+        
+        
+        <a  class="全部文章 Git "
+           href="/2018/11/16/11.17_GIT/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="Git 学习">Git 学习</span>
+            <span class="post-date" title="2018-11-16 10:36:09">2018/11/16</span>
+        </a>
+        
+        
+        <a  class="全部文章 前端 JS高级程序设计 "
+           href="/2018/10/29/PJW_%E4%BA%8B%E4%BB%B6/"
+           data-tag="JS"
+           data-author="" >
+            <span class="post-title" title="事件(Event)学习">事件(Event)学习</span>
+            <span class="post-date" title="2018-10-29 07:36:09">2018/10/29</span>
+        </a>
+        
+        
+        <a  class="全部文章 前端 "
+           href="/2018/10/25/JQ%E5%9F%BA%E7%A1%80/"
+           data-tag="JQ"
+           data-author="" >
+            <span class="post-title" title="jQuery基础">jQuery基础</span>
+            <span class="post-date" title="2018-10-25 07:36:09">2018/10/25</span>
+        </a>
+        
+        
+        <a  class="全部文章 前端 "
+           href="/2018/10/25/React%E5%9F%BA%E7%A1%80/"
+           data-tag="React"
+           data-author="" >
+            <span class="post-title" title="React基础">React基础</span>
+            <span class="post-date" title="2018-10-25 07:36:09">2018/10/25</span>
+        </a>
+        
+        
+        <a  class="全部文章 "
+           href="/2018/10/22/Js%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E3%80%81DRY%E5%8E%9F%E5%88%99%E4%BB%A5%E5%8F%8A%E5%87%BD%E6%95%B0%E5%BC%8F%E7%BC%96%E7%A8%8B/"
+           data-tag="JS"
+           data-author="" >
+            <span class="post-title" title="Js面向对象、DRY原则以及函数式编程">Js面向对象、DRY原则以及函数式编程</span>
+            <span class="post-date" title="2018-10-22 10:36:09">2018/10/22</span>
+        </a>
+        
+        
+        <a  class="全部文章 前端 JS高程 "
+           href="/2018/10/20/PJW_Js%E5%9F%BA%E6%9C%AC%E5%8C%85%E8%A3%85%E7%B1%BB%E5%9E%8B%E4%B8%8E%E6%8B%93%E5%B1%95%E8%BF%90%E7%AE%97%E7%AC%A6%E5%AD%A6%E4%B9%A0/"
+           data-tag="JS"
+           data-author="" >
+            <span class="post-title" title="Js基本包装类型与拓展运算符学习">Js基本包装类型与拓展运算符学习</span>
+            <span class="post-date" title="2018-10-20 05:36:09">2018/10/20</span>
+        </a>
+        
+        
+        <a  class="全部文章 RegExp "
+           href="/2018/10/19/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="正则表达式">正则表达式</span>
+            <span class="post-date" title="2018-10-19 05:36:09">2018/10/19</span>
+        </a>
+        
+        
+        <a  class="全部文章 前端 JS高级程序设计 "
+           href="/2018/10/18/PJW_Js%20%E5%BC%95%E7%94%A8%E7%B1%BB%E5%9E%8B%E7%B1%BB%E5%9E%8B(Date%E3%80%81RegExp%E3%80%81Function)%E4%B8%8E%20%E9%83%A8%E5%88%86ES6%E8%AF%AD%E6%B3%95%E4%BA%86%E8%A7%A3/"
+           data-tag="JS"
+           data-author="" >
+            <span class="post-title" title="Js 引用类型类型引用类型类型(下)">Js 引用类型类型引用类型类型(下)</span>
+            <span class="post-date" title="2018-10-18 07:36:09">2018/10/18</span>
+        </a>
+        
+        
+        <a  class="全部文章 前端 JS高级程序设计 "
+           href="/2018/10/17/PJW_Js%20%E5%BC%95%E7%94%A8%E7%B1%BB%E5%9E%8B%E7%B1%BB%E5%9E%8B(Object%E3%80%81Array)/"
+           data-tag="JS"
+           data-author="" >
+            <span class="post-title" title="Js 引用类型类型(上)">Js 引用类型类型(上)</span>
+            <span class="post-date" title="2018-10-17 05:36:09">2018/10/17</span>
+        </a>
+        
+        
+        <a  class="全部文章 前端 JS高级程序设计 "
+           href="/2018/10/15/PJW_Js%20%E5%9F%BA%E6%9C%AC%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E4%B8%8E%20css%E4%B8%AD%E7%9A%84@media%E3%80%81grid%E3%80%81flex%E5%B1%9E%E6%80%A7%E5%AD%A6%E4%B9%A0/"
+           data-tag="JS"
+           data-author="" >
+            <span class="post-title" title="Js 基本数据类型">Js 基本数据类型</span>
+            <span class="post-date" title="2018-10-15 05:36:09">2018/10/15</span>
+        </a>
+        
+        
+        <a  class="全部文章 "
+           href="/2018/10/14/Js%E7%AB%8B%E5%8D%B3%E6%89%A7%E8%A1%8C%E5%87%BD%E6%95%B0%E5%86%99%E6%B3%95%E4%BB%A5%E5%8F%8AFCC%E4%B8%AD%E5%AD%A6%E5%88%B0%E7%9A%84css%E9%83%A8%E5%88%86%E7%94%A8%E6%B3%95%E5%92%8C%E8%AF%AD%E4%B9%89%E5%8C%96html%E7%AC%94%E8%AE%B0/"
+           data-tag="JS"
+           data-author="" >
+            <span class="post-title" title="Js立即执行函数写法以及FCC中学到的css部分用法和语义化html笔记">Js立即执行函数写法以及FCC中学到的css部分用法和语义化html笔记</span>
+            <span class="post-date" title="2018-10-14 06:36:09">2018/10/14</span>
+        </a>
+        
+        
+        <a  class="全部文章 前端 JS高程 "
+           href="/2018/10/13/PJW_Js%E8%BF%90%E7%AE%97%E7%AC%A6%E5%92%8C%E5%9F%BA%E6%9C%AC%E8%AF%AD%E5%8F%A5%EF%BC%8C%E6%95%B0%E7%BB%84%E7%9A%84%E5%A2%9E%E5%88%A0%E6%96%B9%E6%B3%95%E4%BB%A5%E5%8F%8A%E5%87%BD%E6%95%B0%E4%BD%9C%E7%94%A8%E5%9F%9F%E7%9A%84%E4%B8%80%E4%BA%9B%E4%BA%86%E8%A7%A3/"
+           data-tag="js"
+           data-author="" >
+            <span class="post-title" title="Js运算符和基本语句">Js运算符和基本语句</span>
+            <span class="post-date" title="2018-10-13 06:36:09">2018/10/13</span>
+        </a>
+        
+        
+        <a  class="全部文章 HTTP "
+           href="/2018/10/13/Post%E5%92%8CGet%E7%9A%84%E5%8C%BA%E5%88%AB/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="Post 和 Get区别">Post 和 Get区别</span>
+            <span class="post-date" title="2018-10-13 05:36:09">2018/10/13</span>
+        </a>
+        
+        
+        <a  class="全部文章 前端 "
+           href="/2018/09/19/html%E4%B8%8Ecss/"
+           data-tag="CSS,HTML5"
+           data-author="" >
+            <span class="post-title" title="Css与HTML基础">Css与HTML基础</span>
+            <span class="post-date" title="2018-09-19 06:36:09">2018/09/19</span>
+        </a>
+        
+        <div id="no-item-tips">
+
+        </div>
+    </nav>
+    <div id="outline-list">
+    </div>
+</div>
+
+    </div>
+    <div class="hide-list">
+        <div class="semicircle" data-title="切换全屏 快捷键 s">
+            <div class="brackets first"><</div>
+            <div class="brackets">&gt;</div>
+        </div>
+    </div>
+</aside>
+<div id="post">
+    <div class="pjax">
+        <article id="post-JS 12个重要概念以及reduce方法详解" class="article article-type-post" itemscope itemprop="blogPost">
+    
+        <h1 class="article-title">Js 12个重要概念</h1>
+    
+    <div class="article-meta">
+        
+        
+        
+        
+        <span class="tag">
+            <i class="iconfont icon-tag"></i>
+            
+            <a class="color3">JS</a>
+            
+        </span>
+        
+    </div>
+    <div class="article-meta">
+        
+            发布时间 : <time class="date" title='最后更新: 2022-07-05 03:02:34'>2019-12-28 19:48</time>
+        
+    </div>
+    <div class="article-meta">
+        
+        <span>字数:3.7k</span>
+        
+        
+        
+    </div>
+    
+    <div class="toc-ref">
+    
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#JavaScript%E6%96%B9%E9%9D%A2"><span class="toc-text">JavaScript方面</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#12-%E4%B8%AA-JS%E6%A6%82%E5%BF%B5"><span class="toc-text">12 个 JS概念</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-%E5%8F%98%E9%87%8F%E8%B5%8B%E5%80%BC%EF%BC%88%E5%80%BC%E4%B8%8E%E5%BC%95%E7%94%A8%EF%BC%89"><span class="toc-text">1. 变量赋值（值与引用）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-%E9%97%AD%E5%8C%85"><span class="toc-text">2. 闭包</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-%E8%A7%A3%E6%9E%84"><span class="toc-text">3. 解构</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-%E5%B1%95%E5%BC%80%EF%BC%88spread%EF%BC%89%E8%AF%AD%E6%B3%95"><span class="toc-text">4. 展开（spread）语法</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5-%E5%8F%98%E9%95%BF%E5%8F%82%E6%95%B0-rest-%E8%AF%AD%E6%B3%95"><span class="toc-text">5.变长参数 (rest) 语法</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#6-%E6%95%B0%E7%BB%84%E6%96%B9%E6%B3%95"><span class="toc-text">6.数组方法</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#map%E3%80%81filter%E3%80%81reduce"><span class="toc-text">map、filter、reduce</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#find%E3%80%81findIndex%E3%80%81indexOf"><span class="toc-text">find、findIndex、indexOf</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#push%E3%80%81pop%E3%80%81shift%E3%80%81unshift"><span class="toc-text">push、pop、shift、unshift</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#splice%E3%80%81slice%E3%80%81sort"><span class="toc-text">splice、slice、sort</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#7-%E7%94%9F%E6%88%90%E5%99%A8"><span class="toc-text">7. 生成器</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%8E"><span class="toc-text">&#x3D;&#x3D;&#x3D; 与 &#x3D;&#x3D;</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#9-%E5%AF%B9%E8%B1%A1%E6%AF%94%E8%BE%83"><span class="toc-text">9. 对象比较</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#10-%E5%9B%9E%E8%B0%83%E5%87%BD%E6%95%B0"><span class="toc-text">10. 回调函数</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#11-promise"><span class="toc-text">11. promise</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#12-Async-Await"><span class="toc-text">12. Async&#x2F;Await</span></a></li></ol></li></ol></li></ol>
+    
+<style>
+    .left-col .switch-btn,
+    .left-col .switch-area {
+        display: none;
+    }
+    .toc-level-3 i,
+    .toc-level-3 ol {
+        display: none !important;
+    }
+</style>
+</div>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="JavaScript方面"><a href="#JavaScript方面" class="headerlink" title="JavaScript方面"></a><code>JavaScript</code>方面</h2><h3 id="12-个-JS概念"><a href="#12-个-JS概念" class="headerlink" title="12 个 JS概念"></a>12 个 <code>JS</code>概念</h3><p>来源: <a target="_blank" rel="noopener" href="https://www.infoq.cn/article/3L*kK19KH2Ey7GIVBGsN?utm_medium=hao.caibaojian.com&utm_source=hao.caibaojian.com">infoQ 了解这 12 个概念，让你的 JavaScript 水平更上一层楼
+</a></p>
+<h4 id="1-变量赋值（值与引用）"><a href="#1-变量赋值（值与引用）" class="headerlink" title="1. 变量赋值（值与引用）"></a>1. 变量赋值（值与引用）</h4><p><code>JavaScript</code>总是按照值来给变量赋值。当指定的值是 <code>JavaScript</code>的五种原始类型之一（即 <code>Boolean</code>、<code>null</code>、<code>undefined</code>、<code>String</code>和 <code>Number</code>）时，将为变量分配实际的值。但是，当指定的值是 <code>Array</code>、<code>Function</code>或 <code>Object</code>时，将为变量分配内存的对象引用。</p>
+<span id="more"></span>
+
+<h4 id="2-闭包"><a href="#2-闭包" class="headerlink" title="2. 闭包"></a>2. 闭包</h4><p>闭包是一种重要的 <code>JavaScript</code>模式，可用于访问私有变量。在下面的示例中，<code>createGreeter</code>返回一个匿名函数，这个函数可以访问参数 <code>greeting</code>（在这里是“<code>Hello</code>”）。在后续的调用中，<code>sayHello</code>将有权访问这个 <code>greeting</code>！</p>
+<pre><code class="javascript">function createGreeter(greeting) &#123;
+  return function (name) &#123;
+    console.log(greeting + &quot;, &quot; + name);
+  &#125;;
+&#125;
+const sayHello = createGreeter(&quot;Hello&quot;);
+sayHello(&quot;Joe&quot;);
+// Hello, Joe</code></pre>
+<p>在一个更真实的场景中，你可以设想一个初始化函数 <code>apiConnect</code>(<code>apiKey</code>)，它返回一些使用 <code>API</code>密钥的方法。在这种情况下，只需要提供一次 <code>apiKey</code>即可。</p>
+<pre><code class="javascript">function apiConnect(apiKey) &#123;
+  function get(route) &#123;
+    return fetch(`$&#123;route&#125;?key=$&#123;apiKey&#125;`);
+  &#125;
+  function post(route, params) &#123;
+    return fetch(route, &#123;
+      method: &quot;POST&quot;,
+      body: JSON.stringify(params),
+      headers: &#123;
+        Authorization: `Bearer $&#123;apiKey&#125;`,
+      &#125;,
+    &#125;);
+  &#125;
+  return &#123; get, post &#125;;
+&#125;
+const api = apiConnect(&quot;my-secret-key&quot;);
+// No need to include the apiKey anymore
+api.get(&quot;http://www.example.com/get-endpoint&quot;);
+api.post(&quot;http://www.example.com/post-endpoint&quot;, &#123; name: &quot;Joe&quot; &#125;);</code></pre>
+<h4 id="3-解构"><a href="#3-解构" class="headerlink" title="3. 解构"></a>3. 解构</h4><p><code>JavaScript</code>参数解构是一种从对象中提取属性的常用方法。</p>
+<pre><code class="javascript">const obj = &#123;
+  name: &quot;Joe&quot;,
+  food: &quot;cake&quot;,
+&#125;;
+const &#123; name, food &#125; = obj;
+console.log(name, food);
+// &#39;Joe&#39; &#39;cake&#39;</code></pre>
+<p>如果需要以其他名称来提取属性，可以使用以下格式来指定它们。</p>
+<pre><code class="javascript">const obj = &#123;
+  name: &quot;Joe&quot;,
+  food: &quot;cake&quot;,
+&#125;;
+const &#123; name: myName, food: myFood &#125; = obj;
+console.log(myName, myFood);
+// &#39;Joe&#39; &#39;cake&#39;</code></pre>
+<p>在下面的示例中，解构被用来将 <code>person</code>对象传给 <code>introduce</code>函数。换句话说，解构可以（并且经常）直接用于提取传给函数的参数。如果你熟悉 <code>React</code>，可能已经见过这个！</p>
+<pre><code class="javascript">const person = &#123;
+  name: &quot;Eddie&quot;,
+  age: 24,
+&#125;;
+function introduce(&#123; name, age &#125;) &#123;
+  console.log(`I&#39;m $&#123;name&#125; and I&#39;m $&#123;age&#125; years old!`);
+&#125;
+console.log(introduce(person));
+// &quot;I&#39;m Eddie and I&#39;m 24 years old!&quot;</code></pre>
+<p>详细可看阮一峰的 <a target="_blank" rel="noopener" href="http://es6.ruanyifeng.com/#docs/destructuring">ES6 入门</a></p>
+<h4 id="4-展开（spread）语法"><a href="#4-展开（spread）语法" class="headerlink" title="4. 展开（spread）语法"></a>4. 展开（<code>spread</code>）语法</h4><p>在下面的示例中，<code>Math.max</code>不能直接接受 <code>arr</code>数组，因为它的参数不是数组类型，但可以以数组中的各个元素作为参数。展开运算符 <code>…</code>可用于提取数组的各个元素。</p>
+<pre><code class="javascript">const arr = [4, 6, -1, 3, 10, 4];
+const max = Math.max(...arr);
+console.log(max);
+// 10</code></pre>
+<h4 id="5-变长参数-rest-语法"><a href="#5-变长参数-rest-语法" class="headerlink" title="5.变长参数 (rest) 语法"></a>5.变长参数 (<code>rest</code>) 语法</h4><p>可以用它将 传给函数的 任意数量的 参数放入数组中</p>
+<pre><code class="javascript">function myFunc(...args) &#123;
+  console.log(args[0] + args[1]);
+&#125;
+myFunc(1, 2, 3, 4);
+// 3</code></pre>
+<h4 id="6-数组方法"><a href="#6-数组方法" class="headerlink" title="6.数组方法"></a>6.数组方法</h4><p><code>JavaScript</code>数组方法通常可以为你提供令人难以置信的优雅方式来执行所需的数据转换</p>
+<h5 id="map、filter、reduce"><a href="#map、filter、reduce" class="headerlink" title="map、filter、reduce"></a><code>map</code>、<code>filter</code>、<code>reduce</code></h5><ul>
+<li><code>map:</code>返回一个数组，其中每个元素都是用指定函数进行过转换。</li>
+</ul>
+<pre><code class="javascript">const arr = [1, 2, 3, 4, 5, 6];
+const mapped = arr.map((el) =&gt; el + 20);
+console.log(mapped);
+// [21, 22, 23, 24, 25, 26]</code></pre>
+<ul>
+<li><code>filter:</code>返回一个数字，只有当指定函数返回 <code>true</code>时，相应的元素才会被包含在数组内。</li>
+</ul>
+<pre><code class="javascript">const arr = [1, 2, 3, 4, 5, 6];
+const filtered = arr.filter((el) =&gt; el === 2 || el === 4);
+console.log(filtered);
+// [2, 4]</code></pre>
+<ul>
+<li><code>reduce</code>：基于给定函数累加值。<br>语法： <code>arr.reduce(callback,[initialValue])</code></li>
+<li><code>callback</code>（执行数组中每个值的函数，包含四个参数）<ul>
+<li><code>previousValue</code>（上一次调用回调返回的值，或者是提供的初始值（<code>initialValue</code>））</li>
+<li><code>currentValue</code>（数组中当前被处理的元素）<br><code>index</code>（当前元素在数组中的索引）</li>
+<li><code>array</code>（调用 <code>reduce</code>的数组）</li>
+</ul>
+</li>
+<li><code>initialValue</code>（作为第一次调用 <code>callback</code>的第一个参数。）</li>
+</ul>
+<p>基本应用如下：</p>
+<pre><code class="javascript">var items = [10, 120, 1000];
+
+// our reducer function
+var reducer = function add(sumSoFar, item) &#123;
+  return sumSoFar + item;
+&#125;;
+
+// do the job
+var total = items.reduce(reducer, 0);
+
+console.log(total); // 1130</code></pre>
+<p><code>reduce</code>函数的返回结果类型和传入的初始值相同，上个实例中初始值为 <code>number</code>类型，同理，初始值也可为 <code>object</code>类型。</p>
+<pre><code class="javascript">var items = [10, 120, 1000];
+
+// our reducer function
+var reducer = function add(sumSoFar, item) &#123;
+  sumSoFar.sum = sumSoFar.sum + item;
+  return sumSoFar;
+&#125;;
+
+// do the job
+var total = items.reduce(reducer, &#123; sum: 0 &#125;);
+
+console.log(total); // &#123;sum:1130&#125;</code></pre>
+<p><strong><code>reduce</code>进阶应用</strong>:<br>详见<a target="_blank" rel="noopener" href="https://segmentfault.com/a/1190000010731933">思否 数组 reduce 方法的高级技巧</a> by <a target="_blank" rel="noopener" href="https://segmentfault.com/u/taotao123">风雨后见彩虹</a></p>
+<ul>
+<li><p>我们看下面一个例子。</p>
+<ol>
+<li><p><strong>某同学的期末成绩如下表示</strong></p>
+<pre><code class="javascript">var result = [
+  &#123;
+    subject: &quot;math&quot;,
+    score: 88,
+  &#125;,
+  &#123;
+    subject: &quot;chinese&quot;,
+    score: 95,
+  &#125;,
+  &#123;
+    subject: &quot;english&quot;,
+    score: 80,
+  &#125;,
+];</code></pre>
+<ul>
+<li><p>如何求该同学的总成绩？</p>
+</li>
+<li><p>我们可以使用 <code>reduce</code>来搞定这个问题</p>
+<pre><code class="javascript">var sum = result.reduce(function (prev, cur) &#123;
+  return cur.score + prev;
+&#125;, 0);</code></pre>
+<p>这个时候，我们给 <code>reduce</code>参数添加了第二个参数。通过打印我发现设置了这个参数之后，<code>reduce</code>遍历便已经从第一项开始了。</p>
+<p>这第二个参数就是设置 <code>prev</code>的初始类型和初始值，比如为 0，就表示 <code>prev</code>的初始值为 <code>number</code>类型，值为 0，因此，<code>reduce</code>的最终结果也会是 <code>number</code>类型。</p>
+</li>
+</ul>
+</li>
+<li><p><strong>因为第二个参数为累计结果的初始值，因此假设该同学因为违纪被处罚在总成绩总扣 10 分，只需要将初始值设置为-10 即可。</strong></p>
+<pre><code class="javascript">var sum = result.reduce(function (prev, cur) &#123;
+  return cur.score + prev;
+&#125;, -10);</code></pre>
+</li>
+<li><p><strong>假如该同学的总成绩中，各科所占的比重不同，分别为 50%，30%，20%，我们应该如何求出最终的权重结果呢？</strong></p>
+<p>解决方案如下：</p>
+<pre><code class="javascript">var dis = &#123;
+  math: 0.5,
+  chinese: 0.3,
+  english: 0.2,
+&#125;;
+
+var sum = result.reduce(function (prev, cur) &#123;
+  console.log(prev);
+  return cur.score + prev;
+&#125;, -10);
+
+var qsum = result.reduce(function (prev, cur) &#123;
+  return prev + cur.score * dis[cur.subject];
+&#125;, 0);
+
+console.log(sum, qsum);</code></pre>
+<p>为了计算出权重之后的总值，我们在回调函数内部修改了数组当前项，是使他和权重比例相关联，并重新返回一个一样的回调函数，将新修改的当前项传入，就和之前的例子是一样的了。</p>
+</li>
+<li><p><strong>如何知道一串字符串中每个字母出现的次数？</strong></p>
+<p>我们同样可以使用 <code>reduce</code>来解决这个问题</p>
+<p>我们在 <code>reduce</code>的第二个参数里面初始了回调函数第一个参数的类型和值，将字符串转化为数组，那么迭代的结果将是一个对象，对象的每一项 <code>key</code>值就是字符串的字母。</p>
+<pre><code class="javascript">var arrString = &quot;abcdaabc&quot;;
+
+arrString.split(&quot;&quot;).reduce(function (res, cur) &#123;
+  res[cur] ? res[cur]++ : (res[cur] = 1);
+  return res;
+&#125;, &#123;&#125;);</code></pre>
+<p>由于可以通过第二参数设置叠加结果的类型初始值，因此这个时候 <code>reduce</code>就不再仅仅只是做一个加法了，我们可以灵活的运用它来进行各种各样的类型转换，比如将数组按照一定规则转换为对象，也可以将一种形式的数组转换为另一种形式的数组，大家可以动手去尝试一样。</p>
+<pre><code class="javascript">[1, 2].reduce(function (res, cur) &#123;
+  res.push(cur + 1);
+  return res;
+&#125;, []);</code></pre>
+<p>这种特性使得 <code>reduce</code>在实际开发中大有可为！但是需要注意点，在 <code>ie9</code>一下的浏览器中，并不支持该方法 ！</p>
+</li>
+</ol>
+</li>
+<li><p>此外，使用 <code>reduce</code>方法可以完成多维度的数据叠加。如上例中的初始值{<code>sum: 0</code>}，这仅仅是一个维度的操作，如果涉及到了多个属性的叠加，如{<code>sum: 0</code>,<code>totalInEuros: 0</code>,<code>totalInYen: 0</code>}，则需要相应的逻辑进行处理。</p>
+<ol>
+<li><p>在下面的方法中，采用分而治之的方法，即将 <code>reduce</code>函数第一个参数 <code>callback</code>封装为一个数组，由数组中的每一个函数单独进行叠加并完成 <code>reduce</code>操作。所有的一切通过一个 <code>manager</code>函数来管理流程和传递初始参数。</p>
+<pre><code class="javascript">var manageReducers = function (reducers) &#123;
+  return function (state, item) &#123;
+    return Object.keys(reducers).reduce(function (nextState, key) &#123;
+      reducers[key](state, item);
+      return state;
+    &#125;, &#123;&#125;);
+  &#125;;
+&#125;;</code></pre>
+<p>上面就是 <code>manager</code>函数的实现，它需要 <code>reducers</code>对象作为参数，并返回一个 <code>callback</code>类型的函数，作为 <code>reduce</code>的第一个参数。在该函数内部，则执行多维的叠加工作（<code>Object.keys</code>（））。</p>
+</li>
+<li><p>通过这种分治的思想，可以完成目标对象多个属性的同时叠加，完整代码如下：</p>
+<pre><code class="javascript">var reducers = &#123;
+  totalInEuros: function (state, item) &#123;
+    return (state.euros += item.price * 0.897424392);
+  &#125;,
+  totalInYen: function (state, item) &#123;
+    return (state.yens += item.price * 113.852);
+  &#125;,
+&#125;;
+
+var manageReducers = function (reducers) &#123;
+  return function (state, item) &#123;
+    return Object.keys(reducers).reduce(function (nextState, key) &#123;
+      reducers[key](state, item);
+      return state;
+    &#125;, &#123;&#125;);
+  &#125;;
+&#125;;
+
+var bigTotalPriceReducer = manageReducers(reducers);
+
+var initialState = &#123; euros: 0, yens: 0 &#125;;
+
+var items = [&#123; price: 10 &#125;, &#123; price: 120 &#125;, &#123; price: 1000 &#125;];
+
+var totals = items.reduce(bigTotalPriceReducer, initialState);
+
+console.log(totals);</code></pre>
+</li>
+</ol>
+</li>
+</ul>
+<h5 id="find、findIndex、indexOf"><a href="#find、findIndex、indexOf" class="headerlink" title="find、findIndex、indexOf"></a><code>find</code>、<code>findIndex</code>、<code>indexOf</code></h5><ul>
+<li><p><code>find</code>：返回与指定条件匹配的第一个实例，不会继续查找其他匹配的实例。</p>
+<pre><code class="javascript">const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+const found = arr.find((el) =&gt; el &gt; 5);
+console.log(found);
+// 6</code></pre>
+</li>
+</ul>
+<p>虽然 5 之后的元素都符合条件，但只返回第一个匹配的元素。</p>
+<ul>
+<li><p><code>findIndex</code>：这与 <code>find</code>几乎完全相同，但不返回第一个匹配的元素，而是返回第一个匹配元素的索引。</p>
+<pre><code class="javascript">const arr = [&quot;Nick&quot;, &quot;Frank&quot;, &quot;Joe&quot;, &quot;Frank&quot;];
+const foundIndex = arr.findIndex((el) =&gt; el === &quot;Frank&quot;);
+console.log(foundIndex);
+// 1</code></pre>
+</li>
+<li><p><code>indexOf</code>：与 <code>findIndex</code>几乎完全相同，但它的参数不是一个函数，而是一个简单的值。</p>
+<pre><code class="javascript">const arr = [&quot;Nick&quot;, &quot;Frank&quot;, &quot;Joe&quot;, &quot;Frank&quot;];
+const foundIndex = arr.indexOf(&quot;Frank&quot;);
+console.log(foundIndex);
+// 1</code></pre>
+</li>
+</ul>
+<h5 id="push、pop、shift、unshift"><a href="#push、pop、shift、unshift" class="headerlink" title="push、pop、shift、unshift"></a><code>push</code>、<code>pop</code>、<code>shift</code>、<code>unshift</code></h5><ul>
+<li><p>push：这是一个相对简单的方法，它将一个项添加到数组的末尾。它就地修改数组，函数本身会返回数组的新长度。</p>
+<pre><code class="javascript">let arr = [1, 2, 3, 4];
+const pushed = arr.push(5);
+console.log(arr);
+// [1, 2, 3, 4, 5]
+console.log(pushed);
+// 5</code></pre>
+</li>
+<li><p><code>pop</code>：从数组中删除最后一项。同样，它也是就地修改数组。函数本身返回从数组中删除的项。</p>
+<pre><code class="javascript">let arr = [1, 2, 3, 4];
+const popped = arr.pop();
+console.log(arr);
+// [1, 2, 3]
+console.log(popped);
+// 4</code></pre>
+</li>
+<li><p><code>shift</code>：从数组中删除第一个项。同样，它也是就地修改数组。函数本身返回从数组中删除的项。</p>
+<pre><code class="javascript">let arr = [1, 2, 3, 4];
+const shifted = arr.shift();
+console.log(arr);
+// [2, 3, 4]
+console.log(shifted);
+// 1</code></pre>
+</li>
+<li><p><code>unshift</code>：将一个或多个元素添加到数组的开头。同样，它也是就地修改数组。与其他方法不同的是，函数本身返回数组最新的长度。</p>
+<pre><code class="javascript">let arr = [1, 2, 3, 4];
+const unshifted = arr.unshift(5, 6, 7);
+console.log(arr);
+// [5, 6, 7, 1, 2, 3, 4]
+console.log(unshifted);
+// 7</code></pre>
+</li>
+</ul>
+<h5 id="splice、slice、sort"><a href="#splice、slice、sort" class="headerlink" title="splice、slice、sort"></a><code>splice</code>、<code>slice</code>、<code>sort</code></h5><ul>
+<li><p><code>splice</code>：通过删除或替换现有元素或者添加新元素来修改数组的内容。这个方法也是就地修改数组。<br>下面的代码示例的意思是：在数组的位置 1 上删除 0 个元素，并插入 b。</p>
+<pre><code class="javascript">let arr = [&quot;a&quot;, &quot;c&quot;, &quot;d&quot;, &quot;e&quot;];
+arr.splice(1, 0, &quot;b&quot;);</code></pre>
+</li>
+<li><p><code>slice</code>：从指定的起始位置和结束位置之前返回数组的浅拷贝。如果未指定结束位置，则返回数组的其余部分。这个方法不会修改数组，只是返回所需的子集。</p>
+<pre><code class="javascript">let arr = [&quot;a&quot;, &quot;b&quot;, &quot;c&quot;, &quot;d&quot;, &quot;e&quot;];
+const sliced = arr.slice(2, 4);
+console.log(sliced);
+// [&#39;c&#39;, &#39;d&#39;]
+console.log(arr);
+// [&#39;a&#39;, &#39;b&#39;, &#39;c&#39;, &#39;d&#39;, &#39;e&#39;]</code></pre>
+</li>
+<li><p><code>sort</code>：根据提供的函数对数组进行排序。这个方法就地修改数组。如果函数返回负数或 0，则顺序保持不变。如果返回正数，则交换元素顺序。</p>
+<pre><code class="javascript">let arr = [1, 7, 3, -1, 5, 7, 2];
+const sorter = (firstEl, secondEl) =&gt; firstEl - secondEl;
+arr.sort(sorter);
+console.log(arr);
+// [-1, 1, 2, 3, 5, 7, 7]</code></pre>
+</li>
+</ul>
+<h4 id="7-生成器"><a href="#7-生成器" class="headerlink" title="7. 生成器"></a>7. 生成器</h4><p>详看阮一峰<a target="_blank" rel="noopener" href="http://es6.ruanyifeng.com/#docs/generator">es6 入门</a><br>生成器函数指定下一次调用 <code>next</code>() 时会生成什么 <code>value</code>。既可以生成有限数量的 <code>value</code>（最后调用 <code>next</code>() 会返回 <code>undefined</code>），也可以使用循环生成无限数量的 value。</p>
+<pre><code class="javascript">function* greeter() &#123;
+  yield &quot;Hi&quot;;
+  yield &quot;How are you?&quot;;
+  yield &quot;Bye&quot;;
+&#125;
+const greet = greeter();
+console.log(greet.next().value);
+// &#39;Hi&#39;
+console.log(greet.next().value);
+// &#39;How are you?&#39;
+console.log(greet.next().value);
+// &#39;Bye&#39;
+console.log(greet.next().value);
+// undefined</code></pre>
+<p>使用生成器生成无限个值：</p>
+<pre><code class="javascript">function* idCreator() &#123;
+  let i = 0;
+  while (true) yield i++;
+&#125;
+const ids = idCreator();
+console.log(ids.next().value);
+// 0
+console.log(ids.next().value);
+// 1
+console.log(ids.next().value);
+// 2
+// etc...</code></pre>
+<h4 id="与"><a href="#与" class="headerlink" title="=== 与 =="></a><code>===</code> 与 <code>==</code></h4><p>一定要知道 <code>JavaScript</code>中 === 运算符和 == 运算符之间的区别！== 运算符在比较之前会进行类型转换，而 === 运算符在比较之前不会进行类型转换。</p>
+<pre><code class="javascript">console.log(0 == &quot;0&quot;);
+// true
+console.log(0 === &quot;0&quot;);
+// false</code></pre>
+<h4 id="9-对象比较"><a href="#9-对象比较" class="headerlink" title="9. 对象比较"></a>9. 对象比较</h4><p><code>JavaScript</code>新手容易犯的一个错误是直接比较对象。变量一般是指向内存中对象的引用，而不是对象本身！比较对象的一种方法是将它们转换成 <code>JSON</code>字符串。但这样做有一个缺点：无法保证对象属性的顺序！一种更安全的方法是使用专门进行深度对象比较的库（例如 <code>lodash</code>的 <code>isEqual</code>，<a target="_blank" rel="noopener" href="https://lodash.com/docs#isEqual）。">https://lodash.com/docs#isEqual）。</a><br>下面的对象看起来相同，但它们实际上指向不同的引用。</p>
+<pre><code class="javascript">const joe1 = &#123; name: &quot;Joe&quot; &#125;;
+const joe2 = &#123; name: &quot;Joe&quot; &#125;;
+console.log(joe1 === joe2);
+// false</code></pre>
+<p>相反，下面的结果为 <code>true</code>，因为使用其中一个对象为另一个对象赋值，它们都指向相同的引用（内存中只有一个对象）。</p>
+<pre><code class="javascript">const joe1 = &#123; name: &quot;Joe&quot; &#125;;
+const joe2 = joe1;
+console.log(joe1 === joe2);
+// true</code></pre>
+<h4 id="10-回调函数"><a href="#10-回调函数" class="headerlink" title="10. 回调函数"></a>10. 回调函数</h4><p>很多人都被 <code>JavaScript</code>回调函数吓倒了！它们其实很简单，请看下面的例子。<code>console.log</code>函数作为回调传给 <code>myFunc</code>，并在 <code>setTimeout</code>完成时执行。</p>
+<pre><code class="javascript">function myFunc(text, callback) &#123;
+  setTimeout(function () &#123;
+    callback(text);
+  &#125;, 2000);
+&#125;
+myFunc(&quot;Hello world!&quot;, console.log);
+// &#39;Hello world!&#39;</code></pre>
+<h4 id="11-promise"><a href="#11-promise" class="headerlink" title="11. promise"></a>11. <code>promise</code></h4><p>详看阮一峰的<a target="_blank" rel="noopener" href="http://es6.ruanyifeng.com/#docs/promise">es6 入门</a><br>一旦你理解了 <code>JavaScript</code>回调，很快就会发现自己陷入了“回调地狱”中。这个时候可以使用 <code>promise</code>！将异步逻辑包装在 <code>promise</code>中，使用“<code>then</code>”来处理成功的情况，使用“<code>catch</code>”来处理异常。</p>
+<pre><code class="javascript">const myPromise = new Promise(function (res, rej) &#123;
+  setTimeout(function () &#123;
+    if (Math.random() &lt; 0.9) &#123;
+      return res(&quot;Hooray!&quot;);
+    &#125;
+    return rej(&quot;Oh no!&quot;);
+  &#125;, 1000);
+&#125;);
+myPromise
+  .then(function (data) &#123;
+    console.log(&quot;Success: &quot; + data);
+  &#125;)
+  .catch(function (err) &#123;
+    console.log(&quot;Error: &quot; + err);
+  &#125;);
+// If Math.random() returns less than 0.9 the following is logged:
+// &quot;Success: Hooray!&quot;
+// If Math.random() returns 0.9 or greater the following is logged:
+// &quot;Error: On no!&quot;</code></pre>
+<h4 id="12-Async-Await"><a href="#12-Async-Await" class="headerlink" title="12. Async/Await"></a>12. <code>Async</code>/<code>Await</code></h4><p>详看阮一峰的<a target="_blank" rel="noopener" href="http://es6.ruanyifeng.com/#docs/async">es6 入门</a><br>在掌握了 <code>promise</code>的用法后，你可能也会喜欢 <code>async await</code>，它只是一种基于 <code>promise</code>的“语法糖”。在下面的示例中，我们创建了一个 <code>async</code>函数，并 <code>await greeter promise</code>。</p>
+<pre><code class="javascript">const greeter = new Promise((res, rej) =&gt; &#123;
+  setTimeout(() =&gt; res(&quot;Hello world!&quot;), 2000);
+&#125;);
+async function myFunc() &#123;
+  const greeting = await greeter;
+  console.log(greeting);
+&#125;
+myFunc();
+// &#39;Hello world!&#39;</code></pre>
+
+      
+       <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 kerbalhao@foxmail.com </span>
+    </div>
+</article>
+
+
+
+
+
+
+
+    
+
+
+
+
+    </div>
+    <div class="copyright">
+        <p class="footer-entry">
+    ©2019-2022 Kerbalhao
+</p>
+<p class="footer-entry">Built with <a href="https://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/yelog/hexo-theme-3-hexo" target="_blank">3-hexo</a> theme</p>
+
+    </div>
+    <div class="full-toc">
+        <button class="full" data-title="切换全屏 快捷键 s"><span class="min "></span></button>
+<a class="" id="rocket" ></a>
+
+    </div>
+</div>
+
+</body>
+<script src="/js/jquery.pjax.js?v=1.1.0" ></script>
+
+<script src="/js/script.js?v=1.1.0" ></script>
+<script>
+    var img_resize = 'default';
+    function initArticle() {
+        /*渲染对应的表格样式*/
+        
+            $("#post .pjax table").addClass("green_title");
+        
+
+        /*渲染打赏样式*/
+        
+
+        /*高亮代码块行号*/
+        
+        $('pre code').each(function(){
+            var lines = $(this).text().trim().split('\n').length, widther='';
+            if (lines>99) {
+                widther = 'widther'
+            }
+            var $numbering = $('<ul/>').addClass('pre-numbering ' + widther).attr("unselectable","on");
+            $(this).addClass('has-numbering ' + widther)
+                    .parent()
+                    .append($numbering);
+            for(var i=1;i<=lines;i++){
+                $numbering.append($('<li/>').text(i));
+            }
+        });
+        
+
+        /*访问数量*/
+        
+
+        /*代码高亮，行号对齐*/
+        $('.pre-numbering').css('line-height',$('.has-numbering').css('line-height'));
+
+        
+        
+    }
+
+    /*打赏页面隐藏与展示*/
+    
+
+</script>
+
+<!--加入行号的高亮代码块样式-->
+
+<style>
+    pre{
+        position: relative;
+        margin-bottom: 24px;
+        border-radius: 10px;
+        border: 1px solid #e2dede;
+        background: #FFF;
+        overflow: hidden;
+    }
+    code.has-numbering{
+        margin-left: 30px;
+    }
+    code.has-numbering.widther{
+        margin-left: 35px;
+    }
+    .pre-numbering{
+        margin: 0;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 20px;
+        padding: 0.5em 3px 0.7em 5px;
+        border-right: 1px solid #C3CCD0;
+        text-align: right;
+        color: #AAA;
+        background-color: #fafafa;
+    }
+    .pre-numbering.widther {
+        width: 35px;
+    }
+</style>
+
+<!--自定义样式设置-->
+<style>
+    
+    
+    .nav {
+        width: 542px;
+    }
+    .nav.fullscreen {
+        margin-left: -542px;
+    }
+    .nav-left {
+        width: 120px;
+    }
+    
+    
+    @media screen and (max-width: 1468px) {
+        .nav {
+            width: 492px;
+        }
+        .nav.fullscreen {
+            margin-left: -492px;
+        }
+        .nav-left {
+            width: 100px;
+        }
+    }
+    
+    
+    @media screen and (max-width: 1024px) {
+        .nav {
+            width: 492px;
+            margin-left: -492px
+        }
+        .nav.fullscreen {
+            margin-left: 0;
+        }
+    }
+    
+    @media screen and (max-width: 426px) {
+        .nav {
+            width: 100%;
+        }
+        .nav-left {
+            width: 100%;
+        }
+    }
+    
+    
+    .nav-right .title-list nav a .post-title, .nav-right .title-list #local-search-result a .post-title {
+        color: #383636;
+    }
+    
+    
+    .nav-right .title-list nav a .post-date, .nav-right .title-list #local-search-result a .post-date {
+        color: #5e5e5f;
+    }
+    
+    
+    .nav-right nav a.hover, #local-search-result a.hover{
+        background-color: #e2e0e0;
+    }
+    
+    
+
+    /*列表样式*/
+    
+
+    /* 背景图样式 */
+    
+    
+
+
+    /*引用块样式*/
+    
+
+    /*文章列表背景图*/
+    
+
+    
+    #post .pjax article :not(pre) > code {
+        color: #24292e;
+        font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,Courier,monospace;
+        background-color: rgba(27,31,35,.05);
+        border-radius: 3px;
+        font-size: 85%;
+        margin: 0;
+        padding: .2em .4em;
+    }
+    
+</style>
+
+
+
+
+
+
+
+</html>

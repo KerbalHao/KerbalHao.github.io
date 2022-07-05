@@ -1,0 +1,1969 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Js现代教程笔记 -- Class | kerbalHao</title>
+  <meta name="keywords" content=" JS ">
+  <meta name="description" content="Js现代教程笔记 -- Class | kerbalHao">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="description" content="个人简介  博客信息  本站推荐索引 博客主题相关技术知识点 其他   计划  时间轴记录">
+<meta property="og:type" content="website">
+<meta property="og:title" content="kerbalHao">
+<meta property="og:url" content="https://kerbalhao.github.io/about/index.html">
+<meta property="og:site_name" content="kerbalHao">
+<meta property="og:description" content="个人简介  博客信息  本站推荐索引 博客主题相关技术知识点 其他   计划  时间轴记录">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2018-11-11T08:24:49.000Z">
+<meta property="article:modified_time" content="2022-07-05T03:02:34.959Z">
+<meta property="article:author" content="KerbalHao">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="icon" href="https://avatars.githubusercontent.com/u/42958301?s=40&v=4">
+
+<link href="/css/style.css?v=1.1.0" rel="stylesheet">
+
+<link href="/css/hl_theme/atom-light.css?v=1.1.0" rel="stylesheet">
+
+<link href="//cdn.jsdelivr.net/npm/animate.css@4.1.0/animate.min.css" rel="stylesheet">
+
+<script src="//cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+<script src="/js/titleTip.js?v=1.1.0" ></script>
+
+<script src="//cdn.jsdelivr.net/npm/highlightjs@9.16.2/highlight.pack.min.js"></script>
+<script>
+    hljs.initHighlightingOnLoad();
+</script>
+
+<script src="//cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js"></script>
+
+
+
+<script src="//cdn.jsdelivr.net/npm/jquery.cookie@1.4.1/jquery.cookie.min.js" ></script>
+
+<script src="/js/iconfont.js?v=1.1.0" ></script>
+
+<meta name="generator" content="Hexo 5.4.2"><link rel="alternate" href="/atom.xml" title="kerbalHao" type="application/atom+xml">
+</head>
+<div style="display: none">
+  <input class="theme_disqus_on" value="false">
+  <input class="theme_preload_comment" value="">
+  <input class="theme_blog_path" value="">
+  <input id="theme_shortcut" value="true" />
+  <input id="theme_highlight_on" value="true" />
+  <input id="theme_code_copy" value="true" />
+</div>
+
+
+
+<body>
+<aside class="nav">
+    <div class="nav-left">
+        <a href="/"
+   class="avatar_target">
+    <img class="avatar"
+         src="https://avatars.githubusercontent.com/u/42958301?s=40&amp;v=4"/>
+</a>
+<div class="author">
+    <span>KerbalHao</span>
+</div>
+
+<div class="icon">
+    
+</div>
+
+
+
+
+<ul>
+    <li>
+        <div class="all active" data-rel="全部文章">全部文章
+            
+                <small>(65)</small>
+            
+        </div>
+    </li>
+    
+        
+            
+        
+    
+        
+            
+                <li>
+                    <div data-rel="Git">
+                        
+                        Git
+                        <small>(1)</small>
+                        
+                    </div>
+                    
+                </li>
+            
+        
+    
+        
+            
+        
+    
+        
+            
+                <li>
+                    <div data-rel="HTTP">
+                        
+                        HTTP
+                        <small>(2)</small>
+                        
+                    </div>
+                    
+                </li>
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+                <li>
+                    <div data-rel="RegExp">
+                        
+                        RegExp
+                        <small>(1)</small>
+                        
+                    </div>
+                    
+                </li>
+            
+        
+    
+        
+            
+                <li>
+                    <div data-rel="前端">
+                        <i class="fold iconfont icon-right"></i>
+                        
+                        前端
+                        <small>(45)</small>
+                        
+                    </div>
+                    
+                        <ul class="sub hide">
+                            
+                                <li>
+                                    <div data-rel="前端<--->CSS">
+                                        
+                                        CSS
+                                        
+                                            <small>(2
+                                                )</small>
+                                        
+                                    </div>
+                                    
+                                </li>
+                            
+                                <li>
+                                    <div data-rel="前端<--->HTML">
+                                        
+                                        HTML
+                                        
+                                            <small>(1
+                                                )</small>
+                                        
+                                    </div>
+                                    
+                                </li>
+                            
+                                <li>
+                                    <div data-rel="前端<--->JS源码解析">
+                                        
+                                        JS源码解析
+                                        
+                                            <small>(2
+                                                )</small>
+                                        
+                                    </div>
+                                    
+                                </li>
+                            
+                                <li>
+                                    <div data-rel="前端<--->Js现代教程">
+                                        
+                                        Js现代教程
+                                        
+                                            <small>(9
+                                                )</small>
+                                        
+                                    </div>
+                                    
+                                </li>
+                            
+                                <li>
+                                    <div data-rel="前端<--->JS高程">
+                                        
+                                        JS高程
+                                        
+                                            <small>(2
+                                                )</small>
+                                        
+                                    </div>
+                                    
+                                </li>
+                            
+                                <li>
+                                    <div data-rel="前端<--->JS高级程序设计">
+                                        
+                                        JS高级程序设计
+                                        
+                                            <small>(6
+                                                )</small>
+                                        
+                                    </div>
+                                    
+                                </li>
+                            
+                                <li>
+                                    <div data-rel="前端<--->React">
+                                        
+                                        React
+                                        
+                                            <small>(1
+                                                )</small>
+                                        
+                                    </div>
+                                    
+                                </li>
+                            
+                                <li>
+                                    <div data-rel="前端<--->读书笔记">
+                                        
+                                        读书笔记
+                                        
+                                            <small>(1
+                                                )</small>
+                                        
+                                    </div>
+                                    
+                                </li>
+                            
+                        </ul>
+                    
+                </li>
+            
+        
+    
+        
+            
+                <li>
+                    <div data-rel="读书小记">
+                        
+                        读书小记
+                        <small>(2)</small>
+                        
+                    </div>
+                    
+                </li>
+            
+        
+    
+        
+            
+        
+    
+</ul>
+<div class="left-bottom">
+    <div class="menus">
+        
+            
+            
+            
+    </div>
+    <div>
+        
+        <a 
+                                           class="friends">友链</a>
+        
+    </div>
+</div>
+<input type="hidden" id="yelog_site_posts_number" value="65">
+<input type="hidden" id="yelog_site_word_count" value="134.2k">
+<div style="display: none">
+    <span id="busuanzi_value_site_uv"></span>
+    <span id="busuanzi_value_site_pv"></span>
+</div>
+
+    </div>
+    <div class="nav-right">
+        <div class="friends-area">
+    <div class="friends-title">
+        友情链接
+        <i class="iconfont icon-left"></i>
+    </div>
+    <div class="friends-content">
+        <ul>
+            
+            <li><a target="_blank" href="http://kerbalhao.org/">叶落阁</a></li>
+            
+        </ul>
+    </div>
+</div>
+        <div class="title-list">
+    <div class="right-top">
+        <div id="default-panel">
+            <i class="iconfont icon-search" data-title="搜索 快捷键 i"></i>
+            <div class="right-title">全部文章</div>
+            <i class="iconfont icon-file-tree" data-title="切换到大纲视图 快捷键 w"></i>
+        </div>
+        <div id="search-panel">
+            <i class="iconfont icon-left" data-title="返回"></i>
+            <input id="local-search-input" autocomplete="off"/>
+            <label class="border-line" for="input"></label>
+            <i class="iconfont icon-case-sensitive" data-title="大小写敏感"></i>
+            <i class="iconfont icon-tag" data-title="标签"></i>
+        </div>
+        <div id="outline-panel" style="display: none">
+            <div class="right-title">大纲</div>
+            <i class="iconfont icon-list" data-title="切换到文章列表"></i>
+        </div>
+    </div>
+
+    <div class="tags-list">
+    <input id="tag-search" />
+    <div class="tag-wrapper">
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>Bootstrap</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>CSS</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>ES6</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>HTML MDN</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>HTML5</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>HTTP</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>JQ</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>js</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>JS</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>JS MDN</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>js源码解析</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>Lua</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>MDN</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>React</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>vue</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>作品</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>工作</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>浏览器</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>迭代器与生成器</a>
+            </li>
+        
+    </div>
+
+</div>
+
+    
+    <nav id="title-list-nav">
+        
+        
+        <a  class="全部文章 "
+           href="/2022/04/06/JS%E7%B1%BB%E5%9E%8B%E6%A3%80%E6%B5%8B/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="类型检查">类型检查</span>
+            <span class="post-date" title="2022-04-06 09:50:08">2022/04/06</span>
+        </a>
+        
+        
+        <a  class="全部文章 "
+           href="/2022/03/21/%E6%BA%90%E7%A0%81%E9%98%85%E8%AF%BB-koa-compose%E6%BA%90%E7%A0%81%E8%A7%A3%E6%9E%90/"
+           data-tag="js源码解析"
+           data-author="" >
+            <span class="post-title" title="Koa-Compose 源码解析">Koa-Compose 源码解析</span>
+            <span class="post-date" title="2022-03-21 10:36:09">2022/03/21</span>
+        </a>
+        
+        
+        <a  class="全部文章 前端 "
+           href="/2022/02/16/vue-devtool%20%E4%B8%AD%20open-in-editor%20%E6%BA%90%E7%A0%81%E9%98%85%E8%AF%BB/"
+           data-tag="js源码解析"
+           data-author="" >
+            <span class="post-title" title="Vue-Devtool 中 Open-in-Editor 源码阅读">Vue-Devtool 中 Open-in-Editor 源码阅读</span>
+            <span class="post-date" title="2022-02-16 10:36:09">2022/02/16</span>
+        </a>
+        
+        
+        <a  class="全部文章 "
+           href="/2022/01/21/%E7%94%A8%20ES6%20%E9%87%8D%E5%86%99%20tiny-emitter/"
+           data-tag="js源码解析"
+           data-author="" >
+            <span class="post-title" title="用 ES6 重写 Tiny-Emitter">用 ES6 重写 Tiny-Emitter</span>
+            <span class="post-date" title="2022-01-21 10:36:09">2022/01/21</span>
+        </a>
+        
+        
+        <a  class="全部文章 前端 JS源码解析 "
+           href="/2022/01/10/Vue3%20repease.js%20%E5%AD%A6%E4%B9%A0/"
+           data-tag="JS"
+           data-author="" >
+            <span class="post-title" title="Vue3 repease.js 学习">Vue3 repease.js 学习</span>
+            <span class="post-date" title="2022-01-10 10:36:09">2022/01/10</span>
+        </a>
+        
+        
+        <a  class="全部文章 前端 JS源码解析 "
+           href="/2021/12/16/vue-next%20%E7%9A%84%20shared%20%E6%A8%A1%E5%9D%97%E6%BA%90%E7%A0%81%E9%98%85%E8%AF%BB/"
+           data-tag="JS"
+           data-author="" >
+            <span class="post-title" title="Vue-Next 的 Shared 模块源码阅读">Vue-Next 的 Shared 模块源码阅读</span>
+            <span class="post-date" title="2021-12-16 10:36:09">2021/12/16</span>
+        </a>
+        
+        
+        <a  class="全部文章 前端 "
+           href="/2021/12/05/promissify%20%E5%AE%9E%E7%8E%B0/"
+           data-tag="js源码解析"
+           data-author="" >
+            <span class="post-title" title="Promissify 实现">Promissify 实现</span>
+            <span class="post-date" title="2021-12-05 10:36:09">2021/12/05</span>
+        </a>
+        
+        
+        <a  class="全部文章 前端 "
+           href="/2021/11/10/webpack%E5%AD%A6%E4%B9%A0/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="Webpack 基础配置">Webpack 基础配置</span>
+            <span class="post-date" title="2021-11-10 10:36:09">2021/11/10</span>
+        </a>
+        
+        
+        <a  class="全部文章 "
+           href="/2021/10/21/%E9%A1%B9%E7%9B%AE%E6%8B%86%E5%88%86/"
+           data-tag="工作"
+           data-author="" >
+            <span class="post-title" title="基于后台项目拆分">基于后台项目拆分</span>
+            <span class="post-date" title="2021-10-21 10:36:09">2021/10/21</span>
+        </a>
+        
+        
+        <a  class="全部文章 前端 "
+           href="/2021/10/05/%E8%A7%84%E8%8C%83%E5%9B%A2%E9%98%9F%E5%8C%85%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="规范团队包管理工具">规范团队包管理工具</span>
+            <span class="post-date" title="2021-10-05 10:36:09">2021/10/05</span>
+        </a>
+        
+        
+        <a  class="全部文章 前端 "
+           href="/2021/04/17/%E6%B5%8F%E8%A7%88%E5%99%A8%E6%98%AF%E5%A6%82%E4%BD%95%E6%B8%B2%E6%9F%93%E7%BD%91%E9%A1%B5%E7%9A%84%EF%BC%9F%E2%80%94%E2%80%94DOM,CSSOM%E4%BB%A5%E5%8F%8A%E6%B8%B2%E6%9F%93/"
+           data-tag="浏览器"
+           data-author="" >
+            <span class="post-title" title="浏览器是如何渲染网页的">浏览器是如何渲染网页的</span>
+            <span class="post-date" title="2021-04-17 02:35:10">2021/04/17</span>
+        </a>
+        
+        
+        <a  class="全部文章 HTTP "
+           href="/2021/03/22/%E5%9F%BA%E4%BA%8EHTTP%E7%BD%91%E7%BB%9C%E5%B1%82%E7%9A%84%E5%89%8D%E7%AB%AF%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/"
+           data-tag="HTTP"
+           data-author="" >
+            <span class="post-title" title="从输入 URL 地址到看到页面，HTTP 应用层都经历了什么">从输入 URL 地址到看到页面，HTTP 应用层都经历了什么</span>
+            <span class="post-date" title="2021-03-22 11:48:48">2021/03/22</span>
+        </a>
+        
+        
+        <a  class="全部文章 前端 "
+           href="/2021/01/09/%E6%89%8B%E5%86%99%20promise/"
+           data-tag="JS"
+           data-author="" >
+            <span class="post-title" title="手写Promise">手写Promise</span>
+            <span class="post-date" title="2021-01-09 11:48:48">2021/01/09</span>
+        </a>
+        
+        
+        <a  class="全部文章 前端 React "
+           href="/2020/04/27/LearningReact/"
+           data-tag="JS"
+           data-author="" >
+            <span class="post-title" title="React 思维导图">React 思维导图</span>
+            <span class="post-date" title="2020-04-27 19:01:49">2020/04/27</span>
+        </a>
+        
+        
+        <a  class="全部文章 "
+           href="/2020/04/23/dota2/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="个人 Dota2 项目">个人 Dota2 项目</span>
+            <span class="post-date" title="2020-04-23 22:02:46">2020/04/23</span>
+        </a>
+        
+        
+        <a  class="全部文章 "
+           href="/2020/04/14/Lua%E5%AD%A6%E4%B9%A0/"
+           data-tag="Lua"
+           data-author="" >
+            <span class="post-title" title="Lua 基础学习">Lua 基础学习</span>
+            <span class="post-date" title="2020-04-14 11:08:06">2020/04/14</span>
+        </a>
+        
+        
+        <a  class="全部文章 "
+           href="/2019/12/28/JS%2012%E4%B8%AA%E9%87%8D%E8%A6%81%E6%A6%82%E5%BF%B5%E4%BB%A5%E5%8F%8Areduce%E6%96%B9%E6%B3%95%E8%AF%A6%E8%A7%A3/"
+           data-tag="JS"
+           data-author="" >
+            <span class="post-title" title="Js 12个重要概念">Js 12个重要概念</span>
+            <span class="post-date" title="2019-12-28 19:48:48">2019/12/28</span>
+        </a>
+        
+        
+        <a  class="全部文章 前端 Js现代教程 "
+           href="/2019/09/12/MJT-%E5%BC%82%E6%AD%A5%E8%BF%AD%E4%BB%A3%E5%99%A8%E4%B8%8E%E7%94%9F%E6%88%90%E5%99%A8/"
+           data-tag="JS"
+           data-author="" >
+            <span class="post-title" title="MJT-异步迭代器与生成器">MJT-异步迭代器与生成器</span>
+            <span class="post-date" title="2019-09-12 10:36:09">2019/09/12</span>
+        </a>
+        
+        
+        <a  class="全部文章 前端 "
+           href="/2019/08/19/ES6_%E8%BF%AD%E4%BB%A3%E5%99%A8%E4%B8%8E%E7%94%9F%E6%88%90%E5%99%A8/"
+           data-tag="ES6,迭代器与生成器"
+           data-author="" >
+            <span class="post-title" title="ES6-迭代器与生成器">ES6-迭代器与生成器</span>
+            <span class="post-date" title="2019-08-19 10:36:09">2019/08/19</span>
+        </a>
+        
+        
+        <a  class="全部文章 前端 "
+           href="/2019/08/09/ES6_Set,Map/"
+           data-tag="ES6"
+           data-author="" >
+            <span class="post-title" title="ES6-Set Map">ES6-Set Map</span>
+            <span class="post-date" title="2019-08-09 10:36:09">2019/08/09</span>
+        </a>
+        
+        
+        <a  class="全部文章 前端 "
+           href="/2019/07/20/ES6_Symbol/"
+           data-tag="ES6"
+           data-author="" >
+            <span class="post-title" title="ES6-Symbol">ES6-Symbol</span>
+            <span class="post-date" title="2019-07-20 07:36:09">2019/07/20</span>
+        </a>
+        
+        
+        <a  class="全部文章 前端 "
+           href="/2019/07/10/ES6_%E8%A7%A3%E6%9E%84/"
+           data-tag="ES6"
+           data-author="" >
+            <span class="post-title" title="ES6-解构">ES6-解构</span>
+            <span class="post-date" title="2019-07-10 07:36:09">2019/07/10</span>
+        </a>
+        
+        
+        <a  class="全部文章 "
+           href="/2019/07/06/ES6_%E5%AF%B9%E8%B1%A1/"
+           data-tag="ES6"
+           data-author="" >
+            <span class="post-title" title="ES6-对象">ES6-对象</span>
+            <span class="post-date" title="2019-07-06 01:52:58">2019/07/06</span>
+        </a>
+        
+        
+        <a  class="全部文章 前端 "
+           href="/2019/06/28/ES6_%E5%87%BD%E6%95%B0/"
+           data-tag="ES6"
+           data-author="" >
+            <span class="post-title" title="ES6-函数">ES6-函数</span>
+            <span class="post-date" title="2019-06-28 18:36:09">2019/06/28</span>
+        </a>
+        
+        
+        <a  class="全部文章 前端 "
+           href="/2019/06/18/ES6_%E5%9D%97%E7%BA%A7%E4%BD%9C%E7%94%A8%E5%9F%9F/"
+           data-tag="ES6"
+           data-author="" >
+            <span class="post-title" title="ES6-块级作用域与字符串">ES6-块级作用域与字符串</span>
+            <span class="post-date" title="2019-06-18 18:36:09">2019/06/18</span>
+        </a>
+        
+        
+        <a  class="全部文章 前端 Js现代教程 "
+           href="/2019/05/10/MJT_Class/"
+           data-tag="JS"
+           data-author="" >
+            <span class="post-title" title="Js现代教程笔记 -- Class">Js现代教程笔记 -- Class</span>
+            <span class="post-date" title="2019-05-10 18:36:09">2019/05/10</span>
+        </a>
+        
+        
+        <a  class="全部文章 前端 Js现代教程 "
+           href="/2019/05/01/MJT_%E5%8E%9F%E5%9E%8B%E4%B8%8E%E7%BB%A7%E6%89%BF/"
+           data-tag="JS"
+           data-author="" >
+            <span class="post-title" title="Js现代教程笔记 -- 原型与继承">Js现代教程笔记 -- 原型与继承</span>
+            <span class="post-date" title="2019-05-01 18:36:09">2019/05/01</span>
+        </a>
+        
+        
+        <a  class="全部文章 前端 Js现代教程 "
+           href="/2019/04/23/MJT_%E5%AF%B9%E8%B1%A1%E5%B1%9E%E6%80%A7/"
+           data-tag="JS"
+           data-author="" >
+            <span class="post-title" title="Js现代教程笔记 -- 对象属性">Js现代教程笔记 -- 对象属性</span>
+            <span class="post-date" title="2019-04-23 10:36:09">2019/04/23</span>
+        </a>
+        
+        
+        <a  class="全部文章 前端 Js现代教程 "
+           href="/2019/04/22/MJT_%E6%B5%8F%E8%A7%88%E5%99%A8/"
+           data-tag="JS"
+           data-author="" >
+            <span class="post-title" title="Js现代教程笔记 -- DOM">Js现代教程笔记 -- DOM</span>
+            <span class="post-date" title="2019-04-22 18:36:09">2019/04/22</span>
+        </a>
+        
+        
+        <a  class="全部文章 前端 Js现代教程 "
+           href="/2019/04/21/MJT_%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/"
+           data-tag="JS"
+           data-author="" >
+            <span class="post-title" title="Js现代教程笔记 -- 数据类型">Js现代教程笔记 -- 数据类型</span>
+            <span class="post-date" title="2019-04-21 18:36:09">2019/04/21</span>
+        </a>
+        
+        
+        <a  class="全部文章 前端 Js现代教程 "
+           href="/2019/04/20/MJT_%E5%AF%B9%E4%BA%8E%E5%87%BD%E6%95%B0%E5%8F%82%E6%95%B0%E7%9A%84%E7%AE%80%E4%BB%8B/"
+           data-tag="JS"
+           data-author="" >
+            <span class="post-title" title="Js现代教程笔记 -- 对于函数参数的见解">Js现代教程笔记 -- 对于函数参数的见解</span>
+            <span class="post-date" title="2019-04-20 10:36:09">2019/04/20</span>
+        </a>
+        
+        
+        <a  class="全部文章 前端 Js现代教程 "
+           href="/2019/04/19/MJT_%E5%87%BD%E6%95%B0%E9%AB%98%E9%98%B6%E5%BA%94%E7%94%A8/"
+           data-tag="JS"
+           data-author="" >
+            <span class="post-title" title="Js现代教程笔记 -- 函数高阶应用">Js现代教程笔记 -- 函数高阶应用</span>
+            <span class="post-date" title="2019-04-19 18:36:09">2019/04/19</span>
+        </a>
+        
+        
+        <a  class="全部文章 读书小记 "
+           href="/2019/04/18/LT_little-trick/"
+           data-tag="JS"
+           data-author="" >
+            <span class="post-title" title="随手小记">随手小记</span>
+            <span class="post-date" title="2019-04-18 10:36:09">2019/04/18</span>
+        </a>
+        
+        
+        <a  class="全部文章 前端 Js现代教程 "
+           href="/2019/04/17/MJT_%E2%80%9Cthis%E2%80%9D%E6%8E%A2%E7%B4%A2/"
+           data-tag="JS"
+           data-author="" >
+            <span class="post-title" title="Js现代教程笔记 -- This 值的探索">Js现代教程笔记 -- This 值的探索</span>
+            <span class="post-date" title="2019-04-17 18:36:09">2019/04/17</span>
+        </a>
+        
+        
+        <a  class="全部文章 前端 读书笔记 "
+           href="/2019/04/17/JGP_%E5%AF%B9%E8%B1%A1/"
+           data-tag="JS"
+           data-author="" >
+            <span class="post-title" title="JS语言精粹读书笔记 -- 对象与函数">JS语言精粹读书笔记 -- 对象与函数</span>
+            <span class="post-date" title="2019-04-17 10:36:09">2019/04/17</span>
+        </a>
+        
+        
+        <a  class="全部文章 读书小记 "
+           href="/2019/04/17/LT_%E8%AF%BB%E4%B9%A6%E5%B0%8F%E8%AE%B0/"
+           data-tag="JS"
+           data-author="" >
+            <span class="post-title" title="随手小记">随手小记</span>
+            <span class="post-date" title="2019-04-17 10:36:09">2019/04/17</span>
+        </a>
+        
+        
+        <a  class="全部文章 前端 "
+           href="/2019/02/22/CSS%E7%9B%B8%E5%85%B3%E4%B8%8E%E7%BB%8F%E5%85%B8%E5%B8%83%E5%B1%80%EF%BC%88%E5%8F%8C%E9%A3%9E%E7%BF%BC%E4%B8%8E%E5%9C%A3%E6%9D%AF%EF%BC%89/"
+           data-tag="CSS"
+           data-author="" >
+            <span class="post-title" title="CSS相关与经典布局（双飞翼与圣杯）">CSS相关与经典布局（双飞翼与圣杯）</span>
+            <span class="post-date" title="2019-02-22 06:36:09">2019/02/22</span>
+        </a>
+        
+        
+        <a  class="全部文章 "
+           href="/2019/02/19/html5%E8%AF%AD%E4%B9%89%E5%8C%96%E6%A0%87%E7%AD%BE%E5%AD%A6%E4%B9%A0/"
+           data-tag="HTML5"
+           data-author="" >
+            <span class="post-title" title="HTML5 语义化标签笔记">HTML5 语义化标签笔记</span>
+            <span class="post-date" title="2019-02-19 07:36:09">2019/02/19</span>
+        </a>
+        
+        
+        <a  class="全部文章 "
+           href="/2019/02/19/Html5%E7%9B%B8%E5%85%B3/"
+           data-tag="HTML5"
+           data-author="" >
+            <span class="post-title" title="Html5相关">Html5相关</span>
+            <span class="post-date" title="2019-02-19 06:36:09">2019/02/19</span>
+        </a>
+        
+        
+        <a  class="全部文章 前端 "
+           href="/2019/02/18/symbol%E4%B8%8E%E5%89%8D%E7%AB%AF%E6%9E%B6%E6%9E%84%E5%9B%BE/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="Symbol 与前端架构图">Symbol 与前端架构图</span>
+            <span class="post-date" title="2019-02-18 06:36:09">2019/02/18</span>
+        </a>
+        
+        
+        <a  class="全部文章 "
+           href="/2019/02/18/%E4%BD%9C%E5%93%81/"
+           data-tag="作品"
+           data-author="" >
+            <span class="post-title" title="个人作品集">个人作品集</span>
+            <span class="post-date" title="2019-02-18 06:36:09">2019/02/18</span>
+        </a>
+        
+        
+        <a  class="全部文章 前端 "
+           href="/2019/02/15/Css%E9%83%A8%E5%88%86%E4%BB%8B%E7%BB%8D/"
+           data-tag="CSS"
+           data-author="" >
+            <span class="post-title" title="Css部分介绍">Css部分介绍</span>
+            <span class="post-date" title="2019-02-15 06:36:09">2019/02/15</span>
+        </a>
+        
+        
+        <a  class="全部文章 前端 CSS "
+           href="/2019/01/18/MDN_Css/"
+           data-tag="CSS,MDN"
+           data-author="" >
+            <span class="post-title" title="MDN教程学习-CSS">MDN教程学习-CSS</span>
+            <span class="post-date" title="2019-01-18 10:36:09">2019/01/18</span>
+        </a>
+        
+        
+        <a  class="全部文章 前端 "
+           href="/2019/01/17/MDN_JS/"
+           data-tag="JS MDN"
+           data-author="" >
+            <span class="post-title" title="MDN教程学习-JS">MDN教程学习-JS</span>
+            <span class="post-date" title="2019-01-17 10:36:09">2019/01/17</span>
+        </a>
+        
+        
+        <a  class="全部文章 前端 HTML "
+           href="/2019/01/16/MDN_HTML/"
+           data-tag="HTML MDN"
+           data-author="" >
+            <span class="post-title" title="MDN教程学习-HTML">MDN教程学习-HTML</span>
+            <span class="post-date" title="2019-01-16 10:36:09">2019/01/16</span>
+        </a>
+        
+        
+        <a  class="全部文章 "
+           href="/2019/01/09/Bootstrap_%E5%9F%BA%E6%9C%AC/"
+           data-tag="Bootstrap"
+           data-author="" >
+            <span class="post-title" title="Bootstrap 基本学习">Bootstrap 基本学习</span>
+            <span class="post-date" title="2019-01-09 06:36:09">2019/01/09</span>
+        </a>
+        
+        
+        <a  class="全部文章 前端 CSS "
+           href="/2018/12/30/SCSS_%E5%9F%BA%E7%A1%80/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="Scss基础">Scss基础</span>
+            <span class="post-date" title="2018-12-30 07:36:09">2018/12/30</span>
+        </a>
+        
+        
+        <a  class="全部文章 前端 JS高级程序设计 "
+           href="/2018/12/15/PJW_DOM%E5%AD%A6%E4%B9%A0/"
+           data-tag="JS"
+           data-author="" >
+            <span class="post-title" title="DOM学习">DOM学习</span>
+            <span class="post-date" title="2018-12-15 06:36:09">2018/12/15</span>
+        </a>
+        
+        
+        <a  class="全部文章 前端 "
+           href="/2018/11/28/%E6%B7%B1%E6%8B%B7%E8%B4%9D%E4%B8%8E%E6%B5%85%E6%8B%B7%E8%B4%9D%E7%9A%84%E5%8C%BA%E5%88%AB%EF%BC%8C%E5%AE%9E%E7%8E%B0%E6%B7%B1%E6%8B%B7%E8%B4%9D%E7%9A%84%E5%87%A0%E7%A7%8D%E6%96%B9%E6%B3%95/"
+           data-tag="JS"
+           data-author="" >
+            <span class="post-title" title="深拷贝与浅拷贝的区别，实现深拷贝的几种方法">深拷贝与浅拷贝的区别，实现深拷贝的几种方法</span>
+            <span class="post-date" title="2018-11-28 10:36:09">2018/11/28</span>
+        </a>
+        
+        
+        <a  class="全部文章 前端 JS高级程序设计 "
+           href="/2018/11/25/PJW_%E8%A1%A8%E5%8D%95%E8%84%9A%E6%9C%AC/"
+           data-tag="JS"
+           data-author="" >
+            <span class="post-title" title="表单脚本">表单脚本</span>
+            <span class="post-date" title="2018-11-25 07:36:09">2018/11/25</span>
+        </a>
+        
+        
+        <a  class="全部文章 前端 "
+           href="/2018/11/22/%E6%B7%B1%E5%85%A5%E4%BA%86%E8%A7%A3vue/"
+           data-tag="vue"
+           data-author="" >
+            <span class="post-title" title="VUE深入学习">VUE深入学习</span>
+            <span class="post-date" title="2018-11-22 10:36:09">2018/11/22</span>
+        </a>
+        
+        
+        <a  class="全部文章 Git "
+           href="/2018/11/16/11.17_GIT/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="Git 学习">Git 学习</span>
+            <span class="post-date" title="2018-11-16 10:36:09">2018/11/16</span>
+        </a>
+        
+        
+        <a  class="全部文章 前端 JS高级程序设计 "
+           href="/2018/10/29/PJW_%E4%BA%8B%E4%BB%B6/"
+           data-tag="JS"
+           data-author="" >
+            <span class="post-title" title="事件(Event)学习">事件(Event)学习</span>
+            <span class="post-date" title="2018-10-29 07:36:09">2018/10/29</span>
+        </a>
+        
+        
+        <a  class="全部文章 前端 "
+           href="/2018/10/25/JQ%E5%9F%BA%E7%A1%80/"
+           data-tag="JQ"
+           data-author="" >
+            <span class="post-title" title="jQuery基础">jQuery基础</span>
+            <span class="post-date" title="2018-10-25 07:36:09">2018/10/25</span>
+        </a>
+        
+        
+        <a  class="全部文章 前端 "
+           href="/2018/10/25/React%E5%9F%BA%E7%A1%80/"
+           data-tag="React"
+           data-author="" >
+            <span class="post-title" title="React基础">React基础</span>
+            <span class="post-date" title="2018-10-25 07:36:09">2018/10/25</span>
+        </a>
+        
+        
+        <a  class="全部文章 "
+           href="/2018/10/22/Js%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E3%80%81DRY%E5%8E%9F%E5%88%99%E4%BB%A5%E5%8F%8A%E5%87%BD%E6%95%B0%E5%BC%8F%E7%BC%96%E7%A8%8B/"
+           data-tag="JS"
+           data-author="" >
+            <span class="post-title" title="Js面向对象、DRY原则以及函数式编程">Js面向对象、DRY原则以及函数式编程</span>
+            <span class="post-date" title="2018-10-22 10:36:09">2018/10/22</span>
+        </a>
+        
+        
+        <a  class="全部文章 前端 JS高程 "
+           href="/2018/10/20/PJW_Js%E5%9F%BA%E6%9C%AC%E5%8C%85%E8%A3%85%E7%B1%BB%E5%9E%8B%E4%B8%8E%E6%8B%93%E5%B1%95%E8%BF%90%E7%AE%97%E7%AC%A6%E5%AD%A6%E4%B9%A0/"
+           data-tag="JS"
+           data-author="" >
+            <span class="post-title" title="Js基本包装类型与拓展运算符学习">Js基本包装类型与拓展运算符学习</span>
+            <span class="post-date" title="2018-10-20 05:36:09">2018/10/20</span>
+        </a>
+        
+        
+        <a  class="全部文章 RegExp "
+           href="/2018/10/19/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="正则表达式">正则表达式</span>
+            <span class="post-date" title="2018-10-19 05:36:09">2018/10/19</span>
+        </a>
+        
+        
+        <a  class="全部文章 前端 JS高级程序设计 "
+           href="/2018/10/18/PJW_Js%20%E5%BC%95%E7%94%A8%E7%B1%BB%E5%9E%8B%E7%B1%BB%E5%9E%8B(Date%E3%80%81RegExp%E3%80%81Function)%E4%B8%8E%20%E9%83%A8%E5%88%86ES6%E8%AF%AD%E6%B3%95%E4%BA%86%E8%A7%A3/"
+           data-tag="JS"
+           data-author="" >
+            <span class="post-title" title="Js 引用类型类型引用类型类型(下)">Js 引用类型类型引用类型类型(下)</span>
+            <span class="post-date" title="2018-10-18 07:36:09">2018/10/18</span>
+        </a>
+        
+        
+        <a  class="全部文章 前端 JS高级程序设计 "
+           href="/2018/10/17/PJW_Js%20%E5%BC%95%E7%94%A8%E7%B1%BB%E5%9E%8B%E7%B1%BB%E5%9E%8B(Object%E3%80%81Array)/"
+           data-tag="JS"
+           data-author="" >
+            <span class="post-title" title="Js 引用类型类型(上)">Js 引用类型类型(上)</span>
+            <span class="post-date" title="2018-10-17 05:36:09">2018/10/17</span>
+        </a>
+        
+        
+        <a  class="全部文章 前端 JS高级程序设计 "
+           href="/2018/10/15/PJW_Js%20%E5%9F%BA%E6%9C%AC%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E4%B8%8E%20css%E4%B8%AD%E7%9A%84@media%E3%80%81grid%E3%80%81flex%E5%B1%9E%E6%80%A7%E5%AD%A6%E4%B9%A0/"
+           data-tag="JS"
+           data-author="" >
+            <span class="post-title" title="Js 基本数据类型">Js 基本数据类型</span>
+            <span class="post-date" title="2018-10-15 05:36:09">2018/10/15</span>
+        </a>
+        
+        
+        <a  class="全部文章 "
+           href="/2018/10/14/Js%E7%AB%8B%E5%8D%B3%E6%89%A7%E8%A1%8C%E5%87%BD%E6%95%B0%E5%86%99%E6%B3%95%E4%BB%A5%E5%8F%8AFCC%E4%B8%AD%E5%AD%A6%E5%88%B0%E7%9A%84css%E9%83%A8%E5%88%86%E7%94%A8%E6%B3%95%E5%92%8C%E8%AF%AD%E4%B9%89%E5%8C%96html%E7%AC%94%E8%AE%B0/"
+           data-tag="JS"
+           data-author="" >
+            <span class="post-title" title="Js立即执行函数写法以及FCC中学到的css部分用法和语义化html笔记">Js立即执行函数写法以及FCC中学到的css部分用法和语义化html笔记</span>
+            <span class="post-date" title="2018-10-14 06:36:09">2018/10/14</span>
+        </a>
+        
+        
+        <a  class="全部文章 前端 JS高程 "
+           href="/2018/10/13/PJW_Js%E8%BF%90%E7%AE%97%E7%AC%A6%E5%92%8C%E5%9F%BA%E6%9C%AC%E8%AF%AD%E5%8F%A5%EF%BC%8C%E6%95%B0%E7%BB%84%E7%9A%84%E5%A2%9E%E5%88%A0%E6%96%B9%E6%B3%95%E4%BB%A5%E5%8F%8A%E5%87%BD%E6%95%B0%E4%BD%9C%E7%94%A8%E5%9F%9F%E7%9A%84%E4%B8%80%E4%BA%9B%E4%BA%86%E8%A7%A3/"
+           data-tag="js"
+           data-author="" >
+            <span class="post-title" title="Js运算符和基本语句">Js运算符和基本语句</span>
+            <span class="post-date" title="2018-10-13 06:36:09">2018/10/13</span>
+        </a>
+        
+        
+        <a  class="全部文章 HTTP "
+           href="/2018/10/13/Post%E5%92%8CGet%E7%9A%84%E5%8C%BA%E5%88%AB/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="Post 和 Get区别">Post 和 Get区别</span>
+            <span class="post-date" title="2018-10-13 05:36:09">2018/10/13</span>
+        </a>
+        
+        
+        <a  class="全部文章 前端 "
+           href="/2018/09/19/html%E4%B8%8Ecss/"
+           data-tag="CSS,HTML5"
+           data-author="" >
+            <span class="post-title" title="Css与HTML基础">Css与HTML基础</span>
+            <span class="post-date" title="2018-09-19 06:36:09">2018/09/19</span>
+        </a>
+        
+        <div id="no-item-tips">
+
+        </div>
+    </nav>
+    <div id="outline-list">
+    </div>
+</div>
+
+    </div>
+    <div class="hide-list">
+        <div class="semicircle" data-title="切换全屏 快捷键 s">
+            <div class="brackets first"><</div>
+            <div class="brackets">&gt;</div>
+        </div>
+    </div>
+</aside>
+<div id="post">
+    <div class="pjax">
+        <article id="post-MJT_Class" class="article article-type-post" itemscope itemprop="blogPost">
+    
+        <h1 class="article-title">Js现代教程笔记 -- Class</h1>
+    
+    <div class="article-meta">
+        
+        
+        
+        <span class="book">
+            <i class="iconfont icon-category"></i>
+            
+            
+            <a  data-rel="前端">前端</a> > 
+            
+            <a  data-rel="前端&lt;---&gt;Js现代教程">Js现代教程</a>
+            
+        </span>
+        
+        
+        <span class="tag">
+            <i class="iconfont icon-tag"></i>
+            
+            <a class="color3">JS</a>
+            
+        </span>
+        
+    </div>
+    <div class="article-meta">
+        
+            发布时间 : <time class="date" title='最后更新: 2022-07-05 03:02:34'>2019-05-10 18:36</time>
+        
+    </div>
+    <div class="article-meta">
+        
+        <span>字数:5.6k</span>
+        
+        
+        
+    </div>
+    
+    <div class="toc-ref">
+    
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Class"><span class="toc-text">Class</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#class-%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95"><span class="toc-text">class 基础语法</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%B0%E5%BA%95%E4%BB%80%E4%B9%88%E6%98%AF-class-%E5%91%A2"><span class="toc-text">到底什么是 class 呢</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#class-%E8%A1%A8%E8%BE%BE%E5%BC%8F"><span class="toc-text">class 表达式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#getter-setter%E5%92%8C%E5%85%B6%E4%BB%96%E5%B1%9E%E6%80%A7"><span class="toc-text">getter&#x2F;setter和其他属性</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#class-%E5%B1%9E%E6%80%A7"><span class="toc-text">class 属性</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%B1%BB%E7%9A%84%E7%BB%A7%E6%89%BF"><span class="toc-text">类的继承</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#extends-%E5%85%B3%E9%94%AE%E5%AD%97"><span class="toc-text">extends 关键字</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%87%8D%E5%86%99%E4%B8%80%E4%B8%AA%E6%96%B9%E6%B3%95"><span class="toc-text">重写一个方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%87%8D%E5%86%99%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0"><span class="toc-text">重写构造函数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Super-%E5%86%85%E9%83%A8%E5%9F%BA%E4%BA%8E-HomeObject-%E5%AE%9E%E7%8E%B0"><span class="toc-text">Super: 内部基于 [[HomeObject]] 实现</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#HomeObject"><span class="toc-text">[[HomeObject]]</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#class%E7%9A%84%E9%9D%99%E6%80%81%E5%B1%9E%E6%80%A7%E5%92%8C%E6%96%B9%E6%B3%95"><span class="toc-text">class的静态属性和方法</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%9D%99%E6%80%81%E6%96%B9%E6%B3%95"><span class="toc-text">静态方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%9D%99%E6%80%81%E5%B1%9E%E6%80%A7"><span class="toc-text">静态属性</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%9D%99%E6%80%81%E5%B1%9E%E6%80%A7%E5%92%8C%E6%96%B9%E6%B3%95%E9%83%BD%E6%98%AF%E5%8F%AF%E7%BB%A7%E6%89%BF%E7%9A%84%E3%80%82"><span class="toc-text">静态属性和方法都是可继承的。</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%86%85%E7%BD%AE%E7%B1%BB%E6%B2%A1%E6%9C%89%E9%9D%99%E6%80%81%E6%96%B9%E6%B3%95%E7%BB%A7%E6%89%BF"><span class="toc-text">内置类没有静态方法继承</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8E%9F%E7%94%9F%E6%96%B9%E6%B3%95%E6%98%AF%E5%8F%AF%E6%89%A9%E5%B1%95%E7%9A%84"><span class="toc-text">原生方法是可扩展的</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#JavaScript-%E4%B8%AD%E7%9A%84-Mixin-%E6%A8%A1%E5%BC%8F"><span class="toc-text">JavaScript 中的 Mixin 模式</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#EventMixin"><span class="toc-text">EventMixin</span></a></li></ol></li></ol></li></ol>
+    
+<style>
+    .left-col .switch-btn,
+    .left-col .switch-area {
+        display: none;
+    }
+    .toc-level-3 i,
+    .toc-level-3 ol {
+        display: none !important;
+    }
+</style>
+</div>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="Class"><a href="#Class" class="headerlink" title="Class"></a><code>Class</code></h1><p><code>ES6</code>提供了一个新的 <code>class</code> 关键字用于更创建基于原型继承的类。</p>
+<h2 id="class-基础语法"><a href="#class-基础语法" class="headerlink" title="class 基础语法"></a><code>class</code> 基础语法</h2><pre><code class="js">class MyClass &#123;
+  prop = value; // field
+
+  constructor(...) &#123; // constructor
+    // ...
+  &#125;
+
+  method(...) &#123;&#125; // method
+
+  get something(...) &#123;&#125; // getter method
+  set something(...) &#123;&#125; // setter method
+
+  [Symbol.iterator]() &#123;&#125; // method with computed name/symbol name
+  // ...
+&#125;</code></pre>
+<span id="more"></span>
+
+<p>如上，<code>new MyClass()</code> 创建一个有着上列方法的新对象，<code>constructor()</code> 方法会因为 <code>new</code> 操作符被自动调用，再此我们初始化了该对象，例如：</p>
+<pre><code class="js">class User &#123;
+  constructor(name) &#123;
+    this.name = name;
+  &#125;
+
+  sayHi() &#123;
+    alert(this.name);
+  &#125;
+&#125;
+
+// Usage:
+let user = new User(&quot;John&quot;);
+user.sayHi();</code></pre>
+<p>当 <code>new User(&#39;John&#39;)</code> 被调用：</p>
+<ol>
+<li>一个新对象被创建。</li>
+<li><code>constructor</code> 根据给定的参数运行，并把 <code>this.name</code> 赋值给它</li>
+</ol>
+<h3 id="到底什么是-class-呢"><a href="#到底什么是-class-呢" class="headerlink" title="到底什么是 class 呢"></a>到底什么是 <code>class</code> 呢</h3><p><code>class</code> 的本质还是 函数(<code>Function</code>)。</p>
+<p>上面的例子中， <code>class User&#123;...&#125;</code> 做了这些事情：</p>
+<ol>
+<li><code>class</code> 声明的结果创建了一个叫 <code>User</code> 的函数：函数代码取自 <code>construtor</code> 方法</li>
+<li>把所有其他方法保存在 <code>User.prototype</code></li>
+</ol>
+<p>所以，当我们在新对象调用一个方法时，它是取自 <code>Fn.prototype</code> 的。上面的 <code>new User</code> 对象能从 <code>User.prototype</code> 获得 <code>class</code> 的方法。</p>
+<p>因为我们可以通过不用 <code>class</code> 关键字声明一个看似一样的类，因此有人认为 <code>class</code> 只是一个语法糖，例如:</p>
+<pre><code class="js">// rewriting class User in pure functions
+
+// 1. Create constructor function
+function User(name) &#123;
+  this.name = name;
+&#125;
+// any function prototype has constructor property by default,
+// so we don&#39;t need to create it
+
+// 2. Add the method to prototype
+User.prototype.sayHi = function () &#123;
+  alert(this.name);
+&#125;;
+
+// Usage:
+let user = new User(&quot;John&quot;);
+user.sayHi();</code></pre>
+<p>但是，这个方法和 <code>class</code> 声明有一定的区别：</p>
+<ol>
+<li><p>通过 <code>class</code> 创建的函数有一个隐藏的内部属性 <code>[[FunctionKind]]::&#39;classConstructor&#39;</code>, 因为这个属性，如果不通过 <code>new</code> 运算符调用 <code>class</code>，将会直接报错。而且 <code>class</code> 的字符串描述也不同。</p>
+<pre><code class="js">class User &#123;
+  constructor() &#123;&#125;
+&#125;
+
+alert(User); // class User &#123; ... &#125;</code></pre>
+</li>
+<li><p><code>class</code> 的方法都是不可枚举的(<code>non-enumerable</code>)。<code>class</code> 声明将 <code>prototype</code> 内的所有方法的 <code>enumerable</code> 描述符都设置为了 <code>false</code>.因此 <code>for...in</code> 将无法获取对象继承到的方法</p>
+</li>
+<li><p><code>class</code> 内的所有代码都是被强制使用了 <code>strict mode</code></p>
+</li>
+</ol>
+<h3 id="class-表达式"><a href="#class-表达式" class="headerlink" title="class 表达式"></a><code>class</code> 表达式</h3><p>与 <code>function</code> 类似，<code>class</code> 也可以被其他表达式定义，比如赋值，<code>return</code> 等。</p>
+<p><code>class</code> 声明也可以是匿名的或者命名的，但是命名的 <code>class</code> 只有在 <code>class</code> 内部才能调用其名。</p>
+<pre><code class="js">// &quot;Named Class Expression&quot; (alas, no such term, but that&#39;s what&#39;s going on)
+let User = class MyClass &#123;
+  sayHi() &#123;
+    alert(MyClass); // MyClass is visible only inside the class
+  &#125;
+&#125;;
+
+new User().sayHi(); // works, shows MyClass definition
+
+alert(MyClass); // error, MyClass not visible outside of the class</code></pre>
+<p>我们还可以动态地请求生成 <code>class</code> ：</p>
+<pre><code class="js">function makeClass(phrase) &#123;
+  // declare a class and return it
+  return class &#123;
+    sayHi() &#123;
+      alert(phrase);
+    &#125;
+  &#125;;
+&#125;
+
+// Create a new class
+let User = makeClass(&quot;Hello&quot;);
+
+new User().sayHi(); // Hello</code></pre>
+<h3 id="getter-setter和其他属性"><a href="#getter-setter和其他属性" class="headerlink" title="getter/setter和其他属性"></a><code>getter</code>/<code>setter</code>和其他属性</h3><p><code>class</code> 也包含了 <code>getter</code>/<code>setter</code>,<code>generators</code>, <code>computed</code> 等属性，<br>下面是一个用 <code>get/set</code> 操作 <code>user.name</code> 的例子</p>
+<pre><code class="js">class User &#123;
+  constructor(name) &#123;
+    // invokes the setter
+    this._name = name;
+  &#125;
+
+  get name() &#123;
+    return this._name;
+  &#125;
+
+  set name(value) &#123;
+    if (value.length &lt; 4) &#123;
+      alert(&quot;Name is too short.&quot;);
+      return;
+    &#125;
+    this._name = value;
+  &#125;
+&#125;
+
+let user = new User(&quot;John&quot;);
+alert(user.name); // John
+
+user = new User(&quot;&quot;); // Name is too short.</code></pre>
+<p>实际上，<code>getter</code>和 <code>setter</code> 被创建在 <code>User.prototype</code>，如下：</p>
+<pre><code class="js">Object.defineProperties(User.prototype, &#123;
+  name: &#123;
+    get() &#123;
+      return this._name;
+    &#125;,
+    set(name) &#123;
+      // ...
+    &#125;,
+  &#125;,
+&#125;);</code></pre>
+<h3 id="class-属性"><a href="#class-属性" class="headerlink" title="class 属性"></a><code>class</code> 属性</h3><pre><code class="js">class User &#123;
+  name = &quot;Anonymous&quot;; //*
+
+  sayHi() &#123;
+    alert(`Hello, $&#123;this.name&#125;!`);
+  &#125;
+&#125;
+
+new User().sayHi();
+
+alert(User.prototype.sayHi); // placed in User.prototype
+alert(User.prototype.name); // undefined, not placed in User.prototype</code></pre>
+<p>该属性 <code>name</code> 并没有被放在 <code>User.prototype</code>。它是属于对象 <code>User</code> 自身的属性，它会在调用 <code>constructor()</code> 之前通过 <code>new</code> 创建在每个对象内，各对象内的该属性互不影响。</p>
+<h2 id="类的继承"><a href="#类的继承" class="headerlink" title="类的继承"></a>类的继承</h2><p>类可以继承另外一个类。这是一个非常棒的语法，在技术上是它基于原型继承实现的。</p>
+<h3 id="extends-关键字"><a href="#extends-关键字" class="headerlink" title="extends 关键字"></a><code>extends</code> 关键字</h3><p>为了继承另外一个类，我们需要在括号 <code>&#123;..&#125;</code> 前指定 <code>&quot;extends&quot;</code> 和父类</p>
+<p>这里我们写一个继承自 <code>Animal</code> 的 <code>Rabbit：</code></p>
+<pre><code class="js">class Animal &#123;
+  constructor(name) &#123;
+    this.speed = 0;
+    this.name = name;
+  &#125;
+
+  run(speed) &#123;
+    this.speed += speed;
+    alert(`$&#123;this.name&#125; runs with speed $&#123;this.speed&#125;.`);
+  &#125;
+
+  stop() &#123;
+    this.speed = 0;
+    alert(`$&#123;this.name&#125; stopped.`);
+  &#125;
+&#125;
+
+// 从 Animal 继承
+class Rabbit extends Animal &#123;
+  hide() &#123;
+    alert(`$&#123;this.name&#125; hides!`);
+  &#125;
+&#125;
+
+let rabbit = new Rabbit(&quot;White Rabbit&quot;);
+
+rabbit.run(5); // 白色兔子会以速度 5 奔跑。
+rabbit.hide(); // 白色兔子藏了起来！</code></pre>
+<p>例如，为了找到 <code>rabbit.run()</code> 方法，引擎的查找顺序如下：</p>
+<ol>
+<li><code>rabbit</code> 对象（未找到）。</li>
+<li><code>rabbit</code> 的原型，即 <code>Rabbit.prototype</code>（有 <code>hide()</code>，但没有 <code>run</code>）</li>
+<li><code>Rabbit.prototype</code> 的原型，因为 <code>extends</code> 关键字指向了 <code>Animal</code>，即 <code>Animal.prototype</code>，找到 <code>run()</code> 方法</li>
+</ol>
+<p>就如你期望的那样，也正如我们之前所见，<code>extends</code> 关键字实际上是给 <code>Rabbit.prototype</code> 添加了一个属性 <code>[[Prototype]]</code>，并且它会指向 <code>Animal.prototype。</code></p>
+<p>所以，现在 <code>rabbit</code> 即可以访问它自己的方法，也可以访问 <code>Animal</code> 的方法。</p>
+<p><strong>注意，类语法不仅允许在 <code>extends</code> 后指定一个类，也允许指定任何表达式。</strong></p>
+<pre><code class="js">function f(phrase) &#123;
+  return class &#123;
+    sayHi() &#123;
+      alert(phrase);
+    &#125;
+  &#125;;
+&#125;
+
+class User extends f(&quot;Hello&quot;) &#123;&#125;
+
+new User().sayHi(); // Hello</code></pre>
+<p>上面的代码中， <code>User</code> 就是继承了 <code>f(&#39;Hello)</code> 的返回结果</p>
+<h3 id="重写一个方法"><a href="#重写一个方法" class="headerlink" title="重写一个方法"></a>重写一个方法</h3><p>现在让我们继续前进并尝试重写一个方法。到目前为止，<code>Rabbit</code> 继承了 <code>Animal</code> 的 <code>stop</code> 方法，该方法设置了 <code>this.speed = 0。</code></p>
+<p>如果我们在 <code>Rabbit</code> 中定义了我们自己的 <code>stop</code> 方法，那么它将被用来代替 <code>Animal</code> 的 <code>stop</code> 方法：</p>
+<pre><code class="js">class Rabbit extends Animal &#123;
+  stop() &#123;
+    // ...这将用于 rabbit.stop()
+  &#125;
+&#125;</code></pre>
+<p>…但是通常来说，我们不希望完全替换父类的方法，而是希望基于它做一些调整或者扩展。我们在我们的方法中做一些事情，但是在它之前/之后或在执行过程中调用父类的方法。</p>
+<p>为此，类提供了 <code>&quot;super&quot;</code> 关键字。</p>
+<p>执行 <code>super.methodName(...)</code> 来调用一个父类的方法。<br>执行 <code>super(...)</code> 调用父类的构造函数 (只能在子类的构造函数中执行)。</p>
+<p>例如，让我们的兔子在停下时自动隐藏：</p>
+<pre><code class="js">class Animal &#123;
+  constructor(name) &#123;
+    this.speed = 0;
+    this.name = name;
+  &#125;
+
+  run(speed) &#123;
+    this.speed += speed;
+    alert(`$&#123;this.name&#125; runs with speed $&#123;this.speed&#125;.`);
+  &#125;
+
+  stop() &#123;
+    this.speed = 0;
+    alert(`$&#123;this.name&#125; stopped.`);
+  &#125;
+&#125;
+
+class Rabbit extends Animal &#123;
+  hide() &#123;
+    alert(`$&#123;this.name&#125; hides!`);
+  &#125;
+
+  stop() &#123;
+    super.stop(); // 调用父类的 stop 函数
+    this.hide(); // 并且在那之后隐藏
+  &#125;
+&#125;
+
+let rabbit = new Rabbit(&quot;White Rabbit&quot;);
+
+rabbit.run(5); // White Rabbit runs with speed 5.
+rabbit.stop(); // White Rabbit stopped. White rabbit hides!</code></pre>
+<p>现在，<code>Rabbit</code> 有自己的 <code>stop</code> 函数，并且在执行过程中会调用父类的 <code>super.stop()。</code></p>
+<p><strong>注意，箭头函数中没有 <code>super</code>. 如果被访问，它将从外部函数获取</strong></p>
+<h3 id="重写构造函数"><a href="#重写构造函数" class="headerlink" title="重写构造函数"></a>重写构造函数</h3><p>到目前为止，<code>Rabbit</code> 还没有自己的 <code>constructor。</code></p>
+<p>根据规范，如果一个类继承了另一个类并且没有构造函数，那么将生成以下构造函数：</p>
+<pre><code class="js">class Rabbit extends Animal &#123;
+  // 为没有构造函数的继承类生成以下的构造函数
+  constructor(...args) &#123;
+    super(...args);
+  &#125;
+&#125;</code></pre>
+<p>我们可以看到，它调用了父类的 <code>constructor</code> 并传递了所有的参数。如果我们不写自己的构造函数，就会出现上述这种情况。</p>
+<p>如果我们要手写子类的构造函数，那么，<strong>继承类的构造函数必须调用 <code>super(...)</code>，并且一定要在使用 <code>this</code> 之前调用。</strong></p>
+<p>为什么呢？在 <code>JavaScript</code> 中，“派生类的构造函数”与所有其他的构造函数之间存在区别。在派生类中，相应的构造函数会被标记为特殊的内部属性 <code>[[ConstructorKind]]:&quot;derived&quot;</code>。</p>
+<p>不同点就在于:</p>
+<ul>
+<li>当一个普通构造函数执行时，它会创建一个空对象作为 <code>this</code> 并继续执行。</li>
+<li>但是当派生的构造函数执行时，它并不会做这件事。它期望父类的构造函数来完成这项工作。</li>
+</ul>
+<p>因此，如果我们构建了我们自己的构造函数，我们必须调用 <code>super</code>，否则的话 <code>this</code> 指向的对象不会被创建，并且我们会收到一个报错。例如：</p>
+<pre><code class="js">class Animal &#123;
+  constructor(name) &#123;
+    this.speed = 0;
+    this.name = name;
+  &#125;
+
+  // ...
+&#125;
+
+class Rabbit extends Animal &#123;
+  constructor(name, earLength) &#123;
+    super(name); //如果没有这一行，下面调用将会报错 Error: this is not defined.
+    this.earLength = earLength;
+  &#125;
+
+  // ...
+&#125;
+
+// now fine
+let rabbit = new Rabbit(&quot;White Rabbit&quot;, 10);
+alert(rabbit.name); // White Rabbit
+alert(rabbit.earLength); // 10</code></pre>
+<h3 id="Super-内部基于-HomeObject-实现"><a href="#Super-内部基于-HomeObject-实现" class="headerlink" title="Super: 内部基于 [[HomeObject]] 实现"></a><code>Super</code>: 内部基于 <code>[[HomeObject]]</code> 实现</h3><p>让我们再深入的去研究下 <code>super。</code>顺便说一句，我们会发现一些有趣的事情。</p>
+<p>首先要说的是，从我们迄今为止学到的知识来看，<code>super</code> 是不可能运行的。</p>
+<p>的确是这样，让我们问问自己，在技术上它是如何实现的？当一个对象方法运行时，它会将当前对象作为 <code>this。</code>如果之后我们调用 <code>super.method()，</code>那么如何检索 <code>method？</code>我们想当然地认为需要从当前对象的原型中获取 <code>method。</code>但是从技术上讲，我们（或者 <code>JavaScript</code> 的引擎）可以做到这一点吗？</p>
+<p>也许我们可以从 <code>this</code> 的 <code>[[Prototype]]</code> 上获得方法，就像 <code>this.__proto__.method</code>？不幸的是，这样是行不通的。</p>
+<p>让我们尝试去这么做看看。简单起见，我们不使用类，只使用普通对象。</p>
+<p>在这里，<code>rabbit.eat()</code> 会调用父对象的 <code>animal.eat()</code> 方法：</p>
+<pre><code class="js">let animal = &#123;
+  name: &quot;Animal&quot;,
+  eat() &#123;
+    alert(`$&#123;this.name&#125; eats.`);
+  &#125;,
+&#125;;
+
+let rabbit = &#123;
+  __proto__: animal,
+  name: &quot;Rabbit&quot;,
+  eat() &#123;
+    // 这是 super.eat() 可能工作的原因
+    this.__proto__.eat.call(this); // (*)
+  &#125;,
+&#125;;
+
+rabbit.eat(); // Rabbit eats.</code></pre>
+<p>在 <code>(*)</code> 这一行，我们从 <code>animal</code> 的原型上获取 <code>eat，</code>并在当前对象的上下文中调用它。请注意，<code>.call(this)</code>在这里非常重要，因为简单的调用 <code>this.__proto__.eat()</code> 将在原型的上下文中执行 <code>eat，</code>而非当前对象</p>
+<p>在上述的代码中，它按照期望运行：我们获得了正确的 <code>alert。</code></p>
+<p>现在让我们在原型链上再添加一个额外的对象。我们将看到这件事是如何被打破的：</p>
+<pre><code class="js">let animal = &#123;
+  name: &quot;Animal&quot;,
+  eat() &#123;
+    alert(`$&#123;this.name&#125; eats.`);
+  &#125;,
+&#125;;
+
+let rabbit = &#123;
+  __proto__: animal,
+  eat() &#123;
+    // ...新建一个兔子并调用父类的方法
+    this.__proto__.eat.call(this); // (*)
+  &#125;,
+&#125;;
+
+let longEar = &#123;
+  __proto__: rabbit,
+  eat() &#123;
+    // ...用长耳朵做一些事情，并调用父类（rabbit）的方法
+    this.__proto__.eat.call(this); // (**)
+  &#125;,
+&#125;;
+
+longEar.eat(); // Error: Maximum call stack size exceeded</code></pre>
+<p>代码无法再运行了！我们可以看到，在试图调用 <code>longEar.eat()</code> 时抛出了错误。</p>
+<p>原因可能不那么明显，但是如果我们跟踪 <code>longEar.eat()</code> 的调用，就可以发现原因。在 <code>(*)</code> 和 <code>(**)</code> 这两行中，<code>this</code> 的值都是当前对象 <code>longEar。</code>这是至关重要的一点：所有的对象方法都将当前对象作为 <code>this，</code>而非原型或其他什么东西。</p>
+<p>因此，在 <code>(*)</code> 和 <code>(**)</code>这两行中，<code>this.__proto__</code> 的值是完全相同的，都是 <code>rabbit。</code>在这个无限循环中，他们都调用了 <code>rabbit.eat，</code>而不是在原型链上向上寻找方法。</p>
+<ol>
+<li>在 <code>longEar.eat()</code> 中，<code>(**)</code> 这一行调用 <code>rabbit.eat</code> 并且此时 <code>this=longEar</code>.<pre><code class="js">// 在 longEar.eat() 中 this 指向 longEar
+this.__proto__.eat.call(this); // (**)
+// 变成了
+longEar.__proto__.eat.call(this);
+// 即等同于
+rabbit.eat.call(this);</code></pre>
+</li>
+<li>之后在 <code>rabbit.eat</code> 的 <code>(*)</code>行中，我们希望将函数调用在原型链上向更高层传递，但是因为 <code>this=longEar</code>，因此 <code>this.__proto__.eat</code> 又是 <code>rabbit.eat</code>！<pre><code class="js">// 在 rabbit.eat() 中 this 依旧等于 longEar
+this.__proto__.eat.call(this); // (*)
+// 变成了
+longEar.__proto__.eat.call(this);
+// 再次等同于
+rabbit.eat.call(this);</code></pre>
+</li>
+<li>所以 <code>rabbit.eat</code> 不停地循环调用自己，因此它无法进一步地往原型链的更高层调用</li>
+</ol>
+<p>这个问题没法单独使用 <code>this</code> 来解决。</p>
+<h3 id="HomeObject"><a href="#HomeObject" class="headerlink" title="[[HomeObject]]"></a><code>[[HomeObject]]</code></h3><p>为了提供解决方法，<code>JavaScript</code> 为函数额外添加了一个特殊的内部属性 <code>：[[HomeObject]]</code>。</p>
+<p>当一个函数被定义为类或者对象方法时，它的 <code>[[HomeObject]]</code> 属性就成为当前类或对象。</p>
+<p>一般来说，对象中的函数是自由函数，可以改变他们的 <code>this</code> 值，可以在对象间自由地赋值，但是 <code>[[HomeObject]]</code> 违反了 “解除绑定” 功能的想法，因为函数会记录他们绑定的对象。 <code>[[HomeObject]]</code> 不能被改变，并且这个绑定是永久的。</p>
+<p>但是这种改变是安全的。<code>[[HomeObject]]</code> 只有使用 <code>super</code> 调用父类的方法是才会被使用。所以它不会破坏兼容性。</p>
+<p>让我们看看它是如何帮助 <code>super</code> 运行的 —— 我们再次使用普通对象：</p>
+<pre><code class="js">let animal = &#123;
+  name: &quot;Animal&quot;,
+  eat() &#123;
+    // [[HomeObject]] == animal
+    alert(`$&#123;this.name&#125; eats.`);
+  &#125;,
+&#125;;
+
+let rabbit = &#123;
+  __proto__: animal,
+  name: &quot;Rabbit&quot;,
+  eat() &#123;
+    // [[HomeObject]] == rabbit
+    super.eat();
+  &#125;,
+&#125;;
+
+let longEar = &#123;
+  __proto__: rabbit,
+  name: &quot;Long Ear&quot;,
+  eat() &#123;
+    // [[HomeObject]] == longEar
+    super.eat();
+  &#125;,
+&#125;;
+
+longEar.eat(); // Long Ear eats.</code></pre>
+<p>每个方法都会在内部的 <code>[[HomeObject]]</code> 属性上标记它的对象。然后 <code>super</code> 利用它来解析父级原型。</p>
+<p><code>[[HomeObject]]</code> 是为类和简单对象中定义的方法定义的。但是对于对象，方法必须按照给定的方式定义：使用简写的 <code>methodName()</code>，而不是完整 <code>methodName: function()</code>。</p>
+<p>在下面的例子中，使用非方法语法来进行对比 <code>。[[HomeObject]]</code> 属性没有被设置，并且此时继承没有生效：</p>
+<pre><code class="js">let animal = &#123;
+  eat: function () &#123;
+    // 应该使用简短语法：eat() &#123;...&#125;
+    // ...
+  &#125;,
+&#125;;
+
+let rabbit = &#123;
+  __proto__: animal,
+  eat: function () &#123;
+    super.eat();
+  &#125;,
+&#125;;
+
+rabbit.eat(); // 调用 super 报错（因为没有 [[HomeObject]]）</code></pre>
+<h2 id="class的静态属性和方法"><a href="#class的静态属性和方法" class="headerlink" title="class的静态属性和方法"></a><code>class</code>的静态属性和方法</h2><h3 id="静态方法"><a href="#静态方法" class="headerlink" title="静态方法"></a>静态方法</h3><p>我们也可以给 <code>class</code> 本身赋予方法，而不是给其 <code>prototype</code> 赋予方法，这种方法被叫做 <code>静态方法</code></p>
+<pre><code class="js">//这两种方法是等价的
+// 1.
+class User &#123;
+  static staticMethod() &#123;
+    alert(this === User);
+  &#125;
+&#125;
+
+// 2.
+function User() &#123;&#125;
+
+User.staticMethod = function () &#123;
+  alert(this === User);
+&#125;;</code></pre>
+<p>静态方法并不用于具体的实例，它不要求有实例存在，只要求一个 <code>class</code>，它是 <code>class</code> 独有的，不与实例共享。</p>
+<h3 id="静态属性"><a href="#静态属性" class="headerlink" title="静态属性"></a>静态属性</h3><p>静态属性用于存储 <code>class</code> 级的数据，同样不与实例绑定，语法如下：</p>
+<pre><code class="js">class MyClass &#123;
+  static property = ...;
+
+  static method() &#123;
+    ...
+  &#125;
+&#125;</code></pre>
+<p>这相当于把值赋予 <code>class</code> 本身：</p>
+<pre><code class="js">MyClass.property = ...
+MyClass.method = ...</code></pre>
+<h3 id="静态属性和方法都是可继承的。"><a href="#静态属性和方法都是可继承的。" class="headerlink" title="静态属性和方法都是可继承的。"></a>静态属性和方法都是可继承的。</h3><p>技术上来讲，对于 <code>class B extends A</code>,类 <code>B</code> 的原型指向类 <code>A</code>： <code>B.[[prototype]] = A</code>。</p>
+<pre><code class="js">class Animal &#123;
+  static planet = &quot;Earth&quot;;
+
+  constructor(name, speed) &#123;
+    this.speed = speed;
+    this.name = name;
+  &#125;
+
+  run(speed = 0) &#123;
+    this.speed += speed;
+    alert(`$&#123;this.name&#125; runs with speed $&#123;this.speed&#125;.`);
+  &#125;
+
+  static compare(animalA, animalB) &#123;
+    return animalA.speed - animalB.speed;
+  &#125;
+&#125;
+
+// Inherit from Animal
+class Rabbit extends Animal &#123;
+  hide() &#123;
+    alert(`$&#123;this.name&#125; hides!`);
+  &#125;
+&#125;
+
+let rabbits = [new Rabbit(&quot;White Rabbit&quot;, 10), new Rabbit(&quot;Black Rabbit&quot;, 5)];
+
+rabbits.sort(Rabbit.compare);
+
+rabbits[0].run(); // Black Rabbit runs with speed 5.
+
+alert(Rabbit.planet); // Earth</code></pre>
+<p>如上述代码，当我们调用 <code>Rabbit.compare()</code> 的时候，调用的是继承自 <code>Animal</code> 的静态方法 <code>compare()</code></p>
+<p>这是如何实现的呢？也是通过 <code>prototype</code>，正如你所想的， <code>extends</code> 将 <code>Rabbit</code> 的 <code>[[Prototype]]</code> 指向了 <code>Animal</code></p>
+<p>所以，我们可以说， <code>Rabbit extends Animal</code> 创建了两个 <code>[[Prototype]]</code> 的引用：</p>
+<ol>
+<li><code>Rabbit</code> 类自身的 <code>[[Prototype]]</code> 指向 <code>Animal</code> 类自身</li>
+<li><code>Rabbit.prototype</code> 的 <code>[[Prototype]]</code> 指向 <code>Animal.prototype</code></li>
+</ol>
+<p>所以，继承对于常规方法和静态方法都管用</p>
+<p>我们可以通过代码来检测一下：</p>
+<pre><code class="js">class Animal &#123;&#125;
+class Rabbit extends Animal &#123;&#125;
+
+// for statics
+alert(Rabbit.__proto__ === Animal); // true
+
+// for regular methods
+alert(Rabbit.prototype.__proto__ === Animal.prototype); // true</code></pre>
+<h3 id="内置类没有静态方法继承"><a href="#内置类没有静态方法继承" class="headerlink" title="内置类没有静态方法继承"></a>内置类没有静态方法继承</h3><p>请注意，内置类没有这种静态 <code>[[Prototype]]</code> 的引用。例如， <code>Object</code> 有 <code>Object.defineProperty，``Object.keys</code> 等等的方法，但是 <code>Array，``Date</code> 等等并不会继承他们。</p>
+<p>请注意，<code>Date</code> 和 <code>Object</code> 之间没有关联 <code>。Object</code> 和 <code>Date</code> 都是独立存在的 <code>。Date.prototype</code> 继承自 <code>Object.prototype，</code>但也仅此而已。</p>
+<h3 id="原生方法是可扩展的"><a href="#原生方法是可扩展的" class="headerlink" title="原生方法是可扩展的"></a>原生方法是可扩展的</h3><p><code>Array，``Map</code> 等 <code>JavaScript</code> 内置的类也是可以扩展的。</p>
+<p>例如，这里的 <code>PowerArray</code> 继承自原生的 <code>Array：</code></p>
+<pre><code class="js">// 给 Array 增加一个新方法（可以做更多功能）
+class PowerArray extends Array &#123;
+  isEmpty() &#123;
+    return this.length === 0;
+  &#125;
+&#125;
+
+let arr = new PowerArray(1, 2, 5, 10, 50);
+alert(arr.isEmpty()); // false
+
+let filteredArr = arr.filter((item) =&gt; item &gt;= 10);
+alert(filteredArr); // 10, 50
+alert(filteredArr.isEmpty()); // false</code></pre>
+<p>有一件非常有趣的事情需要注意。像 <code>filter</code>，<code>map</code> 或者其他原生的方法，都会根据继承的类型返回新的对象。他们都是依赖 <code>constructor</code> 属性实现的这一功能。</p>
+<p>在上面的例子中：</p>
+<pre><code class="js">arr.constructor === PowerArray;</code></pre>
+<p>所以当调用 <code>arr.filter()</code> 时，就像 <code>new PowerArray</code> 一样，他会在内部创建新的结果数组。并且我们可以继续链式调用它的方法。</p>
+<p>更重要的是，我们可以定制这种行为。在这种情况下，如果存在静态的 <code>getter</code> <code>Symbol.species，</code>那么就会使用它的返回值作为构造函数。</p>
+<p>举个例子，这里因为有 <code>Symbol.species，</code>像 <code>map，``filter</code> 这样的内置方法将返回“普通”数组：</p>
+<pre><code class="js">class PowerArray extends Array &#123;
+  isEmpty() &#123;
+    return this.length === 0;
+  &#125;
+
+  // 内置函数会使用它作为构造函数
+  static get [Symbol.species]() &#123;
+    return Array;
+  &#125;
+&#125;
+
+let arr = new PowerArray(1, 2, 5, 10, 50);
+alert(arr.isEmpty()); // false
+
+// filter 使用 arr.constructor[Symbol.species] 作为构造函数创建了新数组
+let filteredArr = arr.filter((item) =&gt; item &gt;= 10);
+
+// filteredArr 不是 PowerArray，而是一个 普通数组
+alert(filteredArr.isEmpty()); // Error: filteredArr.isEmpty is not a function</code></pre>
+<h2 id="JavaScript-中的-Mixin-模式"><a href="#JavaScript-中的-Mixin-模式" class="headerlink" title="JavaScript 中的 Mixin 模式"></a><code>JavaScript</code> 中的 <code>Mixin</code> 模式</h2><p>根据维基百科的定义，<code>mixin</code> 是一个包含许多供其它类使用的方法的类，而且这个类不必是其它类的父类。</p>
+<p>换句话说，一个 <code>mixin</code> 提供了许多实现具体行为的方法，但是我们不单独使用它，我们用它来将这些行为添加到其它类中。</p>
+<p>###一个 <code>Mixin</code> 实例<br>在 <code>JavaScript</code> 中构造一个 <code>mixin</code> 最简单的方式就是构造一个拥有许多实用方法的对象，通过这个对象我们可以轻易地将这些实用方法合并到任何类的原型中。</p>
+<p>例如，这个叫做 <code>sayHiMixin</code> 的 <code>mixin</code> 用于给 <code>User</code> 添加一些“言语”。</p>
+<pre><code class="JS">
+// mixin
+let sayHiMixin = &#123;
+  sayHi() &#123;
+    alert(`Hello $&#123;this.name&#125;`);
+  &#125;,
+  sayBye() &#123;
+    alert(`Bye $&#123;this.name&#125;`);
+  &#125;
+&#125;;
+
+// 用法：
+class User &#123;
+  constructor(name) &#123;
+    this.name = name;
+  &#125;
+&#125;
+
+// 拷贝方法
+Object.assign(User.prototype, sayHiMixin);
+
+// 现在 User 可以说　hi 了
+new User(&quot;Dude&quot;).sayHi(); // Hello Dude!</code></pre>
+<p>没有继承，只有一个简单的方法拷贝。因此 <code>User</code> 可以扩展其它类并且同样包含 <code>mixin</code> 来 <code>“mix-in”</code>其它方法，就像这样：</p>
+<pre><code class="js">class User extends Person &#123;
+  // ...
+&#125;
+
+Object.assign(User.prototype, sayHiMixin);</code></pre>
+<p><code>Mixin</code> 可以在自己内部使用继承。</p>
+<p>比如，这里的 <code>sayHiMixin</code> 继承于 <code>sayMixin</code>：</p>
+<pre><code class="JS">let sayMixin = &#123;
+  say(phrase) &#123;
+    alert(phrase);
+  &#125;
+&#125;;
+
+let sayHiMixin = &#123;
+  __proto__: sayMixin, // （或者，我们可以在这里通过 Object.create 来设置原型。）
+
+  sayHi() &#123;
+    // 调用父类中的方法
+    super.say(`Hello $&#123;this.name&#125;`);
+  &#125;,
+  sayBye() &#123;
+    super.say(`Bye $&#123;this.name&#125;`);
+  &#125;
+&#125;;
+
+class User &#123;
+  constructor(name) &#123;
+    this.name = name;
+  &#125;
+&#125;
+
+// 拷贝方法
+Object.assign(User.prototype, sayHiMixin);
+
+// 现在 User 可以说 hi 了
+new User(&quot;Dude&quot;).sayHi(); // Hello Dude!</code></pre>
+<p>请注意在 <code>sayHiMixin</code> 内部对于父类方法 <code>super.say()</code> 的调用会在 <code>mixin</code> 的原型上查找方法而不是在 <code>class</code> 自身查找。</p>
+<p>那是因为 <code>sayHiMixin</code> 内部的方法设置了 <code>[[HomeObject]]</code> 属性。因此 <code>super</code> 实际上就是 <code>sayHiMixin.__proto__</code> ，而不是 <code>User.__proto__</code>。</p>
+<h3 id="EventMixin"><a href="#EventMixin" class="headerlink" title="EventMixin"></a><code>EventMixin</code></h3><p>现在让我们为了实际运用构造一个 <code>mixin</code>。</p>
+<p>许多对象的重要特征是与事件一起工作。</p>
+<p>也就是说：对象应该有一个方法在发生重要事件时“生成事件”，其它对象应该能够“监听”这样的事件。</p>
+<p>一个事件必须有一个名称，并可以选择性的捆绑一些额外的数据。</p>
+<p>比如说，一个 <code>user</code> 对象能够在访问者登录时产生“<code>login</code>”事件。另一个 <code>calendar</code> 对象可能在等待着接受一个这样的事件以便为登录后的用户加载日历。</p>
+<p>或者，<code>menu</code> 在菜单选项被选择之后会产生 “<code>select</code>“ 事件，并且其它对象可能在等待着接受事件的信息并且对事件做出反应。</p>
+<p>事件是一种与任何想要得到信息的人分享信息的方式。它在任何类中都可以使用，因此现在为它构造一个 <code>mixin</code>。</p>
+<pre><code class="JS"> let eventMixin = &#123;
+  /**
+   * 订阅事件，用法：
+   *  menu.on(&#39;select&#39;, function(item) &#123; ... &#125;
+  */
+  on(eventName, handler) &#123;
+    if (!this._eventHandlers) this._eventHandlers = &#123;&#125;;
+    if (!this._eventHandlers[eventName]) &#123;
+      this._eventHandlers[eventName] = [];
+    &#125;
+    this._eventHandlers[eventName].push(handler);
+  &#125;,
+
+  /**
+   * 取消订阅，用法：
+   *  menu.off(&#39;select&#39;, handler)
+   */
+  off(eventName, handler) &#123;
+    let handlers = this._eventHandlers &amp;&amp; this._eventHandlers[eventName];
+    if (!handlers) return;
+    for (let i = 0; i &lt; handlers.length; i++) &#123;
+      if (handlers[i] === handler) &#123;
+        handlers.splice(i--, 1);
+      &#125;
+    &#125;
+  &#125;,
+
+  /**
+   * 触发事件并传递参数
+   *  this.trigger(&#39;select&#39;, data1, data2);
+   */
+  trigger(eventName, ...args) &#123;
+    if (!this._eventHandlers || !this._eventHandlers[eventName]) &#123;
+      return; // 对应事件名没有事件处理函数。
+    &#125;
+
+    // 调用事件处理函数
+    this._eventHandlers[eventName].forEach(handler =&gt; handler.apply(this, args));
+  &#125;
+&#125;;</code></pre>
+<p>有三个方法：</p>
+<p><code>.on(eventName, handler)</code> — 指定函数 handler 在具有对应事件名的事件发生时运行。这些事件处理函数存储在 _eventHandlers 属性中。<br><code>.off(eventName, handler)</code> — 在事件处理函数列表中移除指定的函数。<br><code>.trigger(eventName, ...args)</code> — 触发事件：所有被指定到对应事件的事件处理函数都会被调用并且 args 会被作为参数传递给它们。<br>用法：</p>
+<pre><code class="JS">
+// 新建一个 class
+class Menu &#123;
+  choose(value) &#123;
+    this.trigger(&quot;select&quot;, value);
+  &#125;
+&#125;
+// 添加 mixin
+Object.assign(Menu.prototype, eventMixin);
+
+let menu = new Menu();
+
+// 被选中时调用事件处理函数：
+menu.on(&quot;select&quot;, value =&gt; alert(`Value selected: $&#123;value&#125;`));
+
+// 触发事件 =&gt; 展示被选中的值：123
+menu.choose(&quot;123&quot;); // 被选中的值</code></pre>
+<p>现在如果我们已经有了针对用户选择事件做出具体反应的代码，可以将代码使用 menu.on(…) 进行绑定。</p>
+<p>只要我们喜欢，就可以通过 eventMixin 将这些行为添加到任意个数的类中而不影响继承链。</p>
+<p>总结<br><code>Mixin</code> — 是一个通用的面向对象编程术语：一个包含其他类的方法的类。</p>
+<p>一些其它语言比如 <code>python</code> 允许通过多继承实现 <code>mixin``。JavaScript</code> 不支持多继承，但是可以通过拷贝多个类中的方法到某个类的原型中实现 <code>mixin</code>。</p>
+<p>我们可以使用 <code>mixin</code> 作为一种通过多种行为来增强类的方式，就像我们上面看到的事件处理一样。</p>
+<p>如果 <code>Mixins</code> 偶尔会重写原生类中的方法，那么 <code>Mixins</code> 可能会成为一个冲突点。因此通常情况下应该好好考虑 <code>mixin</code> 的命名，以减少这种冲突的可能性。</p>
+
+      
+       <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 kerbalhao@foxmail.com </span>
+    </div>
+</article>
+
+
+
+
+
+
+
+    
+
+
+
+
+    </div>
+    <div class="copyright">
+        <p class="footer-entry">
+    ©2019-2022 Kerbalhao
+</p>
+<p class="footer-entry">Built with <a href="https://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/yelog/hexo-theme-3-hexo" target="_blank">3-hexo</a> theme</p>
+
+    </div>
+    <div class="full-toc">
+        <button class="full" data-title="切换全屏 快捷键 s"><span class="min "></span></button>
+<a class="" id="rocket" ></a>
+
+    </div>
+</div>
+
+</body>
+<script src="/js/jquery.pjax.js?v=1.1.0" ></script>
+
+<script src="/js/script.js?v=1.1.0" ></script>
+<script>
+    var img_resize = 'default';
+    function initArticle() {
+        /*渲染对应的表格样式*/
+        
+            $("#post .pjax table").addClass("green_title");
+        
+
+        /*渲染打赏样式*/
+        
+
+        /*高亮代码块行号*/
+        
+        $('pre code').each(function(){
+            var lines = $(this).text().trim().split('\n').length, widther='';
+            if (lines>99) {
+                widther = 'widther'
+            }
+            var $numbering = $('<ul/>').addClass('pre-numbering ' + widther).attr("unselectable","on");
+            $(this).addClass('has-numbering ' + widther)
+                    .parent()
+                    .append($numbering);
+            for(var i=1;i<=lines;i++){
+                $numbering.append($('<li/>').text(i));
+            }
+        });
+        
+
+        /*访问数量*/
+        
+
+        /*代码高亮，行号对齐*/
+        $('.pre-numbering').css('line-height',$('.has-numbering').css('line-height'));
+
+        
+        
+    }
+
+    /*打赏页面隐藏与展示*/
+    
+
+</script>
+
+<!--加入行号的高亮代码块样式-->
+
+<style>
+    pre{
+        position: relative;
+        margin-bottom: 24px;
+        border-radius: 10px;
+        border: 1px solid #e2dede;
+        background: #FFF;
+        overflow: hidden;
+    }
+    code.has-numbering{
+        margin-left: 30px;
+    }
+    code.has-numbering.widther{
+        margin-left: 35px;
+    }
+    .pre-numbering{
+        margin: 0;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 20px;
+        padding: 0.5em 3px 0.7em 5px;
+        border-right: 1px solid #C3CCD0;
+        text-align: right;
+        color: #AAA;
+        background-color: #fafafa;
+    }
+    .pre-numbering.widther {
+        width: 35px;
+    }
+</style>
+
+<!--自定义样式设置-->
+<style>
+    
+    
+    .nav {
+        width: 542px;
+    }
+    .nav.fullscreen {
+        margin-left: -542px;
+    }
+    .nav-left {
+        width: 120px;
+    }
+    
+    
+    @media screen and (max-width: 1468px) {
+        .nav {
+            width: 492px;
+        }
+        .nav.fullscreen {
+            margin-left: -492px;
+        }
+        .nav-left {
+            width: 100px;
+        }
+    }
+    
+    
+    @media screen and (max-width: 1024px) {
+        .nav {
+            width: 492px;
+            margin-left: -492px
+        }
+        .nav.fullscreen {
+            margin-left: 0;
+        }
+    }
+    
+    @media screen and (max-width: 426px) {
+        .nav {
+            width: 100%;
+        }
+        .nav-left {
+            width: 100%;
+        }
+    }
+    
+    
+    .nav-right .title-list nav a .post-title, .nav-right .title-list #local-search-result a .post-title {
+        color: #383636;
+    }
+    
+    
+    .nav-right .title-list nav a .post-date, .nav-right .title-list #local-search-result a .post-date {
+        color: #5e5e5f;
+    }
+    
+    
+    .nav-right nav a.hover, #local-search-result a.hover{
+        background-color: #e2e0e0;
+    }
+    
+    
+
+    /*列表样式*/
+    
+
+    /* 背景图样式 */
+    
+    
+
+
+    /*引用块样式*/
+    
+
+    /*文章列表背景图*/
+    
+
+    
+    #post .pjax article :not(pre) > code {
+        color: #24292e;
+        font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,Courier,monospace;
+        background-color: rgba(27,31,35,.05);
+        border-radius: 3px;
+        font-size: 85%;
+        margin: 0;
+        padding: .2em .4em;
+    }
+    
+</style>
+
+
+
+
+
+
+
+</html>

@@ -1,0 +1,1579 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Js现代教程笔记 -- DOM | kerbalHao</title>
+  <meta name="keywords" content=" JS ">
+  <meta name="description" content="Js现代教程笔记 -- DOM | kerbalHao">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="description" content="个人简介  博客信息  本站推荐索引 博客主题相关技术知识点 其他   计划  时间轴记录">
+<meta property="og:type" content="website">
+<meta property="og:title" content="kerbalHao">
+<meta property="og:url" content="https://kerbalhao.github.io/about/index.html">
+<meta property="og:site_name" content="kerbalHao">
+<meta property="og:description" content="个人简介  博客信息  本站推荐索引 博客主题相关技术知识点 其他   计划  时间轴记录">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2018-11-11T08:24:49.000Z">
+<meta property="article:modified_time" content="2022-07-05T03:02:34.959Z">
+<meta property="article:author" content="KerbalHao">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="icon" href="https://avatars.githubusercontent.com/u/42958301?s=40&v=4">
+
+<link href="/css/style.css?v=1.1.0" rel="stylesheet">
+
+<link href="/css/hl_theme/atom-light.css?v=1.1.0" rel="stylesheet">
+
+<link href="//cdn.jsdelivr.net/npm/animate.css@4.1.0/animate.min.css" rel="stylesheet">
+
+<script src="//cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+<script src="/js/titleTip.js?v=1.1.0" ></script>
+
+<script src="//cdn.jsdelivr.net/npm/highlightjs@9.16.2/highlight.pack.min.js"></script>
+<script>
+    hljs.initHighlightingOnLoad();
+</script>
+
+<script src="//cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js"></script>
+
+
+
+<script src="//cdn.jsdelivr.net/npm/jquery.cookie@1.4.1/jquery.cookie.min.js" ></script>
+
+<script src="/js/iconfont.js?v=1.1.0" ></script>
+
+<meta name="generator" content="Hexo 5.4.2"><link rel="alternate" href="/atom.xml" title="kerbalHao" type="application/atom+xml">
+</head>
+<div style="display: none">
+  <input class="theme_disqus_on" value="false">
+  <input class="theme_preload_comment" value="">
+  <input class="theme_blog_path" value="">
+  <input id="theme_shortcut" value="true" />
+  <input id="theme_highlight_on" value="true" />
+  <input id="theme_code_copy" value="true" />
+</div>
+
+
+
+<body>
+<aside class="nav">
+    <div class="nav-left">
+        <a href="/"
+   class="avatar_target">
+    <img class="avatar"
+         src="https://avatars.githubusercontent.com/u/42958301?s=40&amp;v=4"/>
+</a>
+<div class="author">
+    <span>KerbalHao</span>
+</div>
+
+<div class="icon">
+    
+</div>
+
+
+
+
+<ul>
+    <li>
+        <div class="all active" data-rel="全部文章">全部文章
+            
+                <small>(65)</small>
+            
+        </div>
+    </li>
+    
+        
+            
+        
+    
+        
+            
+                <li>
+                    <div data-rel="Git">
+                        
+                        Git
+                        <small>(1)</small>
+                        
+                    </div>
+                    
+                </li>
+            
+        
+    
+        
+            
+        
+    
+        
+            
+                <li>
+                    <div data-rel="HTTP">
+                        
+                        HTTP
+                        <small>(2)</small>
+                        
+                    </div>
+                    
+                </li>
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+                <li>
+                    <div data-rel="RegExp">
+                        
+                        RegExp
+                        <small>(1)</small>
+                        
+                    </div>
+                    
+                </li>
+            
+        
+    
+        
+            
+                <li>
+                    <div data-rel="前端">
+                        <i class="fold iconfont icon-right"></i>
+                        
+                        前端
+                        <small>(45)</small>
+                        
+                    </div>
+                    
+                        <ul class="sub hide">
+                            
+                                <li>
+                                    <div data-rel="前端<--->CSS">
+                                        
+                                        CSS
+                                        
+                                            <small>(2
+                                                )</small>
+                                        
+                                    </div>
+                                    
+                                </li>
+                            
+                                <li>
+                                    <div data-rel="前端<--->HTML">
+                                        
+                                        HTML
+                                        
+                                            <small>(1
+                                                )</small>
+                                        
+                                    </div>
+                                    
+                                </li>
+                            
+                                <li>
+                                    <div data-rel="前端<--->JS源码解析">
+                                        
+                                        JS源码解析
+                                        
+                                            <small>(2
+                                                )</small>
+                                        
+                                    </div>
+                                    
+                                </li>
+                            
+                                <li>
+                                    <div data-rel="前端<--->Js现代教程">
+                                        
+                                        Js现代教程
+                                        
+                                            <small>(9
+                                                )</small>
+                                        
+                                    </div>
+                                    
+                                </li>
+                            
+                                <li>
+                                    <div data-rel="前端<--->JS高程">
+                                        
+                                        JS高程
+                                        
+                                            <small>(2
+                                                )</small>
+                                        
+                                    </div>
+                                    
+                                </li>
+                            
+                                <li>
+                                    <div data-rel="前端<--->JS高级程序设计">
+                                        
+                                        JS高级程序设计
+                                        
+                                            <small>(6
+                                                )</small>
+                                        
+                                    </div>
+                                    
+                                </li>
+                            
+                                <li>
+                                    <div data-rel="前端<--->React">
+                                        
+                                        React
+                                        
+                                            <small>(1
+                                                )</small>
+                                        
+                                    </div>
+                                    
+                                </li>
+                            
+                                <li>
+                                    <div data-rel="前端<--->读书笔记">
+                                        
+                                        读书笔记
+                                        
+                                            <small>(1
+                                                )</small>
+                                        
+                                    </div>
+                                    
+                                </li>
+                            
+                        </ul>
+                    
+                </li>
+            
+        
+    
+        
+            
+                <li>
+                    <div data-rel="读书小记">
+                        
+                        读书小记
+                        <small>(2)</small>
+                        
+                    </div>
+                    
+                </li>
+            
+        
+    
+        
+            
+        
+    
+</ul>
+<div class="left-bottom">
+    <div class="menus">
+        
+            
+            
+            
+    </div>
+    <div>
+        
+        <a 
+                                           class="friends">友链</a>
+        
+    </div>
+</div>
+<input type="hidden" id="yelog_site_posts_number" value="65">
+<input type="hidden" id="yelog_site_word_count" value="134.2k">
+<div style="display: none">
+    <span id="busuanzi_value_site_uv"></span>
+    <span id="busuanzi_value_site_pv"></span>
+</div>
+
+    </div>
+    <div class="nav-right">
+        <div class="friends-area">
+    <div class="friends-title">
+        友情链接
+        <i class="iconfont icon-left"></i>
+    </div>
+    <div class="friends-content">
+        <ul>
+            
+            <li><a target="_blank" href="http://kerbalhao.org/">叶落阁</a></li>
+            
+        </ul>
+    </div>
+</div>
+        <div class="title-list">
+    <div class="right-top">
+        <div id="default-panel">
+            <i class="iconfont icon-search" data-title="搜索 快捷键 i"></i>
+            <div class="right-title">全部文章</div>
+            <i class="iconfont icon-file-tree" data-title="切换到大纲视图 快捷键 w"></i>
+        </div>
+        <div id="search-panel">
+            <i class="iconfont icon-left" data-title="返回"></i>
+            <input id="local-search-input" autocomplete="off"/>
+            <label class="border-line" for="input"></label>
+            <i class="iconfont icon-case-sensitive" data-title="大小写敏感"></i>
+            <i class="iconfont icon-tag" data-title="标签"></i>
+        </div>
+        <div id="outline-panel" style="display: none">
+            <div class="right-title">大纲</div>
+            <i class="iconfont icon-list" data-title="切换到文章列表"></i>
+        </div>
+    </div>
+
+    <div class="tags-list">
+    <input id="tag-search" />
+    <div class="tag-wrapper">
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>Bootstrap</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>CSS</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>ES6</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>HTML MDN</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>HTML5</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>HTTP</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>JQ</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>js</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>JS</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>JS MDN</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>js源码解析</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>Lua</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>MDN</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>React</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>vue</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>作品</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>工作</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>浏览器</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>迭代器与生成器</a>
+            </li>
+        
+    </div>
+
+</div>
+
+    
+    <nav id="title-list-nav">
+        
+        
+        <a  class="全部文章 "
+           href="/2022/04/06/JS%E7%B1%BB%E5%9E%8B%E6%A3%80%E6%B5%8B/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="类型检查">类型检查</span>
+            <span class="post-date" title="2022-04-06 09:50:08">2022/04/06</span>
+        </a>
+        
+        
+        <a  class="全部文章 "
+           href="/2022/03/21/%E6%BA%90%E7%A0%81%E9%98%85%E8%AF%BB-koa-compose%E6%BA%90%E7%A0%81%E8%A7%A3%E6%9E%90/"
+           data-tag="js源码解析"
+           data-author="" >
+            <span class="post-title" title="Koa-Compose 源码解析">Koa-Compose 源码解析</span>
+            <span class="post-date" title="2022-03-21 10:36:09">2022/03/21</span>
+        </a>
+        
+        
+        <a  class="全部文章 前端 "
+           href="/2022/02/16/vue-devtool%20%E4%B8%AD%20open-in-editor%20%E6%BA%90%E7%A0%81%E9%98%85%E8%AF%BB/"
+           data-tag="js源码解析"
+           data-author="" >
+            <span class="post-title" title="Vue-Devtool 中 Open-in-Editor 源码阅读">Vue-Devtool 中 Open-in-Editor 源码阅读</span>
+            <span class="post-date" title="2022-02-16 10:36:09">2022/02/16</span>
+        </a>
+        
+        
+        <a  class="全部文章 "
+           href="/2022/01/21/%E7%94%A8%20ES6%20%E9%87%8D%E5%86%99%20tiny-emitter/"
+           data-tag="js源码解析"
+           data-author="" >
+            <span class="post-title" title="用 ES6 重写 Tiny-Emitter">用 ES6 重写 Tiny-Emitter</span>
+            <span class="post-date" title="2022-01-21 10:36:09">2022/01/21</span>
+        </a>
+        
+        
+        <a  class="全部文章 前端 JS源码解析 "
+           href="/2022/01/10/Vue3%20repease.js%20%E5%AD%A6%E4%B9%A0/"
+           data-tag="JS"
+           data-author="" >
+            <span class="post-title" title="Vue3 repease.js 学习">Vue3 repease.js 学习</span>
+            <span class="post-date" title="2022-01-10 10:36:09">2022/01/10</span>
+        </a>
+        
+        
+        <a  class="全部文章 前端 JS源码解析 "
+           href="/2021/12/16/vue-next%20%E7%9A%84%20shared%20%E6%A8%A1%E5%9D%97%E6%BA%90%E7%A0%81%E9%98%85%E8%AF%BB/"
+           data-tag="JS"
+           data-author="" >
+            <span class="post-title" title="Vue-Next 的 Shared 模块源码阅读">Vue-Next 的 Shared 模块源码阅读</span>
+            <span class="post-date" title="2021-12-16 10:36:09">2021/12/16</span>
+        </a>
+        
+        
+        <a  class="全部文章 前端 "
+           href="/2021/12/05/promissify%20%E5%AE%9E%E7%8E%B0/"
+           data-tag="js源码解析"
+           data-author="" >
+            <span class="post-title" title="Promissify 实现">Promissify 实现</span>
+            <span class="post-date" title="2021-12-05 10:36:09">2021/12/05</span>
+        </a>
+        
+        
+        <a  class="全部文章 前端 "
+           href="/2021/11/10/webpack%E5%AD%A6%E4%B9%A0/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="Webpack 基础配置">Webpack 基础配置</span>
+            <span class="post-date" title="2021-11-10 10:36:09">2021/11/10</span>
+        </a>
+        
+        
+        <a  class="全部文章 "
+           href="/2021/10/21/%E9%A1%B9%E7%9B%AE%E6%8B%86%E5%88%86/"
+           data-tag="工作"
+           data-author="" >
+            <span class="post-title" title="基于后台项目拆分">基于后台项目拆分</span>
+            <span class="post-date" title="2021-10-21 10:36:09">2021/10/21</span>
+        </a>
+        
+        
+        <a  class="全部文章 前端 "
+           href="/2021/10/05/%E8%A7%84%E8%8C%83%E5%9B%A2%E9%98%9F%E5%8C%85%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="规范团队包管理工具">规范团队包管理工具</span>
+            <span class="post-date" title="2021-10-05 10:36:09">2021/10/05</span>
+        </a>
+        
+        
+        <a  class="全部文章 前端 "
+           href="/2021/04/17/%E6%B5%8F%E8%A7%88%E5%99%A8%E6%98%AF%E5%A6%82%E4%BD%95%E6%B8%B2%E6%9F%93%E7%BD%91%E9%A1%B5%E7%9A%84%EF%BC%9F%E2%80%94%E2%80%94DOM,CSSOM%E4%BB%A5%E5%8F%8A%E6%B8%B2%E6%9F%93/"
+           data-tag="浏览器"
+           data-author="" >
+            <span class="post-title" title="浏览器是如何渲染网页的">浏览器是如何渲染网页的</span>
+            <span class="post-date" title="2021-04-17 02:35:10">2021/04/17</span>
+        </a>
+        
+        
+        <a  class="全部文章 HTTP "
+           href="/2021/03/22/%E5%9F%BA%E4%BA%8EHTTP%E7%BD%91%E7%BB%9C%E5%B1%82%E7%9A%84%E5%89%8D%E7%AB%AF%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/"
+           data-tag="HTTP"
+           data-author="" >
+            <span class="post-title" title="从输入 URL 地址到看到页面，HTTP 应用层都经历了什么">从输入 URL 地址到看到页面，HTTP 应用层都经历了什么</span>
+            <span class="post-date" title="2021-03-22 11:48:48">2021/03/22</span>
+        </a>
+        
+        
+        <a  class="全部文章 前端 "
+           href="/2021/01/09/%E6%89%8B%E5%86%99%20promise/"
+           data-tag="JS"
+           data-author="" >
+            <span class="post-title" title="手写Promise">手写Promise</span>
+            <span class="post-date" title="2021-01-09 11:48:48">2021/01/09</span>
+        </a>
+        
+        
+        <a  class="全部文章 前端 React "
+           href="/2020/04/27/LearningReact/"
+           data-tag="JS"
+           data-author="" >
+            <span class="post-title" title="React 思维导图">React 思维导图</span>
+            <span class="post-date" title="2020-04-27 19:01:49">2020/04/27</span>
+        </a>
+        
+        
+        <a  class="全部文章 "
+           href="/2020/04/23/dota2/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="个人 Dota2 项目">个人 Dota2 项目</span>
+            <span class="post-date" title="2020-04-23 22:02:46">2020/04/23</span>
+        </a>
+        
+        
+        <a  class="全部文章 "
+           href="/2020/04/14/Lua%E5%AD%A6%E4%B9%A0/"
+           data-tag="Lua"
+           data-author="" >
+            <span class="post-title" title="Lua 基础学习">Lua 基础学习</span>
+            <span class="post-date" title="2020-04-14 11:08:06">2020/04/14</span>
+        </a>
+        
+        
+        <a  class="全部文章 "
+           href="/2019/12/28/JS%2012%E4%B8%AA%E9%87%8D%E8%A6%81%E6%A6%82%E5%BF%B5%E4%BB%A5%E5%8F%8Areduce%E6%96%B9%E6%B3%95%E8%AF%A6%E8%A7%A3/"
+           data-tag="JS"
+           data-author="" >
+            <span class="post-title" title="Js 12个重要概念">Js 12个重要概念</span>
+            <span class="post-date" title="2019-12-28 19:48:48">2019/12/28</span>
+        </a>
+        
+        
+        <a  class="全部文章 前端 Js现代教程 "
+           href="/2019/09/12/MJT-%E5%BC%82%E6%AD%A5%E8%BF%AD%E4%BB%A3%E5%99%A8%E4%B8%8E%E7%94%9F%E6%88%90%E5%99%A8/"
+           data-tag="JS"
+           data-author="" >
+            <span class="post-title" title="MJT-异步迭代器与生成器">MJT-异步迭代器与生成器</span>
+            <span class="post-date" title="2019-09-12 10:36:09">2019/09/12</span>
+        </a>
+        
+        
+        <a  class="全部文章 前端 "
+           href="/2019/08/19/ES6_%E8%BF%AD%E4%BB%A3%E5%99%A8%E4%B8%8E%E7%94%9F%E6%88%90%E5%99%A8/"
+           data-tag="ES6,迭代器与生成器"
+           data-author="" >
+            <span class="post-title" title="ES6-迭代器与生成器">ES6-迭代器与生成器</span>
+            <span class="post-date" title="2019-08-19 10:36:09">2019/08/19</span>
+        </a>
+        
+        
+        <a  class="全部文章 前端 "
+           href="/2019/08/09/ES6_Set,Map/"
+           data-tag="ES6"
+           data-author="" >
+            <span class="post-title" title="ES6-Set Map">ES6-Set Map</span>
+            <span class="post-date" title="2019-08-09 10:36:09">2019/08/09</span>
+        </a>
+        
+        
+        <a  class="全部文章 前端 "
+           href="/2019/07/20/ES6_Symbol/"
+           data-tag="ES6"
+           data-author="" >
+            <span class="post-title" title="ES6-Symbol">ES6-Symbol</span>
+            <span class="post-date" title="2019-07-20 07:36:09">2019/07/20</span>
+        </a>
+        
+        
+        <a  class="全部文章 前端 "
+           href="/2019/07/10/ES6_%E8%A7%A3%E6%9E%84/"
+           data-tag="ES6"
+           data-author="" >
+            <span class="post-title" title="ES6-解构">ES6-解构</span>
+            <span class="post-date" title="2019-07-10 07:36:09">2019/07/10</span>
+        </a>
+        
+        
+        <a  class="全部文章 "
+           href="/2019/07/06/ES6_%E5%AF%B9%E8%B1%A1/"
+           data-tag="ES6"
+           data-author="" >
+            <span class="post-title" title="ES6-对象">ES6-对象</span>
+            <span class="post-date" title="2019-07-06 01:52:58">2019/07/06</span>
+        </a>
+        
+        
+        <a  class="全部文章 前端 "
+           href="/2019/06/28/ES6_%E5%87%BD%E6%95%B0/"
+           data-tag="ES6"
+           data-author="" >
+            <span class="post-title" title="ES6-函数">ES6-函数</span>
+            <span class="post-date" title="2019-06-28 18:36:09">2019/06/28</span>
+        </a>
+        
+        
+        <a  class="全部文章 前端 "
+           href="/2019/06/18/ES6_%E5%9D%97%E7%BA%A7%E4%BD%9C%E7%94%A8%E5%9F%9F/"
+           data-tag="ES6"
+           data-author="" >
+            <span class="post-title" title="ES6-块级作用域与字符串">ES6-块级作用域与字符串</span>
+            <span class="post-date" title="2019-06-18 18:36:09">2019/06/18</span>
+        </a>
+        
+        
+        <a  class="全部文章 前端 Js现代教程 "
+           href="/2019/05/10/MJT_Class/"
+           data-tag="JS"
+           data-author="" >
+            <span class="post-title" title="Js现代教程笔记 -- Class">Js现代教程笔记 -- Class</span>
+            <span class="post-date" title="2019-05-10 18:36:09">2019/05/10</span>
+        </a>
+        
+        
+        <a  class="全部文章 前端 Js现代教程 "
+           href="/2019/05/01/MJT_%E5%8E%9F%E5%9E%8B%E4%B8%8E%E7%BB%A7%E6%89%BF/"
+           data-tag="JS"
+           data-author="" >
+            <span class="post-title" title="Js现代教程笔记 -- 原型与继承">Js现代教程笔记 -- 原型与继承</span>
+            <span class="post-date" title="2019-05-01 18:36:09">2019/05/01</span>
+        </a>
+        
+        
+        <a  class="全部文章 前端 Js现代教程 "
+           href="/2019/04/23/MJT_%E5%AF%B9%E8%B1%A1%E5%B1%9E%E6%80%A7/"
+           data-tag="JS"
+           data-author="" >
+            <span class="post-title" title="Js现代教程笔记 -- 对象属性">Js现代教程笔记 -- 对象属性</span>
+            <span class="post-date" title="2019-04-23 10:36:09">2019/04/23</span>
+        </a>
+        
+        
+        <a  class="全部文章 前端 Js现代教程 "
+           href="/2019/04/22/MJT_%E6%B5%8F%E8%A7%88%E5%99%A8/"
+           data-tag="JS"
+           data-author="" >
+            <span class="post-title" title="Js现代教程笔记 -- DOM">Js现代教程笔记 -- DOM</span>
+            <span class="post-date" title="2019-04-22 18:36:09">2019/04/22</span>
+        </a>
+        
+        
+        <a  class="全部文章 前端 Js现代教程 "
+           href="/2019/04/21/MJT_%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/"
+           data-tag="JS"
+           data-author="" >
+            <span class="post-title" title="Js现代教程笔记 -- 数据类型">Js现代教程笔记 -- 数据类型</span>
+            <span class="post-date" title="2019-04-21 18:36:09">2019/04/21</span>
+        </a>
+        
+        
+        <a  class="全部文章 前端 Js现代教程 "
+           href="/2019/04/20/MJT_%E5%AF%B9%E4%BA%8E%E5%87%BD%E6%95%B0%E5%8F%82%E6%95%B0%E7%9A%84%E7%AE%80%E4%BB%8B/"
+           data-tag="JS"
+           data-author="" >
+            <span class="post-title" title="Js现代教程笔记 -- 对于函数参数的见解">Js现代教程笔记 -- 对于函数参数的见解</span>
+            <span class="post-date" title="2019-04-20 10:36:09">2019/04/20</span>
+        </a>
+        
+        
+        <a  class="全部文章 前端 Js现代教程 "
+           href="/2019/04/19/MJT_%E5%87%BD%E6%95%B0%E9%AB%98%E9%98%B6%E5%BA%94%E7%94%A8/"
+           data-tag="JS"
+           data-author="" >
+            <span class="post-title" title="Js现代教程笔记 -- 函数高阶应用">Js现代教程笔记 -- 函数高阶应用</span>
+            <span class="post-date" title="2019-04-19 18:36:09">2019/04/19</span>
+        </a>
+        
+        
+        <a  class="全部文章 读书小记 "
+           href="/2019/04/18/LT_little-trick/"
+           data-tag="JS"
+           data-author="" >
+            <span class="post-title" title="随手小记">随手小记</span>
+            <span class="post-date" title="2019-04-18 10:36:09">2019/04/18</span>
+        </a>
+        
+        
+        <a  class="全部文章 前端 Js现代教程 "
+           href="/2019/04/17/MJT_%E2%80%9Cthis%E2%80%9D%E6%8E%A2%E7%B4%A2/"
+           data-tag="JS"
+           data-author="" >
+            <span class="post-title" title="Js现代教程笔记 -- This 值的探索">Js现代教程笔记 -- This 值的探索</span>
+            <span class="post-date" title="2019-04-17 18:36:09">2019/04/17</span>
+        </a>
+        
+        
+        <a  class="全部文章 前端 读书笔记 "
+           href="/2019/04/17/JGP_%E5%AF%B9%E8%B1%A1/"
+           data-tag="JS"
+           data-author="" >
+            <span class="post-title" title="JS语言精粹读书笔记 -- 对象与函数">JS语言精粹读书笔记 -- 对象与函数</span>
+            <span class="post-date" title="2019-04-17 10:36:09">2019/04/17</span>
+        </a>
+        
+        
+        <a  class="全部文章 读书小记 "
+           href="/2019/04/17/LT_%E8%AF%BB%E4%B9%A6%E5%B0%8F%E8%AE%B0/"
+           data-tag="JS"
+           data-author="" >
+            <span class="post-title" title="随手小记">随手小记</span>
+            <span class="post-date" title="2019-04-17 10:36:09">2019/04/17</span>
+        </a>
+        
+        
+        <a  class="全部文章 前端 "
+           href="/2019/02/22/CSS%E7%9B%B8%E5%85%B3%E4%B8%8E%E7%BB%8F%E5%85%B8%E5%B8%83%E5%B1%80%EF%BC%88%E5%8F%8C%E9%A3%9E%E7%BF%BC%E4%B8%8E%E5%9C%A3%E6%9D%AF%EF%BC%89/"
+           data-tag="CSS"
+           data-author="" >
+            <span class="post-title" title="CSS相关与经典布局（双飞翼与圣杯）">CSS相关与经典布局（双飞翼与圣杯）</span>
+            <span class="post-date" title="2019-02-22 06:36:09">2019/02/22</span>
+        </a>
+        
+        
+        <a  class="全部文章 "
+           href="/2019/02/19/html5%E8%AF%AD%E4%B9%89%E5%8C%96%E6%A0%87%E7%AD%BE%E5%AD%A6%E4%B9%A0/"
+           data-tag="HTML5"
+           data-author="" >
+            <span class="post-title" title="HTML5 语义化标签笔记">HTML5 语义化标签笔记</span>
+            <span class="post-date" title="2019-02-19 07:36:09">2019/02/19</span>
+        </a>
+        
+        
+        <a  class="全部文章 "
+           href="/2019/02/19/Html5%E7%9B%B8%E5%85%B3/"
+           data-tag="HTML5"
+           data-author="" >
+            <span class="post-title" title="Html5相关">Html5相关</span>
+            <span class="post-date" title="2019-02-19 06:36:09">2019/02/19</span>
+        </a>
+        
+        
+        <a  class="全部文章 前端 "
+           href="/2019/02/18/symbol%E4%B8%8E%E5%89%8D%E7%AB%AF%E6%9E%B6%E6%9E%84%E5%9B%BE/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="Symbol 与前端架构图">Symbol 与前端架构图</span>
+            <span class="post-date" title="2019-02-18 06:36:09">2019/02/18</span>
+        </a>
+        
+        
+        <a  class="全部文章 "
+           href="/2019/02/18/%E4%BD%9C%E5%93%81/"
+           data-tag="作品"
+           data-author="" >
+            <span class="post-title" title="个人作品集">个人作品集</span>
+            <span class="post-date" title="2019-02-18 06:36:09">2019/02/18</span>
+        </a>
+        
+        
+        <a  class="全部文章 前端 "
+           href="/2019/02/15/Css%E9%83%A8%E5%88%86%E4%BB%8B%E7%BB%8D/"
+           data-tag="CSS"
+           data-author="" >
+            <span class="post-title" title="Css部分介绍">Css部分介绍</span>
+            <span class="post-date" title="2019-02-15 06:36:09">2019/02/15</span>
+        </a>
+        
+        
+        <a  class="全部文章 前端 CSS "
+           href="/2019/01/18/MDN_Css/"
+           data-tag="CSS,MDN"
+           data-author="" >
+            <span class="post-title" title="MDN教程学习-CSS">MDN教程学习-CSS</span>
+            <span class="post-date" title="2019-01-18 10:36:09">2019/01/18</span>
+        </a>
+        
+        
+        <a  class="全部文章 前端 "
+           href="/2019/01/17/MDN_JS/"
+           data-tag="JS MDN"
+           data-author="" >
+            <span class="post-title" title="MDN教程学习-JS">MDN教程学习-JS</span>
+            <span class="post-date" title="2019-01-17 10:36:09">2019/01/17</span>
+        </a>
+        
+        
+        <a  class="全部文章 前端 HTML "
+           href="/2019/01/16/MDN_HTML/"
+           data-tag="HTML MDN"
+           data-author="" >
+            <span class="post-title" title="MDN教程学习-HTML">MDN教程学习-HTML</span>
+            <span class="post-date" title="2019-01-16 10:36:09">2019/01/16</span>
+        </a>
+        
+        
+        <a  class="全部文章 "
+           href="/2019/01/09/Bootstrap_%E5%9F%BA%E6%9C%AC/"
+           data-tag="Bootstrap"
+           data-author="" >
+            <span class="post-title" title="Bootstrap 基本学习">Bootstrap 基本学习</span>
+            <span class="post-date" title="2019-01-09 06:36:09">2019/01/09</span>
+        </a>
+        
+        
+        <a  class="全部文章 前端 CSS "
+           href="/2018/12/30/SCSS_%E5%9F%BA%E7%A1%80/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="Scss基础">Scss基础</span>
+            <span class="post-date" title="2018-12-30 07:36:09">2018/12/30</span>
+        </a>
+        
+        
+        <a  class="全部文章 前端 JS高级程序设计 "
+           href="/2018/12/15/PJW_DOM%E5%AD%A6%E4%B9%A0/"
+           data-tag="JS"
+           data-author="" >
+            <span class="post-title" title="DOM学习">DOM学习</span>
+            <span class="post-date" title="2018-12-15 06:36:09">2018/12/15</span>
+        </a>
+        
+        
+        <a  class="全部文章 前端 "
+           href="/2018/11/28/%E6%B7%B1%E6%8B%B7%E8%B4%9D%E4%B8%8E%E6%B5%85%E6%8B%B7%E8%B4%9D%E7%9A%84%E5%8C%BA%E5%88%AB%EF%BC%8C%E5%AE%9E%E7%8E%B0%E6%B7%B1%E6%8B%B7%E8%B4%9D%E7%9A%84%E5%87%A0%E7%A7%8D%E6%96%B9%E6%B3%95/"
+           data-tag="JS"
+           data-author="" >
+            <span class="post-title" title="深拷贝与浅拷贝的区别，实现深拷贝的几种方法">深拷贝与浅拷贝的区别，实现深拷贝的几种方法</span>
+            <span class="post-date" title="2018-11-28 10:36:09">2018/11/28</span>
+        </a>
+        
+        
+        <a  class="全部文章 前端 JS高级程序设计 "
+           href="/2018/11/25/PJW_%E8%A1%A8%E5%8D%95%E8%84%9A%E6%9C%AC/"
+           data-tag="JS"
+           data-author="" >
+            <span class="post-title" title="表单脚本">表单脚本</span>
+            <span class="post-date" title="2018-11-25 07:36:09">2018/11/25</span>
+        </a>
+        
+        
+        <a  class="全部文章 前端 "
+           href="/2018/11/22/%E6%B7%B1%E5%85%A5%E4%BA%86%E8%A7%A3vue/"
+           data-tag="vue"
+           data-author="" >
+            <span class="post-title" title="VUE深入学习">VUE深入学习</span>
+            <span class="post-date" title="2018-11-22 10:36:09">2018/11/22</span>
+        </a>
+        
+        
+        <a  class="全部文章 Git "
+           href="/2018/11/16/11.17_GIT/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="Git 学习">Git 学习</span>
+            <span class="post-date" title="2018-11-16 10:36:09">2018/11/16</span>
+        </a>
+        
+        
+        <a  class="全部文章 前端 JS高级程序设计 "
+           href="/2018/10/29/PJW_%E4%BA%8B%E4%BB%B6/"
+           data-tag="JS"
+           data-author="" >
+            <span class="post-title" title="事件(Event)学习">事件(Event)学习</span>
+            <span class="post-date" title="2018-10-29 07:36:09">2018/10/29</span>
+        </a>
+        
+        
+        <a  class="全部文章 前端 "
+           href="/2018/10/25/JQ%E5%9F%BA%E7%A1%80/"
+           data-tag="JQ"
+           data-author="" >
+            <span class="post-title" title="jQuery基础">jQuery基础</span>
+            <span class="post-date" title="2018-10-25 07:36:09">2018/10/25</span>
+        </a>
+        
+        
+        <a  class="全部文章 前端 "
+           href="/2018/10/25/React%E5%9F%BA%E7%A1%80/"
+           data-tag="React"
+           data-author="" >
+            <span class="post-title" title="React基础">React基础</span>
+            <span class="post-date" title="2018-10-25 07:36:09">2018/10/25</span>
+        </a>
+        
+        
+        <a  class="全部文章 "
+           href="/2018/10/22/Js%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E3%80%81DRY%E5%8E%9F%E5%88%99%E4%BB%A5%E5%8F%8A%E5%87%BD%E6%95%B0%E5%BC%8F%E7%BC%96%E7%A8%8B/"
+           data-tag="JS"
+           data-author="" >
+            <span class="post-title" title="Js面向对象、DRY原则以及函数式编程">Js面向对象、DRY原则以及函数式编程</span>
+            <span class="post-date" title="2018-10-22 10:36:09">2018/10/22</span>
+        </a>
+        
+        
+        <a  class="全部文章 前端 JS高程 "
+           href="/2018/10/20/PJW_Js%E5%9F%BA%E6%9C%AC%E5%8C%85%E8%A3%85%E7%B1%BB%E5%9E%8B%E4%B8%8E%E6%8B%93%E5%B1%95%E8%BF%90%E7%AE%97%E7%AC%A6%E5%AD%A6%E4%B9%A0/"
+           data-tag="JS"
+           data-author="" >
+            <span class="post-title" title="Js基本包装类型与拓展运算符学习">Js基本包装类型与拓展运算符学习</span>
+            <span class="post-date" title="2018-10-20 05:36:09">2018/10/20</span>
+        </a>
+        
+        
+        <a  class="全部文章 RegExp "
+           href="/2018/10/19/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="正则表达式">正则表达式</span>
+            <span class="post-date" title="2018-10-19 05:36:09">2018/10/19</span>
+        </a>
+        
+        
+        <a  class="全部文章 前端 JS高级程序设计 "
+           href="/2018/10/18/PJW_Js%20%E5%BC%95%E7%94%A8%E7%B1%BB%E5%9E%8B%E7%B1%BB%E5%9E%8B(Date%E3%80%81RegExp%E3%80%81Function)%E4%B8%8E%20%E9%83%A8%E5%88%86ES6%E8%AF%AD%E6%B3%95%E4%BA%86%E8%A7%A3/"
+           data-tag="JS"
+           data-author="" >
+            <span class="post-title" title="Js 引用类型类型引用类型类型(下)">Js 引用类型类型引用类型类型(下)</span>
+            <span class="post-date" title="2018-10-18 07:36:09">2018/10/18</span>
+        </a>
+        
+        
+        <a  class="全部文章 前端 JS高级程序设计 "
+           href="/2018/10/17/PJW_Js%20%E5%BC%95%E7%94%A8%E7%B1%BB%E5%9E%8B%E7%B1%BB%E5%9E%8B(Object%E3%80%81Array)/"
+           data-tag="JS"
+           data-author="" >
+            <span class="post-title" title="Js 引用类型类型(上)">Js 引用类型类型(上)</span>
+            <span class="post-date" title="2018-10-17 05:36:09">2018/10/17</span>
+        </a>
+        
+        
+        <a  class="全部文章 前端 JS高级程序设计 "
+           href="/2018/10/15/PJW_Js%20%E5%9F%BA%E6%9C%AC%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E4%B8%8E%20css%E4%B8%AD%E7%9A%84@media%E3%80%81grid%E3%80%81flex%E5%B1%9E%E6%80%A7%E5%AD%A6%E4%B9%A0/"
+           data-tag="JS"
+           data-author="" >
+            <span class="post-title" title="Js 基本数据类型">Js 基本数据类型</span>
+            <span class="post-date" title="2018-10-15 05:36:09">2018/10/15</span>
+        </a>
+        
+        
+        <a  class="全部文章 "
+           href="/2018/10/14/Js%E7%AB%8B%E5%8D%B3%E6%89%A7%E8%A1%8C%E5%87%BD%E6%95%B0%E5%86%99%E6%B3%95%E4%BB%A5%E5%8F%8AFCC%E4%B8%AD%E5%AD%A6%E5%88%B0%E7%9A%84css%E9%83%A8%E5%88%86%E7%94%A8%E6%B3%95%E5%92%8C%E8%AF%AD%E4%B9%89%E5%8C%96html%E7%AC%94%E8%AE%B0/"
+           data-tag="JS"
+           data-author="" >
+            <span class="post-title" title="Js立即执行函数写法以及FCC中学到的css部分用法和语义化html笔记">Js立即执行函数写法以及FCC中学到的css部分用法和语义化html笔记</span>
+            <span class="post-date" title="2018-10-14 06:36:09">2018/10/14</span>
+        </a>
+        
+        
+        <a  class="全部文章 前端 JS高程 "
+           href="/2018/10/13/PJW_Js%E8%BF%90%E7%AE%97%E7%AC%A6%E5%92%8C%E5%9F%BA%E6%9C%AC%E8%AF%AD%E5%8F%A5%EF%BC%8C%E6%95%B0%E7%BB%84%E7%9A%84%E5%A2%9E%E5%88%A0%E6%96%B9%E6%B3%95%E4%BB%A5%E5%8F%8A%E5%87%BD%E6%95%B0%E4%BD%9C%E7%94%A8%E5%9F%9F%E7%9A%84%E4%B8%80%E4%BA%9B%E4%BA%86%E8%A7%A3/"
+           data-tag="js"
+           data-author="" >
+            <span class="post-title" title="Js运算符和基本语句">Js运算符和基本语句</span>
+            <span class="post-date" title="2018-10-13 06:36:09">2018/10/13</span>
+        </a>
+        
+        
+        <a  class="全部文章 HTTP "
+           href="/2018/10/13/Post%E5%92%8CGet%E7%9A%84%E5%8C%BA%E5%88%AB/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="Post 和 Get区别">Post 和 Get区别</span>
+            <span class="post-date" title="2018-10-13 05:36:09">2018/10/13</span>
+        </a>
+        
+        
+        <a  class="全部文章 前端 "
+           href="/2018/09/19/html%E4%B8%8Ecss/"
+           data-tag="CSS,HTML5"
+           data-author="" >
+            <span class="post-title" title="Css与HTML基础">Css与HTML基础</span>
+            <span class="post-date" title="2018-09-19 06:36:09">2018/09/19</span>
+        </a>
+        
+        <div id="no-item-tips">
+
+        </div>
+    </nav>
+    <div id="outline-list">
+    </div>
+</div>
+
+    </div>
+    <div class="hide-list">
+        <div class="semicircle" data-title="切换全屏 快捷键 s">
+            <div class="brackets first"><</div>
+            <div class="brackets">&gt;</div>
+        </div>
+    </div>
+</aside>
+<div id="post">
+    <div class="pjax">
+        <article id="post-MJT_浏览器" class="article article-type-post" itemscope itemprop="blogPost">
+    
+        <h1 class="article-title">Js现代教程笔记 -- DOM</h1>
+    
+    <div class="article-meta">
+        
+        
+        
+        <span class="book">
+            <i class="iconfont icon-category"></i>
+            
+            
+            <a  data-rel="前端">前端</a> > 
+            
+            <a  data-rel="前端&lt;---&gt;Js现代教程">Js现代教程</a>
+            
+        </span>
+        
+        
+        <span class="tag">
+            <i class="iconfont icon-tag"></i>
+            
+            <a class="color3">JS</a>
+            
+        </span>
+        
+    </div>
+    <div class="article-meta">
+        
+            发布时间 : <time class="date" title='最后更新: 2022-07-05 03:02:34'>2019-04-22 18:36</time>
+        
+    </div>
+    <div class="article-meta">
+        
+        <span>字数:3.1k</span>
+        
+        
+        
+    </div>
+    
+    <div class="toc-ref">
+    
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#DOM"><span class="toc-text">DOM</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AE%BF%E9%97%AE%E8%8A%82%E7%82%B9"><span class="toc-text">访问节点</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%90%9C%E7%B4%A2%E6%8C%87%E5%AE%9A%E5%85%83%E7%B4%A0"><span class="toc-text">搜索指定元素</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%8A%82%E7%82%B9%E5%B1%9E%E6%80%A7"><span class="toc-text">节点属性</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%89%B9%E6%80%A7%E5%92%8C%E5%B1%9E%E6%80%A7"><span class="toc-text">特性和属性</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Dom-%E5%B1%9E%E6%80%A7"><span class="toc-text">Dom 属性</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#HTML-%E7%89%B9%E6%80%A7"><span class="toc-text">HTML 特性</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%B1%9E%E6%80%A7%E2%80%94%E7%89%B9%E6%80%A7%E7%9A%84%E5%90%8C%E6%AD%A5"><span class="toc-text">属性—特性的同步</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%9D%9E%E6%A0%87%E5%87%86%E5%8C%96%E7%9A%84%E7%89%B9%E6%80%A7%EF%BC%8Cdataset"><span class="toc-text">非标准化的特性，dataset</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BF%AE%E6%94%B9%E6%96%87%E6%A1%A3%E5%86%85%E5%AE%B9"><span class="toc-text">修改文档内容</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A0%B7%E5%BC%8F%E5%92%8C%E7%B1%BB"><span class="toc-text">样式和类</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%83%E7%B4%A0-elem-%E7%9A%84%E5%B0%BA%E5%AF%B8%E4%B8%8E%E6%BB%9A%E5%8A%A8"><span class="toc-text">元素 (elem) 的尺寸与滚动</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AA%97%E5%8F%A3-Window-%E7%9A%84%E5%B0%BA%E5%AF%B8%E5%92%8C%E6%BB%9A%E5%8A%A8"><span class="toc-text">窗口 (Window) 的尺寸和滚动</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9D%90%E6%A0%87"><span class="toc-text">坐标</span></a></li></ol></li></ol>
+    
+<style>
+    .left-col .switch-btn,
+    .left-col .switch-area {
+        display: none;
+    }
+    .toc-level-3 i,
+    .toc-level-3 ol {
+        display: none !important;
+    }
+</style>
+</div>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="DOM"><a href="#DOM" class="headerlink" title="DOM"></a>DOM</h2><h3 id="访问节点"><a href="#访问节点" class="headerlink" title="访问节点"></a>访问节点</h3><p>对于一个 Dom 节点，可以通过导航属性来立即访问和它直接相邻的节点</p>
+<ul>
+<li>这些属性主要分两组：<ul>
+<li>对于所有的节点：parentNode、childNodes、firstChild、lastChild、previousSibling 和 nextSibling。</li>
+<li>仅用于元素节点：parentElement、children、firstElementChild、lastElementChild、previousElementSibling 和 nextElementSibling。</li>
+<li>某些类型的 DOM 元素，比如说像 tables，提供了额外的属性和集合用于访问其内容。<br><code>&lt;table&gt;</code> 元素支持 (除了上面给出的之外) 以下这些属性:<ul>
+<li>table.rows — 用于表示表中 <code>&lt;tr&gt;</code> 元素的集合。</li>
+<li>table.caption/tHead/tFoot — 用于访问元素 <code>&lt;caption&gt;</code>、<code>&lt;thead&gt;</code>、<code>&lt;tfoot&gt;</code>。</li>
+<li>table.tBodies — <code>&lt;tbody&gt;</code> 元素的集合（根据标准该元素数量可以很多）。</li>
+</ul>
+</li>
+<li><code>&lt;thead&gt;</code>、<code>&lt;tfoot&gt;</code>、<code>&lt;tbody&gt;</code> 元素提供了 rows 属性：<ul>
+<li>tbody.rows — 表内部 <code>&lt;tr&gt;</code> 元素的集合。</li>
+</ul>
+</li>
+<li><code>&lt;tr&gt;</code>：<ul>
+<li>tr.cells — 在给定 <code>&lt;tr&gt;</code> 元素下 <code>&lt;td&gt;</code> 和 <code>&lt;th&gt;</code> 单元格的集合。</li>
+<li>tr.sectionRowIndex — 在封闭的 <code>&lt;thead&gt;</code>/<code>&lt;tbody&gt;</code> 中 <code>&lt;tr&gt;</code> 的编号。</li>
+<li>tr.rowIndex — 在表中 <code>&lt;tr&gt;</code> 元素的编号。</li>
+</ul>
+</li>
+<li><code>&lt;td&gt;</code> 和 <code>&lt;th&gt;</code>：<ul>
+<li>td.cellIndex — 在封闭的 <code>&lt;tr&gt;</code> 中单元格的编号。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<span id="more"></span>
+
+<h3 id="搜索指定元素"><a href="#搜索指定元素" class="headerlink" title="搜索指定元素"></a>搜索指定元素</h3><p>有 6 种主要的方法，可以在 DOM 中进行搜素：</p>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Searches by…</th>
+<th>Can call on an element?</th>
+<th>Live?(动态变化 Dom)</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>getElementById</td>
+<td>id</td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
+<td>getElementsByName</td>
+<td>name</td>
+<td>-</td>
+<td>✔</td>
+</tr>
+<tr>
+<td>getElementsByTagName</td>
+<td>tag or ‘*‘</td>
+<td>✔</td>
+<td>✔</td>
+</tr>
+<tr>
+<td>getElementsByClassName</td>
+<td>class</td>
+<td>✔</td>
+<td>✔</td>
+</tr>
+<tr>
+<td>querySelector</td>
+<td>CSS-selector</td>
+<td>✔</td>
+<td>-</td>
+</tr>
+<tr>
+<td>querySelectorAll</td>
+<td>CSS-selector</td>
+<td>✔</td>
+<td>-</td>
+</tr>
+</tbody></table>
+<p>请注意，只有在文档 document.getElementById(…) 的上下文中才能调用 getElementById 和 getElementsByName。但元素中没有 elem.getElementById(…) 回报错。</p>
+<p>也可以在元素上调用其他方法，例如 elem.querySelectorAll(…) 将会在 elem（在 DOM 子树中）内部进行搜素。</p>
+<p>除此以外：</p>
+<ul>
+<li>elem.matches(css) 用于检查 elem 与给定的 CSS 选择器是否匹配。</li>
+<li>elem.closest(css) 用于查找与给定 CSS 选择器相匹配的最近的祖先。elem 本身也会被检查。<br>最后我们在提一种检查父子关系的方法：</li>
+</ul>
+<p>如果 elemB 在 elemA（elemA 的后代）中或者当 elemA==elemB 时 elemA.contains(elemB) 将返回 true。</p>
+<h3 id="节点属性"><a href="#节点属性" class="headerlink" title="节点属性"></a>节点属性</h3><p>每个 DOM 节点都属于某个类。这些类形成层次结构。完整的属性和方法集是继承的结果。</p>
+<p>DOM 节点的属性主要有：</p>
+<ul>
+<li>nodeType：<br>我们可以从 DOM 对象类中获取 nodeType，但我们通常只需要查看它是文本节点还是元素节点。nodeType 属性就可以我们的需求。它有数值，最重要的是：1 —— 是元素，3 —— 是文本。只读。</li>
+<li>nodeName/tagName<br>对于元素来说，就是标记名（除了 XML 模式外都要大写）。对于非元素节点，nodeName 则描述了它是什么。只读。</li>
+<li>innerHTML<br>HTML 的元素文本内容。可以被修改。修改结果会实时渲染在页面上</li>
+<li>outerHTML<br>元素的完整 HTML。写入 elem.outerHTML 的操作不会涉及 elem 自身。相反，它会在外部上下文中被替换成新的 HTML。结果不会实时渲染，如果需要操作，需要重新查询来获取元素引用</li>
+<li>nodeValue/data<br>非元素节点（文本、注释）内容。两者几乎一样，我们通常使用 data。允许被修改。</li>
+<li>textContent<br>元素中的文本，基本上是 HTML 减去所有 <code>&lt;tags&gt;</code>。将文本写入元素中，并把所有特殊字符和标记完全视为文本。可以安全地插入用户生成的文本，防止不必要的 HTML 插入。</li>
+<li>hidden<br>当设置为 true 时，执行与 CSS display:none 相同的操作。</li>
+</ul>
+<p>DOM 节点还具有其他属性，具体内容则取决于它们的类。例如，<code>&lt;input&gt;</code>元素（HTMLInputElement）支持 value、type，而 <code>&lt;a&gt;</code> 元素（HTMLAnchorElement）则支持 href 等。大多数标准 HTML 属性都具有相应的 DOM 属性。</p>
+<h3 id="特性和属性"><a href="#特性和属性" class="headerlink" title="特性和属性"></a>特性和属性</h3><p>Attributes —— 写在 HTML 中。<br>Properties —— 是一个 DOM 对象。</p>
+<table>
+<thead>
+<tr>
+<th>-</th>
+<th>Properties</th>
+<th>Attributes</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>类型</td>
+<td>一些值，标准化的属性值在规范中有类型描述</td>
+<td>字符串</td>
+</tr>
+<tr>
+<td>名字</td>
+<td>键名大小写敏感</td>
+<td>键名大小写不敏感</td>
+</tr>
+</tbody></table>
+<p>当浏览器加载页面时，它会“读取”（或者称之为：“解析”）HTML 文本并生成 DOM 对象。对于元素节点，<em>大多数</em> HTML 特性会自动变成 DOM 对象的属性。</p>
+<h4 id="Dom-属性"><a href="#Dom-属性" class="headerlink" title="Dom 属性"></a>Dom 属性</h4><p>DOM 上的属性和方法其实就像是一个标准的 Javascript 对象：</p>
+<ul>
+<li>它可以有很多值。</li>
+<li>它是大小写敏感的（要写成 elem.nodeType，而不是 elem.NoDeTyPe）</li>
+</ul>
+<h4 id="HTML-特性"><a href="#HTML-特性" class="headerlink" title="HTML 特性"></a>HTML 特性</h4><p>在 HTML 语言中，标签可能拥有特性。当浏览器读取 HTML 文本并根据标签生成 DOM 对象，它会辨别标准化特性然后以此创建 DOM 属性。但非标准化的特性会被忽略，读取其 DOM 属性将会返回 undefined。</p>
+<p>一下使针对元素特性的操作(可操作非标准化的特性):</p>
+<ul>
+<li>elem.hasAttribute(name) —— 检验是否拥这个特性。</li>
+<li>elem.getAttribute(name) —— 获取到这个特性值。</li>
+<li>elem.setAttribute(name, value) —— 设置这个特性值。</li>
+<li>elem.removeAttribute(name) —— 移除这个特性。</li>
+</ul>
+<p>我们可以通过 elem.attributes 读取到该元素的所有特性：这些特性都被一个名为 Attr 的内置类以 name 和 value 这样的键-值对收集起来。</p>
+<ul>
+<li>特性的键名大小写不敏感。</li>
+<li>attributes 以 name 和 value 这样的键—值对收集在一个可迭代对象里。</li>
+</ul>
+<h4 id="属性—特性的同步"><a href="#属性—特性的同步" class="headerlink" title="属性—特性的同步"></a>属性—特性的同步</h4><p>当一个标准化的特性被改变，相应的属性随之改变（有极个别除外），反之亦然。比如 input.value，只能从特性同步到属性，反过来则不行</p>
+<p>此外，href 特性 DOM 属性总是一个绝对路径的，而特性值只包含相对路径或者只包含 #hash 这一部分。</p>
+<h4 id="非标准化的特性，dataset"><a href="#非标准化的特性，dataset" class="headerlink" title="非标准化的特性，dataset"></a>非标准化的特性，dataset</h4><p>所有以 “data-” 开头的特性值可以给编程人员正常使用，同时它还是 dataset 合法值。</p>
+<p>例如, 如果一个 elem 有一个键名是 “data-about” 的特性，那么可以通过 elem.dataset.about 取到这个合法值。<br>像 data-order-state 的多字特性键名可以写成驼峰式属性 dataset.orderState。</p>
+<h3 id="修改文档内容"><a href="#修改文档内容" class="headerlink" title="修改文档内容"></a>修改文档内容</h3><p>DOM（document object model 文档对象模型，此文中全部以缩写 DOM 表示）的可修改性是网页能“实时”刷新的关键。</p>
+<ul>
+<li><p>创建节点的方法：</p>
+<ul>
+<li>document.createElement(tag) —— 用给定标签创建一个节点，</li>
+<li>document.createTextNode(value) —— 创建一个文本节点（很少使用），</li>
+<li>elem.cloneNode(boolean) —— 如果参数 为 true 将元素及后代子元素进行克隆。为 false 则只克隆元素本身</li>
+</ul>
+</li>
+<li><p>插入和移除节点的方法：<br>注意，如果我们想要移动一个元素到另一个地方 —— 不需要移除旧的元素。<br>所有插入操作都会从节点原来的位置把节点移除掉。</p>
+<ul>
+<li><p>从 parent</p>
+<ul>
+<li>parent.appendChild(node)</li>
+<li>parent.insertBefore(node, nextSibling)</li>
+<li>parent.removeChild(node)</li>
+<li>parent.replaceChild(newElem, node)<br>这些方法都返回 node。</li>
+</ul>
+</li>
+<li><p>添加一些节点和字符串：</p>
+<ul>
+<li>node.append(…nodes or strings) —— 在 node 末尾位置增加，</li>
+<li>node.prepend(…nodes or strings) —— 在 node 开头位置增加 ，</li>
+<li>node.before(…nodes or strings) —— 在 node 之前位置增加，</li>
+<li>node.after(…nodes or strings) —— 在 node 之后位置增加，</li>
+<li>node.replaceWith(…nodes or strings) —— 替换 node。</li>
+<li>node.remove() —— 移除 node。<br><img src="https://zh.javascript.info/article/modifying-document/before-prepend-append-after@2x.png" alt="如图所示"><br>把字符串当成“文本”插入。</li>
+</ul>
+</li>
+<li><p>在 HTML 中添加内容 elem.insertAdjacentHTML(where, html)，在 where 位置进行操作：</p>
+<ul>
+<li>“beforebegin” —— 将 html 插入 elem 到开头的前面位置，</li>
+<li>“afterbegin” —— 将 html 插入 elem 到开头的后面位置，</li>
+<li>“beforeend” —— 将 html 插入 elem 到结尾的前面位置，</li>
+<li>“afterend” —— 将 html 插入 elem 到结尾的后面位置。<br><img src="https://zh.javascript.info/article/modifying-document/insert-adjacent@2x.png" alt="如图所示"><br>elem.insertAdjacentText 和 elem.insertAdjacentElement 跟 elem.insertAdjacentHTML 很相似，只不过他们一个用来插入字符串，一个用来插入元素，但是很少使用这两个方法。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>在页面加载完成之前添加 HTML 到页面中：</p>
+<p>document.write(html)<br>如果是在页面加载完成以后调用会擦除加载完毕的内容。通常在很老的脚本才会使用这个方法了。</p>
+</li>
+</ul>
+<h3 id="样式和类"><a href="#样式和类" class="headerlink" title="样式和类"></a>样式和类</h3><p>通常有两种方式来设计元素样式：</p>
+<ul>
+<li>在 CSS 中创建一个类并添加它：<code>&lt;div class=&quot;...&quot;&gt;</code></li>
+<li>将属性直接写入 style：<code>&lt;div style=&quot;...&quot;&gt;</code>。<br>CSS 总是首选的方式 —— 不仅用于 HTML，在 JavaScript 中也是如此。</li>
+</ul>
+<p>只有当类“无法处理时”，我们才会操作 style 属性。</p>
+<hr>
+在管理 class 时，有两个 DOM 属性：
+
+<ul>
+<li>className —— 字符串值可以很好地管理整个类集合。</li>
+<li>classList —— 拥有 add/remove/toggle/contains 方法的对象可以很好地支持单独的类。</li>
+</ul>
+<p>改变样式：</p>
+<ul>
+<li>style 属性是一个带有 camelCased 样式的对象。对它的读取和修改 “style” 属性中的单个属性等价。要留意如果应用 important 和其他稀有内容 —— 在 <a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh/docs/Web/API/CSSStyleDeclaration">MDN</a> 上有一个方法列表。</li>
+<li>style.cssText 属性对应于整个“样式”属性，即完整的样式字符串。</li>
+</ul>
+<p>获取已经解析的样式（对应于所有类，在应用所有 CSS 并计算最终值后）：</p>
+<ul>
+<li>getComputedStyle(elem[, pseudo]) 返回与 style 对象类似且包含了所有类的对象，是只读的。</li>
+</ul>
+<h3 id="元素-elem-的尺寸与滚动"><a href="#元素-elem-的尺寸与滚动" class="headerlink" title="元素 (elem) 的尺寸与滚动"></a>元素 (elem) 的尺寸与滚动</h3><p>元素具有以下几何属性：</p>
+<ul>
+<li><code>offsetParent</code> — 是最近的有定位属性的祖先元素，或者是 <code>td、th、table、body。</code></li>
+<li><code>offsetLeft/offsetTop</code> — 是相对于 offsetParent 的左上角边缘坐标。</li>
+<li><code>offsetWidth/offsetHeight</code> — 元素的“外部”宽/高 ，边框尺寸计算在内。</li>
+<li><code>clientLeft/clientTop</code> — 从元素左上角外部到内部的距离(相当于 <code>border</code>的宽度)，对于从左到右渲染元素的操作系统，它始终是左/顶部边界的宽度，而对于从右到左的操作系统，垂直滚动条在左边，所以 <code>clientLeft</code> 也包括滚动条的宽度。</li>
+<li><code>clientWidth/clientHeight</code> — 内容的宽度/高度，包括内间距，但没有滚动条。(<code>clientWidth/clientHeight</code> 相当于 <code>width|height</code> + <code>paddingLeft|paddingTop</code> + <code>paddingRight|paddingBottom</code>)</li>
+<li><code>scrollWidth/scrollHeight</code> — 内容的宽度/高度，包括可滚动的可视区域外的尺寸，也包括内间距，但不包括滚动条。</li>
+<li><code>scrollLeft/scrollTop</code> — 从左上角开始的元素的滚动部分的宽度/高度。<br>除了 <code>scrollLeft/scrollTop</code> 之外，所有属性都是只读的。如果更改，浏览器会使元素滚动。</li>
+</ul>
+<p>不要从 <code>CSS</code> 中获取宽高,我们应该使用集合属性获得宽高：</p>
+<ul>
+<li>首先，<code>CSS</code> 宽度/高度取决于另一个属性：<code>box-sizing</code>，它定义了 “什么是” <code>CSS</code> 宽度和高度。用作 <code>CSS</code> 样式的 <code>box-sizing</code> 的更改可能会破坏这样的 JavaScript 定义。</li>
+<li>其次，<code>CSS</code> 的 <code>width/height</code> 可能是 <code>auto</code></li>
+<li>还有一个原因：滚动条。有时，没有滚动条的代码工作得很好，因为它在一些浏览器中占据了内容的一部分空间。因此，内容的实际宽度比 CSS 宽度要小。</li>
+</ul>
+<h3 id="窗口-Window-的尺寸和滚动"><a href="#窗口-Window-的尺寸和滚动" class="headerlink" title="窗口 (Window) 的尺寸和滚动"></a>窗口 (Window) 的尺寸和滚动</h3><p>窗口的几何属性:</p>
+<ul>
+<li>文档可视范围的宽度/高度（内容区域的宽高）：<br><code>document.documentElement.clientWidth/Height</code></li>
+<li>整个文档的宽度/高度，包括滚动区域外的部分：</li>
+</ul>
+<pre><code class="js">let scrollHeight = Math.max(
+  document.body.scrollHeight,
+  document.documentElement.scrollHeight,
+  document.body.offsetHeight,
+  document.documentElement.offsetHeight,
+  document.body.clientHeight,
+  document.documentElement.clientHeight
+);</code></pre>
+<p>窗口的滚动：</p>
+<ul>
+<li><p>读取当前的滚动：<code>window.pageYOffset/pageXOffset</code></p>
+</li>
+<li><p>改变当前的滚动：</p>
+<ul>
+<li><code>window.scrollTo(pageX,pageY)</code> — 绝对定位 -<code>window.scrollBy(x,y)</code> — 相对当前位置的滚动</li>
+<li>elem.scrollIntoView(true|false) — 滚动到正好 <code>elem</code>可视的位置（<code>elem</code> 与- 窗口的顶部/底部对齐）</li>
+</ul>
+</li>
+</ul>
+<h3 id="坐标"><a href="#坐标" class="headerlink" title="坐标"></a>坐标</h3><p>大多数 <code>JavaScript</code> 方法处理的是以下两种坐标系中的一个：</p>
+<ul>
+<li><p>相对于窗口（或者另一个 <code>viewport</code>）顶部/左侧计算的坐标 – <code>elem.getBoundingClientRect()</code>,该方法返回一个 <code>elem</code> 的窗口坐标对象，这个对象有以下这些属性：</p>
+<ul>
+<li><code>top</code> — 元素顶部边缘的 Y 坐标</li>
+<li><code>left</code> — 元素左边边缘的 X 坐标</li>
+<li><code>right</code> — 元素右边边缘的 X 坐标</li>
+<li><code>bottom</code> — 元素底部边缘的 Y 坐标<br>该方法的效果相当于 <code>position: fixed</code></li>
+</ul>
+</li>
+<li><p>相对于文档顶部/左侧计算的坐标 – <code>elem.getBoundingClientRect()</code> + 加上当前页面滚动的长度。<br>还方法相当于 relate 到 <code>body</code> 中的 <code>position: absolute</code></p>
+</li>
+</ul>
+<p>两个坐标系可以通过由公式相连接：</p>
+<ul>
+<li>pageY = clientY + 文档垂直部分滚动的高度。</li>
+<li>pageX = clientX + 文档水平部分滚动的宽度。</li>
+</ul>
+<p><code>elementFromPoint(x, y)</code>，该方法返回该窗口坐标(x, y)所在的元素<br>注意，当参数为负数或超出窗口 (viewport) 大小时，将会返回 null</p>
+<p>获取一个元素文档坐标的标准方法：</p>
+<pre><code class="js">// 获取元素的文档坐标
+function getCoords(elem) &#123;
+  let box = elem.getBoundingClientRect();
+
+  return &#123;
+    top: box.top + window.pageYOffset,
+    left: box.left + window.pageXOffset,
+  &#125;;
+&#125;</code></pre>
+
+      
+       <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 kerbalhao@foxmail.com </span>
+    </div>
+</article>
+
+
+
+
+
+
+
+    
+
+
+
+
+    </div>
+    <div class="copyright">
+        <p class="footer-entry">
+    ©2019-2022 Kerbalhao
+</p>
+<p class="footer-entry">Built with <a href="https://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/yelog/hexo-theme-3-hexo" target="_blank">3-hexo</a> theme</p>
+
+    </div>
+    <div class="full-toc">
+        <button class="full" data-title="切换全屏 快捷键 s"><span class="min "></span></button>
+<a class="" id="rocket" ></a>
+
+    </div>
+</div>
+
+</body>
+<script src="/js/jquery.pjax.js?v=1.1.0" ></script>
+
+<script src="/js/script.js?v=1.1.0" ></script>
+<script>
+    var img_resize = 'default';
+    function initArticle() {
+        /*渲染对应的表格样式*/
+        
+            $("#post .pjax table").addClass("green_title");
+        
+
+        /*渲染打赏样式*/
+        
+
+        /*高亮代码块行号*/
+        
+        $('pre code').each(function(){
+            var lines = $(this).text().trim().split('\n').length, widther='';
+            if (lines>99) {
+                widther = 'widther'
+            }
+            var $numbering = $('<ul/>').addClass('pre-numbering ' + widther).attr("unselectable","on");
+            $(this).addClass('has-numbering ' + widther)
+                    .parent()
+                    .append($numbering);
+            for(var i=1;i<=lines;i++){
+                $numbering.append($('<li/>').text(i));
+            }
+        });
+        
+
+        /*访问数量*/
+        
+
+        /*代码高亮，行号对齐*/
+        $('.pre-numbering').css('line-height',$('.has-numbering').css('line-height'));
+
+        
+        
+    }
+
+    /*打赏页面隐藏与展示*/
+    
+
+</script>
+
+<!--加入行号的高亮代码块样式-->
+
+<style>
+    pre{
+        position: relative;
+        margin-bottom: 24px;
+        border-radius: 10px;
+        border: 1px solid #e2dede;
+        background: #FFF;
+        overflow: hidden;
+    }
+    code.has-numbering{
+        margin-left: 30px;
+    }
+    code.has-numbering.widther{
+        margin-left: 35px;
+    }
+    .pre-numbering{
+        margin: 0;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 20px;
+        padding: 0.5em 3px 0.7em 5px;
+        border-right: 1px solid #C3CCD0;
+        text-align: right;
+        color: #AAA;
+        background-color: #fafafa;
+    }
+    .pre-numbering.widther {
+        width: 35px;
+    }
+</style>
+
+<!--自定义样式设置-->
+<style>
+    
+    
+    .nav {
+        width: 542px;
+    }
+    .nav.fullscreen {
+        margin-left: -542px;
+    }
+    .nav-left {
+        width: 120px;
+    }
+    
+    
+    @media screen and (max-width: 1468px) {
+        .nav {
+            width: 492px;
+        }
+        .nav.fullscreen {
+            margin-left: -492px;
+        }
+        .nav-left {
+            width: 100px;
+        }
+    }
+    
+    
+    @media screen and (max-width: 1024px) {
+        .nav {
+            width: 492px;
+            margin-left: -492px
+        }
+        .nav.fullscreen {
+            margin-left: 0;
+        }
+    }
+    
+    @media screen and (max-width: 426px) {
+        .nav {
+            width: 100%;
+        }
+        .nav-left {
+            width: 100%;
+        }
+    }
+    
+    
+    .nav-right .title-list nav a .post-title, .nav-right .title-list #local-search-result a .post-title {
+        color: #383636;
+    }
+    
+    
+    .nav-right .title-list nav a .post-date, .nav-right .title-list #local-search-result a .post-date {
+        color: #5e5e5f;
+    }
+    
+    
+    .nav-right nav a.hover, #local-search-result a.hover{
+        background-color: #e2e0e0;
+    }
+    
+    
+
+    /*列表样式*/
+    
+
+    /* 背景图样式 */
+    
+    
+
+
+    /*引用块样式*/
+    
+
+    /*文章列表背景图*/
+    
+
+    
+    #post .pjax article :not(pre) > code {
+        color: #24292e;
+        font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,Courier,monospace;
+        background-color: rgba(27,31,35,.05);
+        border-radius: 3px;
+        font-size: 85%;
+        margin: 0;
+        padding: .2em .4em;
+    }
+    
+</style>
+
+
+
+
+
+
+
+</html>
